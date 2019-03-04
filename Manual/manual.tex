@@ -1,0 +1,130 @@
+\documentclass[12pt]{extarticle}
+%Some packages I commonly use.
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+
+%A bunch of definitions that make my life easier
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\setlength{\columnseprule}{1 pt}
+
+\usepackage{hyperref}
+
+\title{\textbf{SOCRaTEs}\\
+\textbf{S}imulink \textbf{O}racles for \textbf{C}PS \textbf{R}equiremen\textbf{T}s\\ with unc\textbf{E}rtainty}
+\author{Menghi Claudio, Nejati Shiva,  Khouloud Gaaloul,  Lionel Briand}
+%\date{January 2019}
+\date{\vspace{-5ex}}
+\begin{document}
+
+\maketitle
+
+Section~\ref{sec:Overview} provides an overview on SOCRaTEs.
+Section~\ref{sec:installation} describes how to install SOCRaTEs and how to create your first SOCRaTEs project.
+Section~\ref{sec:using} describes how to use SOCRaTEs.
+Finally Section~\ref{sec:tutorial} provides a  tutorial that describes how to use SOCRaTEs on a set of simple examples.
+
+\section{Overview}
+\label{sec:Overview}
+
+\section{Installation and Project Creation}
+\label{sec:installation}
+
+\subsection{Prerequisite}
+The following software must be installed on your laptop to run Socrates
+\begin{itemize}
+\item Eclipse (\url{https://www.eclipse.org/})
+\item Java 1.8 or superior
+\item Matlab/Simulink
+\end{itemize}
+
+\subsection{Installing Socrates}
+Socrates can be installed by performing the following steps:
+\begin{itemize}
+\item Click on Help $>$ Install new Software $>$ Add $>$ Local
+\item Select the Plugin folder;
+\item Uncheck Group items by category;
+\item Select Socrates SDK feature;
+\item Click on Next $>$ Next $>$ I accept $>$ Finish.
+\end{itemize}
+
+\subsection{Creating a New Project}
+To create a new project perform the following steps:
+\begin{itemize}
+\item File $>$ New $>$ Project;
+\item Select Project from General;
+\item Click on Finish;
+\end{itemize}
+
+
+\section{Using SOCRaTEs}
+\label{sec:using}
+
+\subsection{Creating a your Requirements}
+\begin{itemize}
+\item Create a file .socrates (File $>$ New $>$ File);
+\item When asked to convert into an Xtext project click on Yes.
+\end{itemize}
+
+\subsection{Generating the .m files using Socrates}
+\begin{itemize}
+\item copy the file demo.socrates within your workspace.
+\item Change the file (e.g., add a new blank line) and save it
+\item	When you save the file a file .m is automatically created in the folder src-gen/ModelName.
+\end{itemize}
+
+\subsection{Adding the oracles into your model}
+\begin{itemize}
+\item	Open the Simulink model test
+\item	Copy the file Test\_Req.m into your workspace
+\item	Run Test\_Req in Matlab
+\item	tollerableriskTest\_Req=0;
+\item	Run your simulation
+\end{itemize}
+
+
+\section{Tutorial}
+\label{sec:tutorial}
+
+
+\end{document}
