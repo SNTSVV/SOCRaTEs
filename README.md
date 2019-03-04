@@ -11,6 +11,37 @@
 Overview
 ========
 
+Figure 1 shows an overview of SOCRaTeS (*Simulink Oracles for CPS
+RequiremenTs with uncErtainty*), our approach to generate automated test
+oracles for CPS models. SOCRaTeS takes three inputs: ((X)**1**;) a CPS
+model with parameters or inputs involving uncertainties, ((X)**2**;) a
+set of functional requirements for the CPS model and ((X)**3**;) a set
+of test inputs that are developed by engineers to test the CPS model
+with respects to its requirements. SOCRaTeS makes the following
+assumptions about its inputs:
+
+-   *The CPS model is described in Simulink* ((X)**1**;). Simulink
+    allows specifying dynamic systems, it is executable and allows
+    engineers to test their models as early as possible.
+
+-   *Functional requirements are described in a signal logic-based
+    language* ((X)**2**;). We present our requirements language later in
+    this document.
+
+-   *A set of test inputs exercising requirements are provided*
+    ((X)**3**;). We assume engineers have a set of test inputs for their
+    CPS model. The test inputs may be generated manually, randomly or
+    based on any test generation framework proposed in the literature.
+    SOCRaTeS is agnostic to the selected test generation method.
+
+SOCRaTeS automatically converts functional requirements into oracles
+specified in Simulink ((X)**4**;). The oracles evaluate test outputs of
+the CPS model in an automated and online manner and generate fitness
+values that provide engineers with a degree of satisfaction or failure
+for each test input ((X)**5**;). Engineers can stop running a test in
+the middle when SOCRaTeS concludes that the test fitness is going to
+remain below a given threshold for the rest of its execution.
+
 ![An Overview on SOCRaTEs.](Manual/Overview.pdf){width="70%"}
 
 Installation and Project Creation
@@ -110,22 +141,49 @@ frequency $1$ $rad/s$ that is represented in Figure 3.
 The Considered Requirements
 ---------------------------
 
-Scenario 1
-==========
+The first requirement (Test$\_$Forall) specifies that always the signal
+$e$ should not exceed the value $1$. The requirement Test$\_$Forall is
+reported in Figure 4.
 
+![The requirement Test$\_$Forall.](Req1.pdf){width="80%"}
+
+The second requirement (Test$\_$Exists) specifies that there exists a
+time instant in which the signal $e$ exceeds the value $1$. The
+requirement Test$\_$Exists is reported in Figure 5.
+
+![The requirement Test$\_$Exists.](Req2.pdf){width="95%"}
+
+Scenario 1
+----------
+
+In scenario 1 the model Model 1 and the requirement Test$\_$Forall are
+considered. The evaluation of the oracle over time is presented in
+Figure 6.
+
+![The evaluation of the oracle for the requirement Test$\_$Forall and
+the model Model 1.](resModel1TestForall.pdf){width="50%"}
+
+The oracle stops as soon as the requirement is detected to be violated.
 The variable $result\_Test\_Forall.Data$ contains the final result that
 for this simulation is: $-0.0109$. Note that the result is negative. The
 property is indeed violated.
 
 Scenario 2
-==========
+----------
+
+In scenario 2 the model Model 2 and the requirement Test$\_$Forall are
+considered. The evaluation of the oracle over time is presented in
+Figure 7.
+
+![The evaluation of the oracle for the requirement Test$\_$Forall and
+the model Model 2.](resModel2TestForall.pdf){width="50%"}
 
 The variable $result\_Test\_Forall.Data$ contains the final result that
 for this simulation is: $0.3333$. Note that the result is positive. The
 property is indeed satisfied.
 
 Scenario 3
-==========
+----------
 
 Scenario 4
-==========
+----------
