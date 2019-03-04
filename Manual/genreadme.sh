@@ -1,1 +1,1 @@
-pandoc -s manual.tex -o ../README.md
+pandoc -o manual.tex ../README.md
