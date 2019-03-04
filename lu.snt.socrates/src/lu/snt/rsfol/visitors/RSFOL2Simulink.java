@@ -1135,7 +1135,7 @@ public class RSFOL2Simulink implements RSFOLVisitor<String> {
 
 			b.append("add_block('simulink/Commonly Used Blocks/Constant', '" + subcomponentname + "/"
 					+ existsFormula.hashCode() + "Constant')\n");
-			b.append("set_param('" + subcomponentname + "/" + existsFormula.hashCode() + "Constant', 'Value', '1')\n");
+			b.append("set_param('" + subcomponentname + "/" + existsFormula.hashCode() + "Constant', 'Value', '-1')\n");
 
 			b.append("add_block('simulink/Signal Routing/Switch', '" + subcomponentname + "/" + existsFormula.hashCode()
 					+ "Switch')\n");
