@@ -55,16 +55,32 @@
 \author{Menghi Claudio, Nejati Shiva,  Khouloud Gaaloul,  Lionel Briand}
 %\date{January 2019}
 \date{\vspace{-5ex}}
+
+%\geometry{paperwidth=170mm, paperheight=16383pt, left=40pt, top=40pt, textwidth=280pt, marginparsep=20pt, marginparwidth=100pt, textheight=16263pt, footskip=40pt}
+
 \begin{document}
 
 \maketitle
 
-Section~1 provides an overview on SOCRaTEs.
-Section~2 describes how to install SOCRaTEs and how to create your first SOCRaTEs project.
-Section~3 describes how to use SOCRaTEs.
-Finally Section~4 provides a  tutorial that describes how to use SOCRaTEs on a set of simple examples.
+\vspace{1cm}
+\begin{itemize}
+\item Section~Overview provides an overview on SOCRaTEs.
+\item Section~Installation and Project Creation describes how to install SOCRaTEs and how to create your first SOCRaTEs project.
+\item Section~Using SOCRaTEs describes how to use SOCRaTEs.
+\item Finally Section~Tutorial provides a  tutorial that describes how to use SOCRaTEs on a set of simple examples.
+\end{itemize}
+
+
+
+
 
 \section{Overview}
+
+\begin{figure}
+\caption{An Overview on SOCRaTEs.}
+  \centering
+    \includegraphics[width=0.7\textwidth]{Overview.pdf}
+\end{figure}
 
 \section{Installation and Project Creation}
 
@@ -121,6 +137,44 @@ To create a new project perform the following steps:
 
 
 \section{Tutorial}
+We consider four different scenarios obtained by considering two different models and two requirements.
 
+\subsection{The Considered Models}
+The first model generates a sine wave with amplitude $2$ and frequency $1$ $rad/s$ that is represented in Figure~2.
+
+\begin{figure}
+\caption{The signal $e$ generated from the model Model 1.}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Model1.pdf}
+\end{figure}
+
+The second model generates a sine wave with amplitude $0.5$ and frequency $1$ $rad/s$ that is represented in Figure~3.
+
+\begin{figure}
+\caption{The signal $e$ generated from the model Model 2.}
+  \centering
+    \includegraphics[width=0.5\textwidth]{Model2.pdf}
+\end{figure}
+
+\subsection{The Considered Requirements}
+
+
+
+\section{Scenario 1}
+
+The variable  $result\_Test\_Forall.Data$  contains the final result that for this simulation is: $-0.0109$.
+Note that the result is negative. 
+The property is indeed violated.
+
+\section{Scenario 2}
+
+The variable $result\_Test\_Forall.Data$ contains the final result that for this simulation is: $0.3333$.
+Note that the result is positive.
+The property is indeed satisfied.
+
+
+\section{Scenario 3}
+
+\section{Scenario 4}
 
 \end{document}

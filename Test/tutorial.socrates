@@ -1,0 +1,29 @@
+Oracle 
+ModelName: Test;
+Path: ./Test/;
+ID: Test_Forall;
+Signals e;
+Constants T=100;
+Description: "The value of the signal e should be lower than 1";
+Specification: 
+(
+	forall t in [ 0 , T ]:
+	 ({  e(t)  < 1 })
+);
+
+
+
+Oracle 
+ModelName: Test;
+Path: ./Test/;
+ID: Test_Exists;
+Signals e;
+Constants T=100;
+Description: "The value of the signal e should be lower than 1";
+Specification: 
+(
+	exists t in [ 0 , T ]:
+	 ({  e(t)  < 1 })
+);
+
+
