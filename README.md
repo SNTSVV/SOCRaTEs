@@ -11,7 +11,7 @@
 Overview
 ========
 
-![An Overview on SOCRaTEs.](Overview.pdf){width="70%"}
+![An Overview on SOCRaTEs.](Manual/Overview.pdf){width="70%"}
 
 Installation and Project Creation
 =================================
@@ -99,13 +99,13 @@ The first model generates a sine wave with amplitude $2$ and frequency
 $1$ $rad/s$ that is represented in Figure 2.
 
 ![The signal $e$ generated from the model Model
-1.](Model1.pdf){width="50%"}
+1.](Manual/Model1.pdf){width="50%"}
 
 The second model generates a sine wave with amplitude $0.5$ and
 frequency $1$ $rad/s$ that is represented in Figure 3.
 
 ![The signal $e$ generated from the model Model
-2.](Model2.pdf){width="50%"}
+2.](Manual/Model2.pdf){width="50%"}
 
 The Considered Requirements
 ---------------------------
