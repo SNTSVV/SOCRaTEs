@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='2'>
+  <unit id='lu.snt.socrates.sdk.feature.group' version='1.0.0.201902141500' singleton='false'>
+    <update id='lu.snt.socrates.sdk.feature.group' range='[0.0.0,1.0.0.201902141500)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='Socrates SDK Feature '/>
+      <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      <property name='maven-groupId' value='lu.snt.socrates'/>
+      <property name='maven-artifactId' value='lu.snt.socrates.sdk'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='lu.snt.socrates.sdk.feature.group' version='1.0.0.201902141500'/>
+    </provides>
+    <requires size='5'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.runtime.feature.group' range='2.8.0'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='lu.snt.socrates' range='[1.0.0.201902141440,1.0.0.201902141440]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='lu.snt.socrates.ide' range='[1.0.0.201902141440,1.0.0.201902141440]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='lu.snt.socrates.ui' range='[1.0.0.201902141440,1.0.0.201902141440]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='lu.snt.socrates.sdk.feature.jar' range='[1.0.0.201902141500,1.0.0.201902141500]'>
+        <filter>
+          (org.eclipse.update.install.features=true)
+        </filter>
+      </required>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+  <unit id='lu.snt.socrates.sdk.feature.jar' version='1.0.0.201902141500'>
+    <properties size='4'>
+      <property name='org.eclipse.equinox.p2.name' value='Socrates SDK Feature '/>
+      <property name='maven-groupId' value='lu.snt.socrates'/>
+      <property name='maven-artifactId' value='lu.snt.socrates.sdk'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='lu.snt.socrates.sdk.feature.jar' version='1.0.0.201902141500'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+      <provided namespace='org.eclipse.update.feature' name='lu.snt.socrates.sdk' version='1.0.0.201902141500'/>
+    </provides>
+    <filter>
+      (org.eclipse.update.install.features=true)
+    </filter>
+    <artifacts size='1'>
+      <artifact classifier='org.eclipse.update.feature' id='lu.snt.socrates.sdk' version='1.0.0.201902141500'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='zipped'>
+          true
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

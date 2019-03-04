@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: lu.snt.socrates.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: lu.snt.socrates.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: lu.snt.socrates,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: lu.snt.ide.contentassist.antlr.internal,
+ lu.snt.ide.contentassist.antlr

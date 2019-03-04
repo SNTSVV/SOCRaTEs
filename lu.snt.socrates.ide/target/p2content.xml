@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='lu.snt.socrates.ide' version='1.0.0.201902141440' generation='2'>
+    <update id='lu.snt.socrates.ide' range='[0.0.0,1.0.0.201902141440)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='lu.snt.socrates.ide'/>
+      <property name='org.eclipse.equinox.p2.provider' value='My Company'/>
+      <property name='maven-groupId' value='lu.snt.socrates'/>
+      <property name='maven-artifactId' value='lu.snt.socrates.ide'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='6'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='lu.snt.socrates.ide' version='1.0.0.201902141440'/>
+      <provided namespace='osgi.bundle' name='lu.snt.socrates.ide' version='1.0.0.201902141440'/>
+      <provided namespace='java.package' name='lu.snt.ide.contentassist.antlr.internal' version='0.0.0'/>
+      <provided namespace='java.package' name='lu.snt.ide.contentassist.antlr' version='0.0.0'/>
+      <provided namespace='osgi.identity' name='lu.snt.socrates.ide' version='1.0.0.201902141440'>
+        <properties size='1'>
+          <property name='type' value='osgi.bundle'/>
+        </properties>
+      </provided>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='5'>
+      <required namespace='osgi.bundle' name='lu.snt.socrates' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.ide' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.ide' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.antlr.runtime' range='[3.2.0,3.2.1)'/>
+      <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='lu.snt.socrates.ide' version='1.0.0.201902141440'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: lu.snt.socrates.ide; singleton:=true&#xA;Bundle-Version: 1.0.0.201902141440&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

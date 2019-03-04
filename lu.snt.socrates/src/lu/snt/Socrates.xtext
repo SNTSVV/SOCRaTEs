@@ -1,0 +1,276 @@
+grammar lu.snt.Socrates with org.eclipse.xtext.common.Terminals
+
+
+
+generate socrates "http://www.snt.lu/Socrates"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+// Socrates: generating Simulink Oracles for CPS RequiremenTs with uncErtainty
+Socrates:
+	(oracles+=Oracle)*;
+
+Oracle:
+	'Oracle'
+	'ModelName:' modelName=ID ';'
+	('Path:' path=PATH ';')?
+	'ID:' reqname=ReqId ';'
+	signdef=Signalsdefinition
+	(constantDefinitions=ConstantsDefinition)?
+	requirement=Requirement;
+
+
+Requirement:
+	'Description:' DESCRIPTION ';'
+	'Specification:' formula=formula  ';';
+
+ReqId:
+	ID ('_' number ('_' number)*)?;
+
+terminal DESCRIPTION:
+	'"'->'"';
+
+Signalsdefinition:
+	'Signals' signals+=SignalID (',' signals+=SignalID)* ';';
+
+ConstantsDefinition:
+	'Constants' constants+=ConstantDefinition (',' constants+=ConstantDefinition)* ';';
+
+ConstantDefinition:
+	constantid=ConstantId EQ SIGN? value=number;
+
+SignalID:
+	name=ID;
+
+ConstantId:
+	name=ID;
+
+Tvariable:
+	name=ID;
+
+
+negationformula:
+	 NOT negationchild=formula;
+
+
+forAllformula:
+	FORALL  bound=boundterm COLON  LPAREN forallchild=formula RPAREN ;
+
+
+existsformula:
+	 EXISTS  bound=boundterm COLON LPAREN existschild=formula RPAREN;
+
+
+
+formula: f=basicformulae | f=formulab;
+
+formulab:  a=term t=formulabprime;
+
+formulabprime: (op=('or'|'implies'|'iff') t2=term f=formulabprime)? ;
+
+term: a=atom t=termprime; 
+
+termprime: ( op=('and') t=term f1=termprime)?; 
+
+
+expression: //basicexpression=Basicexpression | 
+expb=expressionb;
+
+expressionb:  term=expressionterm expprime=expressionprime | LPAREN term=expressionterm RPAREN expprime=expressionprime;
+
+expressionprime: (op=('+'|'-') t2=expressionterm f=expressionprime)? ;
+
+expressionterm: term=(ExpressionAtom|Basicexpression) expprime=expressiontermprime; 
+
+expressiontermprime: ( op=('*'|'/') t2=expressionterm f=expressiontermprime)?; 
+
+
+ExpressionAtom: 
+	exp=Signal | 
+	LPAREN exp=expression  RPAREN |
+	op=SIGN exp=expression |
+exp=value 
+;
+
+Basicexpression: 
+	LPAREN exp=Basicexpression RPAREN |
+exp=AbsEXP |
+exp=Normexp |	
+exp=Sin |
+exp=Cos |
+exp=Sqrt 
+;
+
+basicformulae: 
+	f=negationformula  
+	| f=forAllformula 
+	| f=existsformula 
+;
+
+
+	
+boundterm: 
+	
+	ref=Tvariable IN  (l=LSQUARE | l=LPAREN)  leftbound=timedterm COMMA rightbound=timedterm (r=RSQUARE | r=RPAREN) 
+;
+
+timedterm:
+	inf=INF
+	| number=number
+	| (ref=[ConstantId]|ref=[Tvariable]) (op=(PLUS | MINUS) value=value)?;
+
+
+
+	
+	
+
+
+
+
+atom:
+	LPAREN f=formula  RPAREN |  
+	'{' s1=expression op=RELOP s2=expression "}";
+
+value:
+	LPAREN exp=expression RPAREN |
+	number=number 
+	| ref=[ConstantId] 
+	| float=FLOAT
+	;
+
+Signal:
+	signalid=[SignalID]
+	LPAREN
+	timdedterm=timedterm RPAREN |
+	signalid=[SignalID]
+	LSQUARE indx1=number RSQUARE
+	LPAREN
+	timdedterm=timedterm RPAREN |
+	signalid=[SignalID]
+	LSQUARE indx1=number RSQUARE LSQUARE indx2=number RSQUARE
+	LPAREN
+	timdedterm=timedterm RPAREN;
+
+
+
+
+
+
+
+AbsEXP:
+	'|' exp1=expression '|';
+
+Normexp:
+	'||' exp1=expression '||';
+
+Sin:
+	'sin' LPAREN exp1=expression RPAREN;
+
+Cos:
+	'cos' LPAREN exp1=expression RPAREN;
+
+Sqrt:
+	'sqrt' LPAREN exp1=expression RPAREN;
+
+
+bin_connective:
+	CONJ | DISJ | IMPL | BICOND;
+
+FLOAT:
+	number '.' number;
+
+PATH: (('../')* | './') ( ID '/')*;
+number:
+	INT | DIGIT;
+
+terminal WS:
+	' ' | '\t' | '\r' | '\n';
+
+RELOP:
+	GE | LE | EQ | LEQ | GEQ | NEQ;
+
+COMMA:
+	',';
+
+LE:
+	'<';
+
+LEQ:
+	'<=';
+
+GE:
+	'>';
+
+GEQ:
+	'>=';
+
+EQ:
+	'=';
+
+NEQ:
+	'!=';
+
+LPAREN:
+	'(';
+
+RPAREN:
+	')';
+
+LSQUARE:
+	'[';
+
+RSQUARE:
+	']';
+
+NOT:
+	'not';
+
+FORALL:
+	'forall';
+
+EXISTS:
+	'exists';
+
+CONJ:
+	'and';
+
+DISJ:
+	'or';
+
+IMPL:
+	'implies';
+
+BICOND:
+	'iff';
+
+INF:
+	'inf';
+
+IN:
+	'in';
+
+NORM:
+	'||';
+
+PLUS:
+	'+';
+
+MINUS:
+	'-';
+
+COLON:
+	':';
+
+SIGN:
+	PLUS | MINUS;
+
+OP:
+	'+' | '-' | '*' | '/';
+
+terminal ML_COMMENT:
+	'/*'->'*/';
+
+terminal DIGIT:
+	('0'..'9');
+
+
+

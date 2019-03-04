@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+    id="lu.snt.socrates.sdk"
+    label="Socrates SDK Feature "
+    version="1.0.0.qualifier">
+    
+    <requires>
+        <import feature="org.eclipse.xtext.runtime" version="2.8.0" match="greaterOrEqual"/>
+    </requires>
+    
+    <plugin
+    id="lu.snt.socrates"
+    download-size="0"
+    install-size="0"
+    version="0.0.0"
+    unpack="false"/>
+    
+    <plugin
+    id="lu.snt.socrates.ide"
+    download-size="0"
+    install-size="0"
+    version="0.0.0"
+    unpack="false"/>
+    
+    <plugin
+    id="lu.snt.socrates.ui"
+    download-size="0"
+    install-size="0"
+    version="0.0.0"
+    unpack="false"/>
+    
+</feature>

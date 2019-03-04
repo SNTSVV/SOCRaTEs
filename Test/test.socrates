@@ -1,0 +1,60 @@
+
+Oracle 
+ModelName: TestModel;
+ID: TestRequirement;
+Signals v;
+Constants T=10;
+Description: "
+SatEx model:
+A satellite control system which helps always keep the satellite on the desired orbit, 
+ensures that the satellite is always facing the earth, and regulates the satellite speed. 
+Requirement:
+the maximum reaction torque (torque) must be equal to 0.015 Nm";
+Specification: (
+forall 
+ t2 in [0,10] : (
+	 	{ v(t2)< 1 }
+	 	and
+	 	(
+	 	forall 
+ 		t in [0,t2+3] : (
+	 	{ v(t)< 1 } and { v(t)< 1 })
+	
+	 	)
+	)
+)
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
