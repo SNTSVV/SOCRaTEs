@@ -145,13 +145,13 @@ The first requirement (Test$\_$Forall) specifies that always the signal
 $e$ should not exceed the value $1$. The requirement Test$\_$Forall is
 reported in Figure 4.
 
-![The requirement Test$\_$Forall.](Req1.png){width="80%"}
+![The requirement Test$\_$Forall.](Manual/Req1.png){width="80%"}
 
 The second requirement (Test$\_$Exists) specifies that there exists a
 time instant in which the signal $e$ exceeds the value $1$. The
 requirement Test$\_$Exists is reported in Figure 5.
 
-![The requirement Test$\_$Exists.](Req2.png){width="95%"}
+![The requirement Test$\_$Exists.](Manual/Req2.png){width="95%"}
 
 Scenario 1
 ----------
@@ -161,7 +161,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 6.
 
 ![The evaluation of the oracle for the requirement Test$\_$Forall and
-the model Model 1.](resModel1TestForall.png){width="50%"}
+the model Model 1.](Manual/resModel1TestForall.png){width="50%"}
 
 The oracle stops as soon as the requirement is detected to be violated.
 The variable $result\_Test\_Forall.Data$ contains the final result that
@@ -176,7 +176,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 7.
 
 ![The evaluation of the oracle for the requirement Test$\_$Forall and
-the model Model 2.](resModel2TestForall.png){width="50%"}
+the model Model 2.](Manual/resModel2TestForall.png){width="50%"}
 
 The variable $result\_Test\_Forall.Data$ contains the final result that
 for this simulation is: $0.3333$. Note that the result is positive. The
