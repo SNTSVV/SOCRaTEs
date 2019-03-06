@@ -132,7 +132,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Tvariable getRef()
   {
     return ref;
@@ -160,7 +159,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setRef(Tvariable newRef)
   {
     if (newRef != ref)
@@ -182,7 +180,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getL()
   {
     return l;
@@ -193,7 +190,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setL(String newL)
   {
     String oldL = l;
@@ -207,7 +203,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public timedterm getLeftbound()
   {
     return leftbound;
@@ -235,7 +230,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setLeftbound(timedterm newLeftbound)
   {
     if (newLeftbound != leftbound)
@@ -257,7 +251,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public timedterm getRightbound()
   {
     return rightbound;
@@ -285,7 +278,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setRightbound(timedterm newRightbound)
   {
     if (newRightbound != rightbound)
@@ -307,7 +299,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getR()
   {
     return r;
@@ -318,7 +309,6 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setR(String newR)
   {
     String oldR = r;
@@ -463,7 +453,7 @@ public class boundtermImpl extends MinimalEObjectImpl.Container implements bound
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (l: ");
     result.append(l);
     result.append(", r: ");

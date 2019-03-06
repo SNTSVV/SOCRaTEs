@@ -111,7 +111,6 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formula getF()
   {
     return f;
@@ -139,7 +138,6 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setF(formula newF)
   {
     if (newF != f)
@@ -161,7 +159,6 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expression getS1()
   {
     return s1;
@@ -189,7 +186,6 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setS1(expression newS1)
   {
     if (newS1 != s1)
@@ -211,7 +207,6 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getOp()
   {
     return op;
@@ -222,7 +217,6 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setOp(String newOp)
   {
     String oldOp = op;
@@ -236,7 +230,6 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expression getS2()
   {
     return s2;
@@ -264,7 +257,6 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setS2(expression newS2)
   {
     if (newS2 != s2)
@@ -407,7 +399,7 @@ public class atomImpl extends MinimalEObjectImpl.Container implements atom
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (op: ");
     result.append(op);
     result.append(')');

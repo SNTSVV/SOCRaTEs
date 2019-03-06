@@ -14,4 +14,10 @@ public interface TimedTerm extends RSFOLFormula {
 	public float getMaximumAddedValue();
 	
 	public void shift(float value);
+	
+	/**
+	 * returns true if and only if the timed term is a constant 
+	 * @return true if and only if the  timed term is a constant 
+	 */
+	public boolean refersToConstantInstant();
 }

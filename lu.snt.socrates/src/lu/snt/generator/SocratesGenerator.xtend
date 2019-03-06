@@ -22,6 +22,7 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import lu.snt.rsfol.visitors.RSFOL2MaximumExistBound
+import lu.snt.rsfol.preprocessing.Preprocess
 
 /**
  * Generates code from your model files on save.
@@ -91,9 +92,11 @@ class SocratesGenerator extends AbstractGenerator {
 		}
 		val vpushed=voriginal.accept(new RSFOLPushNegations(false));
 		
+		val fafterpushing = vpushed.accept(new Preprocess());
 
-		val t1=new TimeShiftVisitor(vpushed);
-		val v1 = vpushed.accept(t1);
+		val t1=new TimeShiftVisitor(fafterpushing);
+		val v1=fafterpushing.accept(t1);
+		
 
 		println("Time shifted requirement:")
 		System.out.println(v1);
@@ -127,6 +130,8 @@ class SocratesGenerator extends AbstractGenerator {
 //		w.write("delete '" + m.name + ".slx'\n")
 //		w.write("open_system(new_system('" + m.name + "'))\n");
 //		w.write("add_block('simulink/Ports & Subsystems/Subsystem','" + m.modelName + "/" + m.name + "')\n");
+		
+		w.write("delete_block('" + m.modelName + "/" + m.reqname + "')\n");
 		w.write("add_block('simulink/Commonly Used Blocks/Subsystem','" + m.modelName + "/" + m.reqname + "')\n");
 
 		w.write("delete_line('" + m.modelName + "/" + m.reqname + "', 'In1/1', 'Out1/1')\n");

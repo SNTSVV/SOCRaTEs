@@ -67,7 +67,6 @@ public class basicformulaeImpl extends MinimalEObjectImpl.Container implements b
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EObject getF()
   {
     return f;
@@ -95,7 +94,6 @@ public class basicformulaeImpl extends MinimalEObjectImpl.Container implements b
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setF(EObject newF)
   {
     if (newF != f)

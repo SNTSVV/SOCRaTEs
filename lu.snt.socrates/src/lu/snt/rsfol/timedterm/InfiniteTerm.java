@@ -84,4 +84,9 @@ public class InfiniteTerm implements TimedTerm {
 		return null;
 	}
 
+	@Override
+	public boolean refersToConstantInstant() {
+		return false;
+	}
+
 }

@@ -110,4 +110,9 @@ public class TimedTermExpression implements TimedTerm {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public boolean refersToConstantInstant() {
+		return false;
+	}
 }

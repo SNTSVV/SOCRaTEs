@@ -79,7 +79,6 @@ public class termImpl extends MinimalEObjectImpl.Container implements term
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public atom getA()
   {
     return a;
@@ -107,7 +106,6 @@ public class termImpl extends MinimalEObjectImpl.Container implements term
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setA(atom newA)
   {
     if (newA != a)
@@ -129,7 +127,6 @@ public class termImpl extends MinimalEObjectImpl.Container implements term
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public termprime getT()
   {
     return t;
@@ -157,7 +154,6 @@ public class termImpl extends MinimalEObjectImpl.Container implements term
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setT(termprime newT)
   {
     if (newT != t)

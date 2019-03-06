@@ -142,7 +142,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getInf()
   {
     return inf;
@@ -153,7 +152,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setInf(String newInf)
   {
     String oldInf = inf;
@@ -167,7 +165,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getNumber()
   {
     return number;
@@ -178,7 +175,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setNumber(String newNumber)
   {
     String oldNumber = number;
@@ -192,7 +188,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EObject getRef()
   {
     if (ref != null && ref.eIsProxy())
@@ -223,7 +218,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setRef(EObject newRef)
   {
     EObject oldRef = ref;
@@ -237,7 +231,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getOp()
   {
     return op;
@@ -248,7 +241,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setOp(String newOp)
   {
     String oldOp = op;
@@ -262,7 +254,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public value getValue()
   {
     return value;
@@ -290,7 +281,6 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setValue(value newValue)
   {
     if (newValue != value)
@@ -440,7 +430,7 @@ public class timedtermImpl extends MinimalEObjectImpl.Container implements timed
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (inf: ");
     result.append(inf);
     result.append(", number: ");

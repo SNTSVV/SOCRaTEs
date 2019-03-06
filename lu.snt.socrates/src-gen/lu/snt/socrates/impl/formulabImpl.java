@@ -79,7 +79,6 @@ public class formulabImpl extends MinimalEObjectImpl.Container implements formul
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public term getA()
   {
     return a;
@@ -107,7 +106,6 @@ public class formulabImpl extends MinimalEObjectImpl.Container implements formul
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setA(term newA)
   {
     if (newA != a)
@@ -129,7 +127,6 @@ public class formulabImpl extends MinimalEObjectImpl.Container implements formul
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formulabprime getT()
   {
     return t;
@@ -157,7 +154,6 @@ public class formulabImpl extends MinimalEObjectImpl.Container implements formul
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setT(formulabprime newT)
   {
     if (newT != t)

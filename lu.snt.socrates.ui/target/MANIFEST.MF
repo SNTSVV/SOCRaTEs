@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: lu.snt.socrates.ui
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.201902141440
+Bundle-Version: 1.0.0.201903060631
 Bundle-SymbolicName: lu.snt.socrates.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: lu.snt.socrates,lu.snt.socrates.ide,org.eclipse.xtext.ui

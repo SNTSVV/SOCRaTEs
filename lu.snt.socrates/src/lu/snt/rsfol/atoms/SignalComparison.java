@@ -100,4 +100,9 @@ public class SignalComparison implements Atom {
 		throw new IllegalArgumentException("Operation not supported");
 	}
 
+	@Override
+	public boolean refersToConstantInstant() {
+		return this.signal1.refersToConstantInstant() || this.signal2.refersToConstantInstant();
+	}
+
 }

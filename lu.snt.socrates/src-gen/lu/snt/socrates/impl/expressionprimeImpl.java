@@ -99,7 +99,6 @@ public class expressionprimeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getOp()
   {
     return op;
@@ -110,7 +109,6 @@ public class expressionprimeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setOp(String newOp)
   {
     String oldOp = op;
@@ -124,7 +122,6 @@ public class expressionprimeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expressionterm getT2()
   {
     return t2;
@@ -152,7 +149,6 @@ public class expressionprimeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setT2(expressionterm newT2)
   {
     if (newT2 != t2)
@@ -174,7 +170,6 @@ public class expressionprimeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expressionprime getF()
   {
     return f;
@@ -202,7 +197,6 @@ public class expressionprimeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setF(expressionprime newF)
   {
     if (newF != f)
@@ -333,7 +327,7 @@ public class expressionprimeImpl extends MinimalEObjectImpl.Container implements
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (op: ");
     result.append(op);
     result.append(')');

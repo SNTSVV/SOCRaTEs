@@ -88,7 +88,6 @@ public class ExpressionAtomImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EObject getExp()
   {
     return exp;
@@ -116,7 +115,6 @@ public class ExpressionAtomImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setExp(EObject newExp)
   {
     if (newExp != exp)
@@ -138,7 +136,6 @@ public class ExpressionAtomImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getOp()
   {
     return op;
@@ -149,7 +146,6 @@ public class ExpressionAtomImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setOp(String newOp)
   {
     String oldOp = op;
@@ -260,7 +256,7 @@ public class ExpressionAtomImpl extends MinimalEObjectImpl.Container implements 
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (op: ");
     result.append(op);
     result.append(')');

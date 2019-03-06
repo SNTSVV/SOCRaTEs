@@ -121,7 +121,6 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expression getExp()
   {
     return exp;
@@ -149,7 +148,6 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setExp(expression newExp)
   {
     if (newExp != exp)
@@ -171,7 +169,6 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getNumber()
   {
     return number;
@@ -182,7 +179,6 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setNumber(String newNumber)
   {
     String oldNumber = number;
@@ -196,7 +192,6 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ConstantId getRef()
   {
     if (ref != null && ref.eIsProxy())
@@ -227,7 +222,6 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setRef(ConstantId newRef)
   {
     ConstantId oldRef = ref;
@@ -241,7 +235,6 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getFloat()
   {
     return float_;
@@ -252,7 +245,6 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setFloat(String newFloat)
   {
     String oldFloat = float_;
@@ -384,7 +376,7 @@ public class valueImpl extends MinimalEObjectImpl.Container implements value
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (number: ");
     result.append(number);
     result.append(", float: ");

@@ -78,5 +78,8 @@ public class SignedExpression implements Expression {
 	public RSFOLFormula pushNegations(boolean negate) {
 		return this;
 	}
-
+	@Override
+	public boolean refersToConstantInstant() {
+		return this.exp.refersToConstantInstant();
+	}
 }

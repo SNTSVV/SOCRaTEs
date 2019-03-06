@@ -2367,9 +2367,9 @@ rule__Oracle__Group__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getOracleAccess().getNameAssignment_6()); }
-	(rule__Oracle__NameAssignment_6)
-	{ after(grammarAccess.getOracleAccess().getNameAssignment_6()); }
+	{ before(grammarAccess.getOracleAccess().getReqnameAssignment_6()); }
+	(rule__Oracle__ReqnameAssignment_6)
+	{ after(grammarAccess.getOracleAccess().getReqnameAssignment_6()); }
 )
 ;
 finally {
@@ -6471,15 +6471,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Oracle__NameAssignment_6
+rule__Oracle__ReqnameAssignment_6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getOracleAccess().getNameReqIdParserRuleCall_6_0()); }
+		{ before(grammarAccess.getOracleAccess().getReqnameReqIdParserRuleCall_6_0()); }
 		ruleReqId
-		{ after(grammarAccess.getOracleAccess().getNameReqIdParserRuleCall_6_0()); }
+		{ after(grammarAccess.getOracleAccess().getReqnameReqIdParserRuleCall_6_0()); }
 	)
 ;
 finally {

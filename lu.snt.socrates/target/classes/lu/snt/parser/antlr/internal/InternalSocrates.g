@@ -184,17 +184,17 @@ ruleOracle returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getOracleAccess().getNameReqIdParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getOracleAccess().getReqnameReqIdParserRuleCall_6_0());
 				}
-				lv_name_8_0=ruleReqId
+				lv_reqname_8_0=ruleReqId
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getOracleRule());
 					}
 					set(
 						$current,
-						"name",
-						lv_name_8_0,
+						"reqname",
+						lv_reqname_8_0,
 						"lu.snt.Socrates.ReqId");
 					afterParserOrEnumRuleCall();
 				}

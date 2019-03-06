@@ -79,7 +79,6 @@ public class existsformulaImpl extends MinimalEObjectImpl.Container implements e
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public boundterm getBound()
   {
     return bound;
@@ -107,7 +106,6 @@ public class existsformulaImpl extends MinimalEObjectImpl.Container implements e
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setBound(boundterm newBound)
   {
     if (newBound != bound)
@@ -129,7 +127,6 @@ public class existsformulaImpl extends MinimalEObjectImpl.Container implements e
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formula getExistschild()
   {
     return existschild;
@@ -157,7 +154,6 @@ public class existsformulaImpl extends MinimalEObjectImpl.Container implements e
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setExistschild(formula newExistschild)
   {
     if (newExistschild != existschild)

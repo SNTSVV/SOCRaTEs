@@ -79,7 +79,6 @@ public class expressiontermImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EObject getTerm()
   {
     return term;
@@ -107,7 +106,6 @@ public class expressiontermImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setTerm(EObject newTerm)
   {
     if (newTerm != term)
@@ -129,7 +127,6 @@ public class expressiontermImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expressiontermprime getExpprime()
   {
     return expprime;
@@ -157,7 +154,6 @@ public class expressiontermImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setExpprime(expressiontermprime newExpprime)
   {
     if (newExpprime != expprime)

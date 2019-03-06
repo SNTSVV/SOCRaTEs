@@ -97,4 +97,9 @@ public class BinaryExpression implements Expression{
 	public RSFOLFormula pushNegations(boolean negate) {
 		return this;
 	}
+
+	@Override
+	public boolean refersToConstantInstant() {
+		return leftExpression.refersToConstantInstant() || rightExpression.refersToConstantInstant();
+	}
 }

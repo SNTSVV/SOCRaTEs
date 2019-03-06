@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='lu.snt.socrates.ui' version='1.0.0.201902141440'>
+  <artifact classifier='osgi.bundle' id='lu.snt.socrates.ui' version='1.0.0.201903060631'>
     <properties size='5'>
-      <property name='artifact.size' value='21877'/>
-      <property name='download.size' value='21877'/>
+      <property name='artifact.size' value='21882'/>
+      <property name='download.size' value='21882'/>
       <property name='maven-groupId' value='lu.snt.socrates'/>
       <property name='maven-artifactId' value='lu.snt.socrates.ui'/>
       <property name='maven-version' value='1.0.0-SNAPSHOT'/>

@@ -80,4 +80,11 @@ public class Signal  implements Expression, RSFOLFormula{
 	public RSFOLFormula pushNegations(boolean negate) {
 		return this;
 	}
+
+	@Override
+	public boolean refersToConstantInstant() {
+		return this.timedTerm.refersToConstantInstant();
+	}
+	
+
 }

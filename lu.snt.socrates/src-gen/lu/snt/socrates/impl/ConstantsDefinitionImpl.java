@@ -72,7 +72,6 @@ public class ConstantsDefinitionImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EList<ConstantDefinition> getConstants()
   {
     if (constants == null)

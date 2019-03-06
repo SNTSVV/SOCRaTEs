@@ -67,7 +67,6 @@ public class CosImpl extends MinimalEObjectImpl.Container implements Cos
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expression getExp1()
   {
     return exp1;
@@ -95,7 +94,6 @@ public class CosImpl extends MinimalEObjectImpl.Container implements Cos
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setExp1(expression newExp1)
   {
     if (newExp1 != exp1)

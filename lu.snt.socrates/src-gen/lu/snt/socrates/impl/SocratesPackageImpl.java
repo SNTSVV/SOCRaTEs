@@ -330,7 +330,7 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   *
+   * 
    * <p>This method is used to initialize {@link SocratesPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -345,8 +345,7 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
     if (isInited) return (SocratesPackage)EPackage.Registry.INSTANCE.getEPackage(SocratesPackage.eNS_URI);
 
     // Obtain or create and register package
-    Object registeredSocratesPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-    SocratesPackageImpl theSocratesPackage = registeredSocratesPackage instanceof SocratesPackageImpl ? (SocratesPackageImpl)registeredSocratesPackage : new SocratesPackageImpl();
+    SocratesPackageImpl theSocratesPackage = (SocratesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SocratesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SocratesPackageImpl());
 
     isInited = true;
 
@@ -359,6 +358,7 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
     // Mark meta-data to indicate it can't be changed
     theSocratesPackage.freeze();
 
+  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(SocratesPackage.eNS_URI, theSocratesPackage);
     return theSocratesPackage;
@@ -369,7 +369,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getSocrates()
   {
     return socratesEClass;
@@ -380,7 +379,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSocrates_Oracles()
   {
     return (EReference)socratesEClass.getEStructuralFeatures().get(0);
@@ -391,7 +389,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getOracle()
   {
     return oracleEClass;
@@ -402,7 +399,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getOracle_ModelName()
   {
     return (EAttribute)oracleEClass.getEStructuralFeatures().get(0);
@@ -413,7 +409,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getOracle_Path()
   {
     return (EAttribute)oracleEClass.getEStructuralFeatures().get(1);
@@ -424,7 +419,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getOracle_Reqname()
   {
     return (EAttribute)oracleEClass.getEStructuralFeatures().get(2);
@@ -435,7 +429,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getOracle_Signdef()
   {
     return (EReference)oracleEClass.getEStructuralFeatures().get(3);
@@ -446,7 +439,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getOracle_ConstantDefinitions()
   {
     return (EReference)oracleEClass.getEStructuralFeatures().get(4);
@@ -457,7 +449,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getOracle_Requirement()
   {
     return (EReference)oracleEClass.getEStructuralFeatures().get(5);
@@ -468,7 +459,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getRequirement()
   {
     return requirementEClass;
@@ -479,7 +469,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getRequirement_Formula()
   {
     return (EReference)requirementEClass.getEStructuralFeatures().get(0);
@@ -490,7 +479,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getSignalsdefinition()
   {
     return signalsdefinitionEClass;
@@ -501,7 +489,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSignalsdefinition_Signals()
   {
     return (EReference)signalsdefinitionEClass.getEStructuralFeatures().get(0);
@@ -512,7 +499,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getConstantsDefinition()
   {
     return constantsDefinitionEClass;
@@ -523,7 +509,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getConstantsDefinition_Constants()
   {
     return (EReference)constantsDefinitionEClass.getEStructuralFeatures().get(0);
@@ -534,7 +519,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getConstantDefinition()
   {
     return constantDefinitionEClass;
@@ -545,7 +529,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getConstantDefinition_Constantid()
   {
     return (EReference)constantDefinitionEClass.getEStructuralFeatures().get(0);
@@ -556,7 +539,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getConstantDefinition_Value()
   {
     return (EAttribute)constantDefinitionEClass.getEStructuralFeatures().get(1);
@@ -567,7 +549,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getSignalID()
   {
     return signalIDEClass;
@@ -578,7 +559,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getSignalID_Name()
   {
     return (EAttribute)signalIDEClass.getEStructuralFeatures().get(0);
@@ -589,7 +569,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getConstantId()
   {
     return constantIdEClass;
@@ -600,7 +579,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getConstantId_Name()
   {
     return (EAttribute)constantIdEClass.getEStructuralFeatures().get(0);
@@ -611,7 +589,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getTvariable()
   {
     return tvariableEClass;
@@ -622,7 +599,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getTvariable_Name()
   {
     return (EAttribute)tvariableEClass.getEStructuralFeatures().get(0);
@@ -633,7 +609,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getnegationformula()
   {
     return negationformulaEClass;
@@ -644,7 +619,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getnegationformula_Negationchild()
   {
     return (EReference)negationformulaEClass.getEStructuralFeatures().get(0);
@@ -655,7 +629,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getforAllformula()
   {
     return forAllformulaEClass;
@@ -666,7 +639,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getforAllformula_Bound()
   {
     return (EReference)forAllformulaEClass.getEStructuralFeatures().get(0);
@@ -677,7 +649,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getforAllformula_Forallchild()
   {
     return (EReference)forAllformulaEClass.getEStructuralFeatures().get(1);
@@ -688,7 +659,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getexistsformula()
   {
     return existsformulaEClass;
@@ -699,7 +669,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexistsformula_Bound()
   {
     return (EReference)existsformulaEClass.getEStructuralFeatures().get(0);
@@ -710,7 +679,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexistsformula_Existschild()
   {
     return (EReference)existsformulaEClass.getEStructuralFeatures().get(1);
@@ -721,7 +689,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getformula()
   {
     return formulaEClass;
@@ -732,7 +699,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getformula_F()
   {
     return (EReference)formulaEClass.getEStructuralFeatures().get(0);
@@ -743,7 +709,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getformulab()
   {
     return formulabEClass;
@@ -754,7 +719,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getformulab_A()
   {
     return (EReference)formulabEClass.getEStructuralFeatures().get(0);
@@ -765,7 +729,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getformulab_T()
   {
     return (EReference)formulabEClass.getEStructuralFeatures().get(1);
@@ -776,7 +739,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getformulabprime()
   {
     return formulabprimeEClass;
@@ -787,7 +749,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getformulabprime_Op()
   {
     return (EAttribute)formulabprimeEClass.getEStructuralFeatures().get(0);
@@ -798,7 +759,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getformulabprime_T2()
   {
     return (EReference)formulabprimeEClass.getEStructuralFeatures().get(1);
@@ -809,7 +769,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getformulabprime_F()
   {
     return (EReference)formulabprimeEClass.getEStructuralFeatures().get(2);
@@ -820,7 +779,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getterm()
   {
     return termEClass;
@@ -831,7 +789,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getterm_A()
   {
     return (EReference)termEClass.getEStructuralFeatures().get(0);
@@ -842,7 +799,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getterm_T()
   {
     return (EReference)termEClass.getEStructuralFeatures().get(1);
@@ -853,7 +809,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass gettermprime()
   {
     return termprimeEClass;
@@ -864,7 +819,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute gettermprime_Op()
   {
     return (EAttribute)termprimeEClass.getEStructuralFeatures().get(0);
@@ -875,7 +829,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference gettermprime_T()
   {
     return (EReference)termprimeEClass.getEStructuralFeatures().get(1);
@@ -886,7 +839,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference gettermprime_F1()
   {
     return (EReference)termprimeEClass.getEStructuralFeatures().get(2);
@@ -897,7 +849,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getexpression()
   {
     return expressionEClass;
@@ -908,7 +859,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpression_Expb()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(0);
@@ -919,7 +869,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getexpressionb()
   {
     return expressionbEClass;
@@ -930,7 +879,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpressionb_Term()
   {
     return (EReference)expressionbEClass.getEStructuralFeatures().get(0);
@@ -941,7 +889,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpressionb_Expprime()
   {
     return (EReference)expressionbEClass.getEStructuralFeatures().get(1);
@@ -952,7 +899,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getexpressionprime()
   {
     return expressionprimeEClass;
@@ -963,7 +909,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getexpressionprime_Op()
   {
     return (EAttribute)expressionprimeEClass.getEStructuralFeatures().get(0);
@@ -974,7 +919,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpressionprime_T2()
   {
     return (EReference)expressionprimeEClass.getEStructuralFeatures().get(1);
@@ -985,7 +929,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpressionprime_F()
   {
     return (EReference)expressionprimeEClass.getEStructuralFeatures().get(2);
@@ -996,7 +939,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getexpressionterm()
   {
     return expressiontermEClass;
@@ -1007,7 +949,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpressionterm_Term()
   {
     return (EReference)expressiontermEClass.getEStructuralFeatures().get(0);
@@ -1018,7 +959,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpressionterm_Expprime()
   {
     return (EReference)expressiontermEClass.getEStructuralFeatures().get(1);
@@ -1029,7 +969,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getexpressiontermprime()
   {
     return expressiontermprimeEClass;
@@ -1040,7 +979,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getexpressiontermprime_Op()
   {
     return (EAttribute)expressiontermprimeEClass.getEStructuralFeatures().get(0);
@@ -1051,7 +989,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpressiontermprime_T2()
   {
     return (EReference)expressiontermprimeEClass.getEStructuralFeatures().get(1);
@@ -1062,7 +999,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getexpressiontermprime_F()
   {
     return (EReference)expressiontermprimeEClass.getEStructuralFeatures().get(2);
@@ -1073,7 +1009,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getExpressionAtom()
   {
     return expressionAtomEClass;
@@ -1084,7 +1019,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getExpressionAtom_Exp()
   {
     return (EReference)expressionAtomEClass.getEStructuralFeatures().get(0);
@@ -1095,7 +1029,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getExpressionAtom_Op()
   {
     return (EAttribute)expressionAtomEClass.getEStructuralFeatures().get(1);
@@ -1106,7 +1039,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getBasicexpression()
   {
     return basicexpressionEClass;
@@ -1117,7 +1049,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getBasicexpression_Exp()
   {
     return (EReference)basicexpressionEClass.getEStructuralFeatures().get(0);
@@ -1128,7 +1059,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getbasicformulae()
   {
     return basicformulaeEClass;
@@ -1139,7 +1069,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getbasicformulae_F()
   {
     return (EReference)basicformulaeEClass.getEStructuralFeatures().get(0);
@@ -1150,7 +1079,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getboundterm()
   {
     return boundtermEClass;
@@ -1161,7 +1089,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getboundterm_Ref()
   {
     return (EReference)boundtermEClass.getEStructuralFeatures().get(0);
@@ -1172,7 +1099,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getboundterm_L()
   {
     return (EAttribute)boundtermEClass.getEStructuralFeatures().get(1);
@@ -1183,7 +1109,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getboundterm_Leftbound()
   {
     return (EReference)boundtermEClass.getEStructuralFeatures().get(2);
@@ -1194,7 +1119,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getboundterm_Rightbound()
   {
     return (EReference)boundtermEClass.getEStructuralFeatures().get(3);
@@ -1205,7 +1129,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getboundterm_R()
   {
     return (EAttribute)boundtermEClass.getEStructuralFeatures().get(4);
@@ -1216,7 +1139,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass gettimedterm()
   {
     return timedtermEClass;
@@ -1227,7 +1149,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute gettimedterm_Inf()
   {
     return (EAttribute)timedtermEClass.getEStructuralFeatures().get(0);
@@ -1238,7 +1159,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute gettimedterm_Number()
   {
     return (EAttribute)timedtermEClass.getEStructuralFeatures().get(1);
@@ -1249,7 +1169,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference gettimedterm_Ref()
   {
     return (EReference)timedtermEClass.getEStructuralFeatures().get(2);
@@ -1260,7 +1179,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute gettimedterm_Op()
   {
     return (EAttribute)timedtermEClass.getEStructuralFeatures().get(3);
@@ -1271,7 +1189,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference gettimedterm_Value()
   {
     return (EReference)timedtermEClass.getEStructuralFeatures().get(4);
@@ -1282,7 +1199,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getatom()
   {
     return atomEClass;
@@ -1293,7 +1209,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getatom_F()
   {
     return (EReference)atomEClass.getEStructuralFeatures().get(0);
@@ -1304,7 +1219,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getatom_S1()
   {
     return (EReference)atomEClass.getEStructuralFeatures().get(1);
@@ -1315,7 +1229,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getatom_Op()
   {
     return (EAttribute)atomEClass.getEStructuralFeatures().get(2);
@@ -1326,7 +1239,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getatom_S2()
   {
     return (EReference)atomEClass.getEStructuralFeatures().get(3);
@@ -1337,7 +1249,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getvalue()
   {
     return valueEClass;
@@ -1348,7 +1259,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getvalue_Exp()
   {
     return (EReference)valueEClass.getEStructuralFeatures().get(0);
@@ -1359,7 +1269,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getvalue_Number()
   {
     return (EAttribute)valueEClass.getEStructuralFeatures().get(1);
@@ -1370,7 +1279,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getvalue_Ref()
   {
     return (EReference)valueEClass.getEStructuralFeatures().get(2);
@@ -1381,7 +1289,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getvalue_Float()
   {
     return (EAttribute)valueEClass.getEStructuralFeatures().get(3);
@@ -1392,7 +1299,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getSignal()
   {
     return signalEClass;
@@ -1403,7 +1309,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSignal_Signalid()
   {
     return (EReference)signalEClass.getEStructuralFeatures().get(0);
@@ -1414,7 +1319,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSignal_Timdedterm()
   {
     return (EReference)signalEClass.getEStructuralFeatures().get(1);
@@ -1425,7 +1329,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getSignal_Indx1()
   {
     return (EAttribute)signalEClass.getEStructuralFeatures().get(2);
@@ -1436,7 +1339,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getSignal_Indx2()
   {
     return (EAttribute)signalEClass.getEStructuralFeatures().get(3);
@@ -1447,7 +1349,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getAbsEXP()
   {
     return absEXPEClass;
@@ -1458,7 +1359,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getAbsEXP_Exp1()
   {
     return (EReference)absEXPEClass.getEStructuralFeatures().get(0);
@@ -1469,7 +1369,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getNormexp()
   {
     return normexpEClass;
@@ -1480,7 +1379,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getNormexp_Exp1()
   {
     return (EReference)normexpEClass.getEStructuralFeatures().get(0);
@@ -1491,7 +1389,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getSin()
   {
     return sinEClass;
@@ -1502,7 +1399,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSin_Exp1()
   {
     return (EReference)sinEClass.getEStructuralFeatures().get(0);
@@ -1513,7 +1409,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getCos()
   {
     return cosEClass;
@@ -1524,7 +1419,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getCos_Exp1()
   {
     return (EReference)cosEClass.getEStructuralFeatures().get(0);
@@ -1535,7 +1429,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getSqrt()
   {
     return sqrtEClass;
@@ -1546,7 +1439,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSqrt_Exp1()
   {
     return (EReference)sqrtEClass.getEStructuralFeatures().get(0);
@@ -1557,7 +1449,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public SocratesFactory getSocratesFactory()
   {
     return (SocratesFactory)getEFactoryInstance();

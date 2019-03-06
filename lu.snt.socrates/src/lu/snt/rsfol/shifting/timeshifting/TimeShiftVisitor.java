@@ -1,8 +1,6 @@
 package lu.snt.rsfol.shifting.timeshifting;
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import lu.snt.rsfol.Signal;
 import lu.snt.rsfol.SignalID;
@@ -39,25 +37,9 @@ public class TimeShiftVisitor implements RSFOLVisitor<RSFOLFormula> {
 
 	public TimeShiftVisitor(RSFOLFormula formula) {
 
-		this.shiftValue = new HashMap<>();
-		this.timeShiftingmap = formula.accept(new GetTimeShiftingDt());
+		this.shiftValue = formula.accept(new GetTimeShiftingDt());
 		System.out.println(this.timeShiftingmap);
 		
-		for (Entry<RSFOLFormula, Float> e : timeShiftingmap.entrySet()) {
-			
-			if(e.getKey() instanceof Tvariable) {
-				this.shiftValue.put(((Tvariable)e.getKey()), timeShiftingmap.get(e.getKey()));
-			}
-/*			if (e.getKey() instanceof ForallFormula) {
-				ForallFormula f = (ForallFormula) e.getKey();
-				this.shiftValue.put(f.getBound().getTvariable(), this.timeShiftingmap.get(f.getBound().getTvariable()));
-			}
-			if(e.getKey() instanceof ExistsFormula) {
-				ExistsFormula f = (ExistsFormula) e.getKey();
-				this.shiftValue.put(f.getBound().getTvariable(), this.timeShiftingmap.get(f.getBound().getTvariable()));
-				
-			}*/
-		}
 		System.out.println(this.shiftValue);
 	}
 

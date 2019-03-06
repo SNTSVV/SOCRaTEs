@@ -105,6 +105,11 @@ public class ExpressionComparison implements Atom{
 	
 	}
 
+	@Override
+	public boolean refersToConstantInstant() {
+		return expression1.refersToConstantInstant() || expression2.refersToConstantInstant();
+	}
+
 	
 
 	

@@ -67,7 +67,6 @@ public class expressionImpl extends MinimalEObjectImpl.Container implements expr
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expressionb getExpb()
   {
     return expb;
@@ -95,7 +94,6 @@ public class expressionImpl extends MinimalEObjectImpl.Container implements expr
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setExpb(expressionb newExpb)
   {
     if (newExpb != expb)

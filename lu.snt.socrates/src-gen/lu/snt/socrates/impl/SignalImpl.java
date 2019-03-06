@@ -121,7 +121,6 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public SignalID getSignalid()
   {
     if (signalid != null && signalid.eIsProxy())
@@ -152,7 +151,6 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setSignalid(SignalID newSignalid)
   {
     SignalID oldSignalid = signalid;
@@ -166,7 +164,6 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public timedterm getTimdedterm()
   {
     return timdedterm;
@@ -194,7 +191,6 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setTimdedterm(timedterm newTimdedterm)
   {
     if (newTimdedterm != timdedterm)
@@ -216,7 +212,6 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getIndx1()
   {
     return indx1;
@@ -227,7 +222,6 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setIndx1(String newIndx1)
   {
     String oldIndx1 = indx1;
@@ -241,7 +235,6 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getIndx2()
   {
     return indx2;
@@ -252,7 +245,6 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setIndx2(String newIndx2)
   {
     String oldIndx2 = indx2;
@@ -384,7 +376,7 @@ public class SignalImpl extends MinimalEObjectImpl.Container implements Signal
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (indx1: ");
     result.append(indx1);
     result.append(", indx2: ");

@@ -99,7 +99,6 @@ public class termprimeImpl extends MinimalEObjectImpl.Container implements termp
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getOp()
   {
     return op;
@@ -110,7 +109,6 @@ public class termprimeImpl extends MinimalEObjectImpl.Container implements termp
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setOp(String newOp)
   {
     String oldOp = op;
@@ -124,7 +122,6 @@ public class termprimeImpl extends MinimalEObjectImpl.Container implements termp
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public term getT()
   {
     return t;
@@ -152,7 +149,6 @@ public class termprimeImpl extends MinimalEObjectImpl.Container implements termp
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setT(term newT)
   {
     if (newT != t)
@@ -174,7 +170,6 @@ public class termprimeImpl extends MinimalEObjectImpl.Container implements termp
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public termprime getF1()
   {
     return f1;
@@ -202,7 +197,6 @@ public class termprimeImpl extends MinimalEObjectImpl.Container implements termp
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setF1(termprime newF1)
   {
     if (newF1 != f1)
@@ -333,7 +327,7 @@ public class termprimeImpl extends MinimalEObjectImpl.Container implements termp
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (op: ");
     result.append(op);
     result.append(')');

@@ -64,4 +64,9 @@ public class Value implements Expression {
 		return this;
 	}
 
+	@Override
+	public boolean refersToConstantInstant() {
+		return false;
+	}
+
 }

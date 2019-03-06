@@ -78,4 +78,9 @@ public class TimedTermNumber implements TimedTerm {
 		return null;
 	}
 
+	@Override
+	public boolean refersToConstantInstant() {
+		return true;
+	}
+
 }

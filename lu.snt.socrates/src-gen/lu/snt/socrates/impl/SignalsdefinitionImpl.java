@@ -72,7 +72,6 @@ public class SignalsdefinitionImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EList<SignalID> getSignals()
   {
     if (signals == null)

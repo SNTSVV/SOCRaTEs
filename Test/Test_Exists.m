@@ -3,6 +3,7 @@
 % shifted requirement
 % (for all t:[0.0,50.0].(e(t+0.0)>1.0))
 % By running the simulator up to t_fin you compute the results up to t_fin-0.0 due to the shifting procedure
+delete_block('Test/Test_Exists')
 add_block('simulink/Commonly Used Blocks/Subsystem','Test/Test_Exists')
 delete_line('Test/Test_Exists', 'In1/1', 'Out1/1')
 delete_block('Test/Test_Exists/In1')

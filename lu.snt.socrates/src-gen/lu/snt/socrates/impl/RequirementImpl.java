@@ -67,7 +67,6 @@ public class RequirementImpl extends MinimalEObjectImpl.Container implements Req
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formula getFormula()
   {
     return formula;
@@ -95,7 +94,6 @@ public class RequirementImpl extends MinimalEObjectImpl.Container implements Req
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setFormula(formula newFormula)
   {
     if (newFormula != formula)

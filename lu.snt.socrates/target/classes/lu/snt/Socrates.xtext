@@ -13,7 +13,7 @@ Oracle:
 	'Oracle'
 	'ModelName:' modelName=ID ';'
 	('Path:' path=PATH ';')?
-	'ID:' name=ReqId ';'
+	'ID:' reqname=ReqId ';'
 	signdef=Signalsdefinition
 	(constantDefinitions=ConstantsDefinition)?
 	requirement=Requirement;

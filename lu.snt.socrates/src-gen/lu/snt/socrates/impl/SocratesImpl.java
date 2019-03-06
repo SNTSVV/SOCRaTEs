@@ -72,7 +72,6 @@ public class SocratesImpl extends MinimalEObjectImpl.Container implements Socrat
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EList<Oracle> getOracles()
   {
     if (oracles == null)

@@ -110,7 +110,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Socrates createSocrates()
   {
     SocratesImpl socrates = new SocratesImpl();
@@ -122,7 +121,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Oracle createOracle()
   {
     OracleImpl oracle = new OracleImpl();
@@ -134,7 +132,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Requirement createRequirement()
   {
     RequirementImpl requirement = new RequirementImpl();
@@ -146,7 +143,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Signalsdefinition createSignalsdefinition()
   {
     SignalsdefinitionImpl signalsdefinition = new SignalsdefinitionImpl();
@@ -158,7 +154,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ConstantsDefinition createConstantsDefinition()
   {
     ConstantsDefinitionImpl constantsDefinition = new ConstantsDefinitionImpl();
@@ -170,7 +165,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ConstantDefinition createConstantDefinition()
   {
     ConstantDefinitionImpl constantDefinition = new ConstantDefinitionImpl();
@@ -182,7 +176,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public SignalID createSignalID()
   {
     SignalIDImpl signalID = new SignalIDImpl();
@@ -194,7 +187,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ConstantId createConstantId()
   {
     ConstantIdImpl constantId = new ConstantIdImpl();
@@ -206,7 +198,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Tvariable createTvariable()
   {
     TvariableImpl tvariable = new TvariableImpl();
@@ -218,7 +209,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public negationformula createnegationformula()
   {
     negationformulaImpl negationformula = new negationformulaImpl();
@@ -230,7 +220,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public forAllformula createforAllformula()
   {
     forAllformulaImpl forAllformula = new forAllformulaImpl();
@@ -242,7 +231,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public existsformula createexistsformula()
   {
     existsformulaImpl existsformula = new existsformulaImpl();
@@ -254,7 +242,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formula createformula()
   {
     formulaImpl formula = new formulaImpl();
@@ -266,7 +253,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formulab createformulab()
   {
     formulabImpl formulab = new formulabImpl();
@@ -278,7 +264,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formulabprime createformulabprime()
   {
     formulabprimeImpl formulabprime = new formulabprimeImpl();
@@ -290,7 +275,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public term createterm()
   {
     termImpl term = new termImpl();
@@ -302,7 +286,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public termprime createtermprime()
   {
     termprimeImpl termprime = new termprimeImpl();
@@ -314,7 +297,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expression createexpression()
   {
     expressionImpl expression = new expressionImpl();
@@ -326,7 +308,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expressionb createexpressionb()
   {
     expressionbImpl expressionb = new expressionbImpl();
@@ -338,7 +319,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expressionprime createexpressionprime()
   {
     expressionprimeImpl expressionprime = new expressionprimeImpl();
@@ -350,7 +330,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expressionterm createexpressionterm()
   {
     expressiontermImpl expressionterm = new expressiontermImpl();
@@ -362,7 +341,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public expressiontermprime createexpressiontermprime()
   {
     expressiontermprimeImpl expressiontermprime = new expressiontermprimeImpl();
@@ -374,7 +352,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ExpressionAtom createExpressionAtom()
   {
     ExpressionAtomImpl expressionAtom = new ExpressionAtomImpl();
@@ -386,7 +363,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Basicexpression createBasicexpression()
   {
     BasicexpressionImpl basicexpression = new BasicexpressionImpl();
@@ -398,7 +374,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public basicformulae createbasicformulae()
   {
     basicformulaeImpl basicformulae = new basicformulaeImpl();
@@ -410,7 +385,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public boundterm createboundterm()
   {
     boundtermImpl boundterm = new boundtermImpl();
@@ -422,7 +396,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public timedterm createtimedterm()
   {
     timedtermImpl timedterm = new timedtermImpl();
@@ -434,7 +407,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public atom createatom()
   {
     atomImpl atom = new atomImpl();
@@ -446,7 +418,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public value createvalue()
   {
     valueImpl value = new valueImpl();
@@ -458,7 +429,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Signal createSignal()
   {
     SignalImpl signal = new SignalImpl();
@@ -470,7 +440,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public AbsEXP createAbsEXP()
   {
     AbsEXPImpl absEXP = new AbsEXPImpl();
@@ -482,7 +451,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Normexp createNormexp()
   {
     NormexpImpl normexp = new NormexpImpl();
@@ -494,7 +462,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Sin createSin()
   {
     SinImpl sin = new SinImpl();
@@ -506,7 +473,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Cos createCos()
   {
     CosImpl cos = new CosImpl();
@@ -518,7 +484,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Sqrt createSqrt()
   {
     SqrtImpl sqrt = new SqrtImpl();
@@ -530,7 +495,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public SocratesPackage getSocratesPackage()
   {
     return (SocratesPackage)getEPackage();

@@ -67,7 +67,6 @@ public class negationformulaImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formula getNegationchild()
   {
     return negationchild;
@@ -95,7 +94,6 @@ public class negationformulaImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setNegationchild(formula newNegationchild)
   {
     if (newNegationchild != negationchild)

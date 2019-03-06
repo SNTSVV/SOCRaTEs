@@ -79,7 +79,6 @@ public class forAllformulaImpl extends MinimalEObjectImpl.Container implements f
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public boundterm getBound()
   {
     return bound;
@@ -107,7 +106,6 @@ public class forAllformulaImpl extends MinimalEObjectImpl.Container implements f
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setBound(boundterm newBound)
   {
     if (newBound != bound)
@@ -129,7 +127,6 @@ public class forAllformulaImpl extends MinimalEObjectImpl.Container implements f
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public formula getForallchild()
   {
     return forallchild;
@@ -157,7 +154,6 @@ public class forAllformulaImpl extends MinimalEObjectImpl.Container implements f
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setForallchild(formula newForallchild)
   {
     if (newForallchild != forallchild)

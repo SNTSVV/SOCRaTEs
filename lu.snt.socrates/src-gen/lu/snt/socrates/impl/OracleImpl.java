@@ -154,7 +154,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getModelName()
   {
     return modelName;
@@ -165,7 +164,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setModelName(String newModelName)
   {
     String oldModelName = modelName;
@@ -179,7 +177,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getPath()
   {
     return path;
@@ -190,7 +187,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setPath(String newPath)
   {
     String oldPath = path;
@@ -204,7 +200,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getReqname()
   {
     return reqname;
@@ -215,7 +210,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setReqname(String newReqname)
   {
     String oldReqname = reqname;
@@ -229,7 +223,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Signalsdefinition getSigndef()
   {
     return signdef;
@@ -257,7 +250,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setSigndef(Signalsdefinition newSigndef)
   {
     if (newSigndef != signdef)
@@ -279,7 +271,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ConstantsDefinition getConstantDefinitions()
   {
     return constantDefinitions;
@@ -307,7 +298,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setConstantDefinitions(ConstantsDefinition newConstantDefinitions)
   {
     if (newConstantDefinitions != constantDefinitions)
@@ -329,7 +319,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Requirement getRequirement()
   {
     return requirement;
@@ -357,7 +346,6 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setRequirement(Requirement newRequirement)
   {
     if (newRequirement != requirement)
@@ -520,7 +508,7 @@ public class OracleImpl extends MinimalEObjectImpl.Container implements Oracle
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (modelName: ");
     result.append(modelName);
     result.append(", path: ");

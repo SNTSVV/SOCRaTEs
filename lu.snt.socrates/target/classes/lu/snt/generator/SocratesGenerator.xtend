@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import lu.snt.rsfol.visitors.RSFOL2MaximumExistBound
+import lu.snt.rsfol.preprocessing.Preprocess
 
 /**
  * Generates code from your model files on save.
@@ -50,10 +52,10 @@ class SocratesGenerator extends AbstractGenerator {
 
 			mapModelNumReq.put(o.modelName, mapModelNumReq.get(o.modelName) + 1);
 			System.out.println(o.modelName)
-			System.out.println(o.name);
+			System.out.println(o.reqname);
 
 			writer.append(o.modelName + ",");
-			writer.append(o.name + ",");
+			writer.append(o.reqname + ",");
 
 			val startTime = System.nanoTime();
 
@@ -90,10 +92,11 @@ class SocratesGenerator extends AbstractGenerator {
 		}
 		val vpushed=voriginal.accept(new RSFOLPushNegations(false));
 		
-		
+		val fafterpushing = vpushed.accept(new Preprocess());
 
-		val t1=new TimeShiftVisitor(vpushed);
-		val v1 = vpushed.accept(t1);
+		val t1=new TimeShiftVisitor(fafterpushing);
+		val v1=fafterpushing.accept(t1);
+		
 
 		println("Time shifted requirement:")
 		System.out.println(v1);
@@ -127,29 +130,35 @@ class SocratesGenerator extends AbstractGenerator {
 //		w.write("delete '" + m.name + ".slx'\n")
 //		w.write("open_system(new_system('" + m.name + "'))\n");
 //		w.write("add_block('simulink/Ports & Subsystems/Subsystem','" + m.modelName + "/" + m.name + "')\n");
-		w.write("add_block('simulink/Commonly Used Blocks/Subsystem','" + m.modelName + "/" + m.name + "')\n");
+		
+		w.write("delete_block('" + m.modelName + "/" + m.reqname + "')\n");
+		w.write("add_block('simulink/Commonly Used Blocks/Subsystem','" + m.modelName + "/" + m.reqname + "')\n");
 
-		w.write("delete_line('" + m.modelName + "/" + m.name + "', 'In1/1', 'Out1/1')\n");
+		w.write("delete_line('" + m.modelName + "/" + m.reqname + "', 'In1/1', 'Out1/1')\n");
 
-		w.write("delete_block('" + m.modelName + "/" + m.name + "/In1')\n");
-		w.write("delete_block('" + m.modelName + "/" + m.name + "/Out1')\n");
+		w.write("delete_block('" + m.modelName + "/" + m.reqname + "/In1')\n");
+		w.write("delete_block('" + m.modelName + "/" + m.reqname + "/Out1')\n");
 
 		// updates blocks and connections
 		writer.write(v2.accept(new RSFOL2NumberOfBlocks()) + ",");
 		writer.write(v2.accept(new RSFOL2NumberOfConnections()) + ",");
 		writer.write(v2.accept(new RSFOL2Size())+",");
 		
-		val String line=v2.accept(new RSFOL2Simulink(m.modelName, m.name));
+		val String line=v2.accept(new RSFOL2Simulink(m.modelName, m.reqname));
+		
+		val existupperbound=v2.accept(new RSFOL2MaximumExistBound());
+		
+		
 		w.write(line);
 
 		w.write("% miscellaneous\n")
-		w.write("add_block('simulink/Ports & Subsystems/Out1', '" + m.modelName + "/" + m.name + "/OutRes')\n")
+		w.write("add_block('simulink/Ports & Subsystems/Out1', '" + m.modelName + "/" + m.reqname + "/OutRes')\n")
 
-		w.write("add_line('" + m.modelName + "/" + m.name + "', '" + v2.hashCode + "/1', 'OutRes/1')\n");
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "/1', 'OutRes/1')\n");
 		w.write(
-			"add_block('simulink/Commonly Used Blocks/Constant', '" + m.modelName + "/" + m.name + "/" + v2.hashCode +
+			"add_block('simulink/Commonly Used Blocks/Constant', '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode +
 				"finalone')\n");
-		w.write("set_param('" + m.modelName + "/" + m.name + "/" + v2.hashCode + "finalone', 'Value', '1')\n");
+		w.write("set_param('" + m.modelName + "/" + m.reqname + "/" + v2.hashCode + "finalone', 'Value', '1')\n");
 
 		// counting time
 		// checking that time is over
@@ -159,46 +168,79 @@ class SocratesGenerator extends AbstractGenerator {
 			(formulaSize+mapModelRequirementSize.get(m.modelName))
 		);
 
-		w.append("add_block('simulink/Ports & Subsystems/In1','" + m.modelName + "/" + m.name + "/tollerablerisk')\n");
+		w.append("add_block('simulink/Ports & Subsystems/In1','" + m.modelName + "/" + m.reqname + "/tollerablerisk')\n");
 
 		w.write(
-			"add_block('simulink/Logic and Bit Operations/Relational Operator', '" + m.modelName + "/" + m.name + "/" +
+			"add_block('simulink/Logic and Bit Operations/Relational Operator', '" + m.modelName + "/" + m.reqname + "/" +
 				v2.hashCode + "timespan')\n");
-		w.write("set_param('" +  m.modelName + "/" + m.name + "/" +
+		w.write("set_param('" +  m.modelName + "/" + m.reqname + "/" +
 				v2.hashCode + "timespan', 'Operator', '>=')\n");
 
-		w.write("add_line('" + m.modelName + "/" + m.name + "', 'tollerablerisk/1', '" + v2.hashCode +
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', 'tollerablerisk/1', '" + v2.hashCode +
 			"timespan/1')\n");
 
-		w.write("add_line('" + m.modelName + "/" + m.name + "', '" + v2.hashCode + "/1', '" + v2.hashCode +
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "/1', '" + v2.hashCode +
 			"timespan/2')\n");
 
 		// creating the switch
-		w.write("add_block('simulink/Signal Routing/Switch', '" + m.modelName + "/" + m.name + "/" + v2.hashCode +
+		w.write("add_block('simulink/Signal Routing/Switch', '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode +
 			"Switchfinal')\n");
-		w.write("set_param('"+ m.modelName + "/" + m.name + "/" + v2.hashCode + "Switchfinal', 'Criteria', 'u2 > Threshold')\n");
+		w.write("set_param('"+ m.modelName + "/" + m.reqname + "/" + v2.hashCode + "Switchfinal', 'Criteria', 'u2 > Threshold')\n");
 
 		w.write(
-			"add_block('simulink/Commonly Used Blocks/Constant', '" + m.modelName + "/" + m.name + "/" + v2.hashCode +
+			"add_block('simulink/Commonly Used Blocks/Constant', '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode +
 				"finalzero')\n");
 
-		w.write("set_param('" + m.modelName + "/" + m.name + "/" + v2.hashCode + "finalzero', 'Value', '0')\n");
-		w.write("add_line('" + m.modelName + "/" + m.name + "', '" + v2.hashCode + "finalzero/1', '" + v2.hashCode +
+		w.write("set_param('" + m.modelName + "/" + m.reqname + "/" + v2.hashCode + "finalzero', 'Value', '0')\n");
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "finalzero/1', '" + v2.hashCode +
 			"Switchfinal/3')\n");
-		w.write("add_line('" + m.modelName + "/" + m.name + "', '" + v2.hashCode + "timespan/1', '" + v2.hashCode +
-			"Switchfinal/2')\n");
-		w.write("add_line('" + m.modelName + "/" + m.name + "', '" + v2.hashCode + "finalone/1', '" + v2.hashCode +
-			"Switchfinal/1')\n");
+			
+
+		w.write("add_block('simulink/Signal Routing/Switch', '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode +
+			"Switchexists')\n");
+		w.write("set_param('"+ m.modelName + "/" + m.reqname + "/" + v2.hashCode + "Switchexists', 'Criteria', 'u2 > Threshold')\n");
+
+		w.write("add_block('simulink/Commonly Used Blocks/Constant', '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode + "timec')\n");
+		w.write("add_block('simulink/Commonly Used Blocks/Integrator',  '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode + "timeintegrator')\n");
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "timec/1', '" + v2.hashCode + "timeintegrator/1')\n");
+
+		w.write("add_block('simulink/Commonly Used Blocks/Constant', '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode + "existupperbound')\n");
+		w.write("set_param('" + m.modelName + "/" + m.reqname + "/" + v2.hashCode + "existupperbound', 'Value', '"+existupperbound+"')\n");		
+
+		w.write(
+			"add_block('simulink/Logic and Bit Operations/Relational Operator', '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode + "stoppingenables')\n");
+		w.write("set_param('" +  m.modelName + "/" + m.reqname + "/" + v2.hashCode + "stoppingenables', 'Operator', '>=')\n");
+
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "','" + v2.hashCode + "timeintegrator/1','" + v2.hashCode + "stoppingenables/1')\n");
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "','"  + v2.hashCode + "existupperbound/1','" + v2.hashCode + "stoppingenables/2')\n");
 		
-		w.write("add_block('simulink/Sinks/To Workspace','"+m.modelName+ "/" + m.name +"/stoppingvalue"+m.name+"')\n");
-		w.write("set_param('"+m.modelName + "/" + m.name + "/stoppingvalue"+m.name+"','MaxDataPoints','1')\n");
-		w.write("set_param('"+m.modelName + "/" + m.name + "/stoppingvalue"+m.name+"','VariableName','result_"+m.name+"')\n");
-		w.write("add_line('" + m.modelName + "/" + m.name + "', '" + v2.hashCode + "/1', 'stoppingvalue"+m.name+"/1')\n");
+				
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "stoppingenables/1', '" + v2.hashCode +
+			"Switchexists/2')\n");
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "finalzero/1', '" + v2.hashCode +
+			"Switchexists/3')\n");
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "timespan/1', '" + v2.hashCode +
+			"Switchexists/1')\n");
+		
+			
+			
+		
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "finalone/1', '" + v2.hashCode +
+			"Switchfinal/1')\n");
+	
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "Switchexists/1', '" + v2.hashCode +
+			"Switchfinal/2')\n");
+		
+		
+		w.write("add_block('simulink/Sinks/To Workspace','"+m.modelName+ "/" + m.reqname +"/stoppingvalue"+m.reqname+"')\n");
+		w.write("set_param('"+m.modelName + "/" + m.reqname + "/stoppingvalue"+m.reqname+"','MaxDataPoints','1')\n");
+		w.write("set_param('"+m.modelName + "/" + m.reqname + "/stoppingvalue"+m.reqname+"','VariableName','result_"+m.reqname+"')\n");
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "/1', 'stoppingvalue"+m.reqname+"/1')\n");
 			
 		// creating the stopping block
-		w.write("add_block('simulink/Sinks/Stop Simulation', '" + m.modelName + "/" + m.name + "/" + v2.hashCode +
+		w.write("add_block('simulink/Sinks/Stop Simulation', '" + m.modelName + "/" + m.reqname + "/" + v2.hashCode +
 			"stop')\n");
-		w.write("add_line('" + m.modelName + "/" + m.name + "', '" + v2.hashCode + "Switchfinal/1', '" + v2.hashCode +
+		w.write("add_line('" + m.modelName + "/" + m.reqname + "', '" + v2.hashCode + "Switchfinal/1', '" + v2.hashCode +
 			"stop/1')\n");
 		
 		w.write("% connecting the model and the requirement \n");
@@ -206,20 +248,19 @@ class SocratesGenerator extends AbstractGenerator {
 		var num=1;
 		for(s: v2.accept(new RSFOLGetSignals())){
 			w.write("set_param('"+m.modelName + "/Model/"+s.name+"','Port','"+num+"')\n");
-			w.write("set_param('"+m.modelName + "/" + m.name + "/"+s.name+"','Port','"+num+"')\n");
-			w.write("add_line('"+m.modelName + "', 'Model/"+ num+"','"+ m.name + "/"+num+"')\n");
-
+			w.write("set_param('"+m.modelName + "/" + m.reqname + "/"+s.name+"','Port','"+num+"')\n");
+			w.write("add_line('"+m.modelName + "', 'Model/"+ num+"','"+ m.reqname + "/"+num+"')\n");
 			
 			num=num+1;
 		}
-		w.write("add_block('simulink/Sources/Constant','"+m.modelName+"/tollerablerisk"+m.name+"')\n");
-		w.write("set_param('"+m.modelName +"/tollerablerisk"+m.name+"','Value','tollerablerisk"+m.name+"')\n");
-		w.write("add_line('"+m.modelName + "', 'tollerablerisk"+m.name+"/1','"+m.name+"/"+ num+"')\n");
+		w.write("add_block('simulink/Sources/Constant','"+m.modelName+"/tollerablerisk"+m.reqname+"')\n");
+		w.write("set_param('"+m.modelName +"/tollerablerisk"+m.reqname+"','Value','tollerablerisk"+m.reqname+"')\n");
+		w.write("add_line('"+m.modelName + "', 'tollerablerisk"+m.reqname+"/1','"+m.reqname+"/"+ num+"')\n");
 	
-		w.write("add_block('simulink/Sinks/To Workspace','"+m.modelName+"/outsignal"+m.name+"')\n");
-		w.write("set_param('"+m.modelName + "/outsignal" + m.name + "','MaxDataPoints','1')\n");
-		w.write("set_param('"+m.modelName+"/outsignal"+m.name+"','Variablename','out_"+m.name+"')\n");
-		w.write("add_line('"+m.modelName + "', '"+m.name+"/1','outsignal"+m.name+"/1')\n");
+		w.write("add_block('simulink/Sinks/To Workspace','"+m.modelName+"/outsignal"+m.reqname+"')\n");
+		w.write("set_param('"+m.modelName + "/outsignal" + m.reqname + "','MaxDataPoints','1')\n");
+		w.write("set_param('"+m.modelName+"/outsignal"+m.reqname+"','Variablename','out_"+m.reqname+"')\n");
+		w.write("add_line('"+m.modelName + "', '"+m.reqname+"/1','outsignal"+m.reqname+"/1')\n");
 	
 		
 		//w.write("disp('By running the simulator up to t_fin you compute the results up to t_fin-" +visitor.simulationShifting + " due to the shifting procedure')\n");
@@ -229,12 +270,12 @@ class SocratesGenerator extends AbstractGenerator {
 
 			System.out.println(Paths.get(".").toAbsolutePath().normalize().toString());
 			println("Saving the file on the path")
-			println(m.path+m.name + ".m")
-			fsa.generateFile(m.path+m.name + ".m", w.toString);	
+			println(m.path+m.reqname + ".m")
+			fsa.generateFile(m.path+m.reqname + ".m", w.toString);	
 			
 		}
 		else{
-			fsa.generateFile(m.name + ".m", w.toString);	
+			fsa.generateFile(m.reqname + ".m", w.toString);	
 		}
 		
 	}
