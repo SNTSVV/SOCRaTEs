@@ -2,9 +2,10 @@
 
 ### Menghi Claudio, Nejati Shiva,  Khouloud Gaaloul,  Lionel Briand
 
-<div style="text-align:center">
+<p align="center">
 <img src="Manual/Socrates.png" alt="drawing" width="200"/>
-</div>
+</p>
+
 
 - Section Overview provides an overview on SOCRaTEs.
 
