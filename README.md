@@ -185,6 +185,8 @@ To replicate the scenario
 
 -   run the `.m` file
 
+-   set the value of the tollerableriskTest_Forall and tollerableriskTest_Exists variables to $0$
+
 -   run the Simulink simulator
 
 Scenario 1
