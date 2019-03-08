@@ -61,7 +61,7 @@ Prerequisite
 
 The following software must be installed on your laptop to run Socrates
 
--   Eclipse (<https://www.eclipse.org/>)
+-   Eclipse [https://www.eclipse.org/](https://www.eclipse.org/)
 
 -   Java 1.8 or superior
 
@@ -71,6 +71,8 @@ Installing Socrates
 -------------------
 
 Socrates can be installed by performing the following steps:
+
+-   Download the last version of SOCRaTEs from [https://github.com/claudiomenghi/SOCRaTEs/releases](https://github.com/claudiomenghi/SOCRaTEs/releases)
 
 -   Click on Help > Install new Software > Add > Local
 
