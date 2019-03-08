@@ -4,9 +4,9 @@
 
 <div style="text-align:center">
 <img src="Manual/Socrates.png" alt="drawing" width="200"/>
-</div?
+</div>
 
--   Section Overview provides an overview on SOCRaTEs.
+- Section Overview provides an overview on SOCRaTEs.
 
 -   Section Installation and Project Creation describes how to install
     SOCRaTEs and how to create your first SOCRaTEs project.
