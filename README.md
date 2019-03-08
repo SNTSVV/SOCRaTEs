@@ -1,4 +1,7 @@
-![image](Manual/Socrates.png){width="20%"}
+# SOCRaTEs 
+# Simulink Oracles for CPS RequiremenTs with uncErtainty
+
+![image](Manual/Socrates.png =100x)
 
 -   Section Overview provides an overview on SOCRaTEs.
 
@@ -44,7 +47,7 @@ for each test input ((X)**5**;). Engineers can stop running a test in
 the middle when SOCRaTeS concludes that the test fitness is going to
 remain below a given threshold for the rest of its execution.
 
-![An Overview on SOCRaTEs.](Manual/Overview.png){width="70%"}
+![An Overview on SOCRaTEs.](Manual/Overview.png)
 
 Installation and Project Creation
 =================================
@@ -132,13 +135,13 @@ The first model generates a sine wave with amplitude $2$ and frequency
 $1$ $rad/s$ that is represented in Figure 2.
 
 ![The signal $e$ generated from the model Model
-1.](Manual/Model1.png){width="50%"}
+1.](Manual/Model1.png)
 
 The second model generates a sine wave with amplitude $0.5$ and
 frequency $1$ $rad/s$ that is represented in Figure 3.
 
 ![The signal $e$ generated from the model Model
-2.](Manual/Model2.png){width="50%"}
+2.](Manual/Model2.png)
 
 The Considered Requirements
 ---------------------------
@@ -147,13 +150,13 @@ The first requirement (Test$\_$Forall) specifies that always the signal
 $e$ should not exceed the value $1$. The requirement Test$\_$Forall is
 reported in Figure 4.
 
-![The requirement Test$\_$Forall.](Manual/Req1.png){width="80%"}
+![The requirement Test$\_$Forall.](Manual/Req1.png)
 
 The second requirement (Test$\_$Exists) specifies that there exists a
 time instant in which the signal $e$ exceeds the value $1$. The
 requirement Test$\_$Exists is reported in Figure 5.
 
-![The requirement Test$\_$Exists.](Manual/Req2.png){width="95%"}
+![The requirement Test$\_$Exists.](Manual/Req2.png)
 
 Replicating the Scenarios
 -------------------------
@@ -189,7 +192,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 6.
 
 ![The evaluation of the oracle for the requirement Test$\_$Forall and
-the model Model 1.](Manual/resModel1TestForall.png){width="50%"}
+the model Model 1.](Manual/resModel1TestForall.png)
 
 The oracle stops as soon as the requirement is detected to be violated.
 The variable $result\_Test\_Forall.Data$ contains the final result that
@@ -204,7 +207,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 7.
 
 ![The evaluation of the oracle for the requirement Test$\_$Forall and
-the model Model 2.](Manual/resModel2TestForall.png){width="50%"}
+the model Model 2.](Manual/resModel2TestForall.png)
 
 The variable $result\_Test\_Forall.Data$ contains the final result that
 for this simulation is: $0.3333$. Note that the result is positive. The
@@ -218,7 +221,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 8.
 
 ![The evaluation of the oracle for the requirement Test$\_$Exists and
-the model Model 1.](Manual/resModel1TestExists.png){width="50%"}
+the model Model 1.](Manual/resModel1TestExists.png)
 
 The variable $result\_Test\_Exists.Data$ contains the final result that
 for this simulation is: $0.5$. Note that the result is positive. The
@@ -232,7 +235,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 9.
 
 ![The evaluation of the oracle for the requirement Test$\_$Exists and
-the model Model 2.](Manual/resModel2TestExists.png){width="50%"}
+the model Model 2.](Manual/resModel2TestExists.png)
 
 The variable $result\_Test\_Exists.Data$ contains the final result that
 for this simulation is: $-0.3333$. Note that the result is negative, and
