@@ -2,7 +2,9 @@
 
 ### Menghi Claudio, Nejati Shiva,  Khouloud Gaaloul,  Lionel Briand
 
+<div style="text-align:center">
 <img src="Manual/Socrates.png" alt="drawing" width="200"/>
+</div?
 
 -   Section Overview provides an overview on SOCRaTEs.
 
@@ -19,32 +21,32 @@ Overview
 
 Figure 1 shows an overview of SOCRaTeS (*Simulink Oracles for CPS
 RequiremenTs with uncErtainty*), our approach to generate automated test
-oracles for CPS models. SOCRaTeS takes three inputs: ((X)**1**;) a CPS
-model with parameters or inputs involving uncertainties, ((X)**2**;) a
-set of functional requirements for the CPS model and ((X)**3**;) a set
+oracles for CPS models. SOCRaTeS takes three inputs: (1) a CPS
+model with parameters or inputs involving uncertainties, (2) a
+set of functional requirements for the CPS model and (3) a set
 of test inputs that are developed by engineers to test the CPS model
 with respects to its requirements. SOCRaTeS makes the following
 assumptions about its inputs:
 
--   *The CPS model is described in Simulink* ((X)**1**;). Simulink
+-   *The CPS model is described in Simulink* (1). Simulink
     allows specifying dynamic systems, it is executable and allows
     engineers to test their models as early as possible.
 
 -   *Functional requirements are described in a signal logic-based
-    language* ((X)**2**;). We present our requirements language later in
+    language* (2). We present our requirements language later in
     this document.
 
 -   *A set of test inputs exercising requirements are provided*
-    ((X)**3**;). We assume engineers have a set of test inputs for their
+    (3). We assume engineers have a set of test inputs for their
     CPS model. The test inputs may be generated manually, randomly or
     based on any test generation framework proposed in the literature.
     SOCRaTeS is agnostic to the selected test generation method.
 
 SOCRaTeS automatically converts functional requirements into oracles
-specified in Simulink ((X)**4**;). The oracles evaluate test outputs of
+specified in Simulink (4). The oracles evaluate test outputs of
 the CPS model in an automated and online manner and generate fitness
 values that provide engineers with a degree of satisfaction or failure
-for each test input ((X)**5**;). Engineers can stop running a test in
+for each test input (5). Engineers can stop running a test in
 the middle when SOCRaTeS concludes that the test fitness is going to
 remain below a given threshold for the rest of its execution.
 
@@ -69,7 +71,7 @@ Installing Socrates
 
 Socrates can be installed by performing the following steps:
 
--   Click on Help $>$ Install new Software $>$ Add $>$ Local
+-   Click on Help > Install new Software > Add > Local
 
 -   Select the Plugin folder;
 
@@ -77,14 +79,14 @@ Socrates can be installed by performing the following steps:
 
 -   Select Socrates SDK feature;
 
--   Click on Next $>$ Next $>$ I accept $>$ Finish.
+-   Click on Next > Next > I accept > Finish.
 
 Creating a New Project
 ----------------------
 
 To create a new project perform the following steps:
 
--   File $>$ New $>$ Project;
+-   File > New > Project;
 
 -   Select Project from General;
 
@@ -96,7 +98,7 @@ Using SOCRaTEs
 Creating a file with your Requirements
 --------------------------------------
 
--   Create a file .socrates (File $>$ New $>$ File);
+-   Create a file .socrates (File > New > File);
 
 -   When asked to convert into an Xtext project click on Yes.
 
@@ -132,32 +134,32 @@ different models and two requirements.
 The Considered Models
 ---------------------
 
-The first model generates a sine wave with amplitude $2$ and frequency
-$1$ $rad/s$ that is represented in Figure 2.
+The first model generates a sine wave with amplitude 2 and frequency
+1 rad/s that is represented in Figure 2.
 
-![The signal $e$ generated from the model Model
+![The signal e generated from the model Model
 1.](Manual/Model1.png)
 
-The second model generates a sine wave with amplitude $0.5$ and
-frequency $1$ $rad/s$ that is represented in Figure 3.
+The second model generates a sine wave with amplitude 0.5 and
+frequency 1 rad/s that is represented in Figure 3.
 
-![The signal $e$ generated from the model Model
+![The signal e generated from the model Model
 2.](Manual/Model2.png)
 
 The Considered Requirements
 ---------------------------
 
-The first requirement (Test$\_$Forall) specifies that always the signal
-$e$ should not exceed the value $1$. The requirement Test$\_$Forall is
+The first requirement (Test_Forall) specifies that always the signal
+e should not exceed the value 1. The requirement Test_Forall is
 reported in Figure 4.
 
-![The requirement Test$\_$Forall.](Manual/Req1.png)
+![The requirement Test_Forall.](Manual/Req1.png)
 
-The second requirement (Test$\_$Exists) specifies that there exists a
-time instant in which the signal $e$ exceeds the value $1$. The
-requirement Test$\_$Exists is reported in Figure 5.
+The second requirement (Test_Exists) specifies that there exists a
+time instant in which the signal e exceeds the value 1. The
+requirement Test_Exists is reported in Figure 5.
 
-![The requirement Test$\_$Exists.](Manual/Req2.png)
+![The requirement Test_Exists.](Manual/Req2.png)
 
 Replicating the Scenarios
 -------------------------
@@ -188,58 +190,58 @@ To replicate the scenario
 Scenario 1
 ----------
 
-In scenario 1 the model Model 1 and the requirement Test$\_$Forall are
+In scenario 1 the model Model 1 and the requirement Test_Forall are
 considered. The evaluation of the oracle over time is presented in
 Figure 6.
 
-![The evaluation of the oracle for the requirement Test$\_$Forall and
+![The evaluation of the oracle for the requirement Test_Forall and
 the model Model 1.](Manual/resModel1TestForall.png)
 
 The oracle stops as soon as the requirement is detected to be violated.
-The variable $result\_Test\_Forall.Data$ contains the final result that
-for this simulation is: $-0.0109$. Note that the result is negative. The
+The variable result\_Test\_Forall.Data contains the final result that
+for this simulation is: -0.0109. Note that the result is negative. The
 property is indeed violated.
 
 Scenario 2
 ----------
 
-In scenario 2 the model Model 2 and the requirement Test$\_$Forall are
+In scenario 2 the model Model 2 and the requirement Test_Forall are
 considered. The evaluation of the oracle over time is presented in
 Figure 7.
 
-![The evaluation of the oracle for the requirement Test$\_$Forall and
+![The evaluation of the oracle for the requirement Test_Forall and
 the model Model 2.](Manual/resModel2TestForall.png)
 
-The variable $result\_Test\_Forall.Data$ contains the final result that
-for this simulation is: $0.3333$. Note that the result is positive. The
+The variable result_Test_Forall.Data contains the final result that
+for this simulation is: 0.3333. Note that the result is positive. The
 property is indeed satisfied.
 
 Scenario 3
 ----------
 
-In scenario 3 the model Model 1 and the requirement Test$\_$Exists are
+In scenario 3 the model Model 1 and the requirement Test\_Exists are
 considered. The evaluation of the oracle over time is presented in
 Figure 8.
 
-![The evaluation of the oracle for the requirement Test$\_$Exists and
+![The evaluation of the oracle for the requirement Test\_Exists and
 the model Model 1.](Manual/resModel1TestExists.png)
 
-The variable $result\_Test\_Exists.Data$ contains the final result that
-for this simulation is: $0.5$. Note that the result is positive. The
+The variable result_Test_Exists.Data contains the final result that
+for this simulation is: 0.5. Note that the result is positive. The
 property is indeed satisfied.
 
 Scenario 4
 ----------
 
-In scenario 4 the model Model 2 and the requirement Test$\_$Exists are
+In scenario 4 the model Model 2 and the requirement Test\_Exists are
 considered. The evaluation of the oracle over time is presented in
 Figure 9.
 
-![The evaluation of the oracle for the requirement Test$\_$Exists and
+![The evaluation of the oracle for the requirement Test\_Exists and
 the model Model 2.](Manual/resModel2TestExists.png)
 
-The variable $result\_Test\_Exists.Data$ contains the final result that
-for this simulation is: $-0.3333$. Note that the result is negative, and
+The variable result_Test_Exists.Data contains the final result that
+for this simulation is: -0.3333. Note that the result is negative, and
 the simulation stops as soon as the upper-bound of the interval
 constrained by the exist operator is reached. The property is indeed not
 satisfied.
