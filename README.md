@@ -1,7 +1,8 @@
-# SOCRaTEs 
-# Simulink Oracles for CPS RequiremenTs with uncErtainty
+# SOCRaTEs: Simulink Oracles for CPS RequiremenTs with uncErtainty
 
-![image](Manual/Socrates.png =100x)
+### Menghi Claudio, Nejati Shiva,  Khouloud Gaaloul,  Lionel Briand
+
+<img src="Manual/Socrates.png" alt="drawing" width="200"/>
 
 -   Section Overview provides an overview on SOCRaTEs.
 
