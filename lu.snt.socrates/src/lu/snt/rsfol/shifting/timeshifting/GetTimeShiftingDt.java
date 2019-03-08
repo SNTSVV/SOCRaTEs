@@ -13,7 +13,6 @@ import lu.snt.rsfol.atoms.SignalComparison;
 import lu.snt.rsfol.atoms.SignalConstantComparison;
 import lu.snt.rsfol.atoms.Value;
 import lu.snt.rsfol.expression.AbsoluteExpression;
-import lu.snt.rsfol.expression.ArithmeticOperator;
 import lu.snt.rsfol.expression.BinaryExpression;
 import lu.snt.rsfol.expression.CosExpression;
 import lu.snt.rsfol.expression.NormExpression;

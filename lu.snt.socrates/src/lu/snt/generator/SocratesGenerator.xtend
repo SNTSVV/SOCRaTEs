@@ -94,8 +94,8 @@ class SocratesGenerator extends AbstractGenerator {
 		
 		val fafterpushing = vpushed.accept(new Preprocess());
 
-		val t1=new TimeShiftVisitor(fafterpushing);
-		val v1=fafterpushing.accept(t1);
+
+		val v1=fafterpushing.accept(new TimeShiftVisitor(fafterpushing));
 		
 
 		println("Time shifted requirement:")

@@ -13,7 +13,7 @@ import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
 @FinalFieldsConstructor
 @SuppressWarnings("all")
 public class SocratesUiModule extends AbstractSocratesUiModule {
-  public SocratesUiModule(final AbstractUIPlugin arg0) {
-    super(arg0);
+  public SocratesUiModule(final AbstractUIPlugin plugin) {
+    super(plugin);
   }
 }

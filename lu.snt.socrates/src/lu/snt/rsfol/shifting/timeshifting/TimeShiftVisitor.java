@@ -31,16 +31,10 @@ import lu.snt.rsfol.visitors.RSFOLVisitor;
 
 public class TimeShiftVisitor implements RSFOLVisitor<RSFOLFormula> {
 
-	private Map<RSFOLFormula, Float> timeShiftingmap;
-
 	private Map<Tvariable, Float> shiftValue;
 
 	public TimeShiftVisitor(RSFOLFormula formula) {
-
 		this.shiftValue = formula.accept(new GetTimeShiftingDt());
-		System.out.println(this.timeShiftingmap);
-		
-		System.out.println(this.shiftValue);
 	}
 
 	@Override

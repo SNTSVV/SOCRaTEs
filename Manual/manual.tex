@@ -73,7 +73,12 @@
 
 \maketitle
 
-\vspace{1cm}
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.2\textwidth]{Socrates.png}
+\end{figure}
+
+%\vspace{1cm}
 \begin{itemize}
 \item Section~Overview provides an overview on SOCRaTEs.
 \item Section~Installation and Project Creation describes how to install SOCRaTEs and how to create your first SOCRaTEs project.
@@ -139,7 +144,7 @@ To create a new project perform the following steps:
 
 \section{Using SOCRaTEs}
 
-\subsection{Creating a your Requirements}
+\subsection{Creating a file with your Requirements}
 \begin{itemize}
 \item Create a file .socrates (File $>$ New $>$ File);
 \item When asked to convert into an Xtext project click on Yes.
@@ -201,8 +206,24 @@ The requirement  Test$\_$Exists is reported in Figure~5.
   \centering
     \includegraphics[width=0.95\textwidth]{Manual/Req2.png}
 \end{figure}
-
 \clearpage
+\subsection{Replicating the Scenarios}
+To replicate the scenario
+\begin{itemize}
+\item open Matlab
+\item rename the selected model into \texttt{Test.slx}
+\item open the file \texttt{Test.slx} in Simulink
+\item open SOCRaTEs
+\item create a new proect as previously described
+\item add the file \texttt{tutorial.socrates} to your project
+\item add an empty line to the file \texttt{tutorial.socrates} and save it
+\item copy the \texttt{.m} file associated with the desired requirement from \texttt{src-gen/Test} to the Matlab workspace
+\item run the \texttt{.m} file
+\item run the Simulink simulator
+\end{itemize}
+\clearpage
+
+
 
 \subsection{Scenario 1}
 In scenario 1 the model Model 1 and the requirement Test$\_$Forall are considered. 

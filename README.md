@@ -1,3 +1,5 @@
+![image](Socrates.png){width="20%"}
+
 -   Section Overview provides an overview on SOCRaTEs.
 
 -   Section Installation and Project Creation describes how to install
@@ -42,7 +44,7 @@ for each test input ((X)**5**;). Engineers can stop running a test in
 the middle when SOCRaTeS concludes that the test fitness is going to
 remain below a given threshold for the rest of its execution.
 
-![An Overview on SOCRaTEs.](Manual/Overview.png)
+![An Overview on SOCRaTEs.](Manual/Overview.png){width="70%"}
 
 Installation and Project Creation
 =================================
@@ -87,8 +89,8 @@ To create a new project perform the following steps:
 Using SOCRaTEs
 ==============
 
-Creating a your Requirements
-----------------------------
+Creating a file with your Requirements
+--------------------------------------
 
 -   Create a file .socrates (File $>$ New $>$ File);
 
@@ -130,13 +132,13 @@ The first model generates a sine wave with amplitude $2$ and frequency
 $1$ $rad/s$ that is represented in Figure 2.
 
 ![The signal $e$ generated from the model Model
-1.](Manual/Model1.png)
+1.](Manual/Model1.png){width="50%"}
 
 The second model generates a sine wave with amplitude $0.5$ and
 frequency $1$ $rad/s$ that is represented in Figure 3.
 
 ![The signal $e$ generated from the model Model
-2.](Manual/Model2.png)
+2.](Manual/Model2.png){width="50%"}
 
 The Considered Requirements
 ---------------------------
@@ -145,13 +147,39 @@ The first requirement (Test$\_$Forall) specifies that always the signal
 $e$ should not exceed the value $1$. The requirement Test$\_$Forall is
 reported in Figure 4.
 
-![The requirement Test$\_$Forall.](Manual/Req1.png)
+![The requirement Test$\_$Forall.](Manual/Req1.png){width="80%"}
 
 The second requirement (Test$\_$Exists) specifies that there exists a
 time instant in which the signal $e$ exceeds the value $1$. The
 requirement Test$\_$Exists is reported in Figure 5.
 
-![The requirement Test$\_$Exists.](Manual/Req2.png)
+![The requirement Test$\_$Exists.](Manual/Req2.png){width="95%"}
+
+Replicating the Scenarios
+-------------------------
+
+To replicate the scenario
+
+-   open Matlab
+
+-   rename the selected model into `Test.slx`
+
+-   open the file `Test.slx` in Simulink
+
+-   open SOCRaTEs
+
+-   create a new proect as previously described
+
+-   add the file `tutorial.socrates` to your project
+
+-   add an empty line to the file `tutorial.socrates` and save it
+
+-   copy the `.m` file associated with the desired requirement from
+    `src-gen/Test` to the Matlab workspace
+
+-   run the `.m` file
+
+-   run the Simulink simulator
 
 Scenario 1
 ----------
@@ -161,7 +189,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 6.
 
 ![The evaluation of the oracle for the requirement Test$\_$Forall and
-the model Model 1.](Manual/resModel1TestForall.png)
+the model Model 1.](Manual/resModel1TestForall.png){width="50%"}
 
 The oracle stops as soon as the requirement is detected to be violated.
 The variable $result\_Test\_Forall.Data$ contains the final result that
@@ -176,7 +204,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 7.
 
 ![The evaluation of the oracle for the requirement Test$\_$Forall and
-the model Model 2.](Manual/resModel2TestForall.png)
+the model Model 2.](Manual/resModel2TestForall.png){width="50%"}
 
 The variable $result\_Test\_Forall.Data$ contains the final result that
 for this simulation is: $0.3333$. Note that the result is positive. The
@@ -190,7 +218,7 @@ considered. The evaluation of the oracle over time is presented in
 Figure 8.
 
 ![The evaluation of the oracle for the requirement Test$\_$Exists and
-the model Model 1.](Manual/resModel1TestExists.png)
+the model Model 1.](Manual/resModel1TestExists.png){width="50%"}
 
 The variable $result\_Test\_Exists.Data$ contains the final result that
 for this simulation is: $0.5$. Note that the result is positive. The
@@ -204,8 +232,10 @@ considered. The evaluation of the oracle over time is presented in
 Figure 9.
 
 ![The evaluation of the oracle for the requirement Test$\_$Exists and
-the model Model 2.](Manual/resModel2TestExists.png)
+the model Model 2.](Manual/resModel2TestExists.png){width="50%"}
 
 The variable $result\_Test\_Exists.Data$ contains the final result that
-for this simulation is: $-0.3333$. Note that the result is negative. The
-property is indeed not satisfied.
+for this simulation is: $-0.3333$. Note that the result is negative, and
+the simulation stops as soon as the upper-bound of the interval
+constrained by the exist operator is reached. The property is indeed not
+satisfied.
