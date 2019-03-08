@@ -1,4 +1,4 @@
-![image](Socrates.png){width="20%"}
+![image](Manual/Socrates.png){width="20%"}
 
 -   Section Overview provides an overview on SOCRaTEs.
 
