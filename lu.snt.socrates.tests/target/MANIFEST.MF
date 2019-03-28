@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: lu.snt.socrates.tests
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.201903060631
+Bundle-Version: 1.0.0.201903281601
 Bundle-SymbolicName: lu.snt.socrates.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: lu.snt.socrates,org.junit;bundle-version="4.7.0",org.ecl

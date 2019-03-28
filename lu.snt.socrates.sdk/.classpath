@@ -7,7 +7,7 @@
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/javax.inject/1.0.0.v20091030/javax.inject-1.0.0.v20091030.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/com.ibm.icu/63.1.0.v20181030-1705/com.ibm.icu-63.1.0.v20181030-1705.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.osgi/3.13.200.v20181130-2106/org.eclipse.osgi-3.13.200.v20181130-2106.jar"/>
-  <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/lu/snt/socrates/lu.snt.socrates/1.0.0-SNAPSHOT/lu.snt.socrates-1.0.0-SNAPSHOT.jar"/>
+  <classpathentry kind="src" path="/lu.snt.socrates"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.xtext/2.16.0.v20181203-0514/org.eclipse.xtext-2.16.0.v20181203-0514.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.xbase/2.16.0.v20181203-0528/org.eclipse.xtext.xbase-2.16.0.v20181203-0528.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.common/3.10.200.v20181021-1645/org.eclipse.equinox.common-3.10.200.v20181021-1645.jar"/>
@@ -18,10 +18,10 @@
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.xtend.lib/2.16.0.v20181203-0507/org.eclipse.xtend.lib-2.16.0.v20181203-0507.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.emf.common/2.15.0.v20180914-1817/org.eclipse.emf.common-2.15.0.v20180914-1817.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.apache.log4j/1.2.15.v201012070815/org.apache.log4j-1.2.15.v201012070815.jar"/>
-  <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/lu/snt/socrates/lu.snt.socrates.ide/1.0.0-SNAPSHOT/lu.snt.socrates.ide-1.0.0-SNAPSHOT.jar"/>
+  <classpathentry kind="src" path="/lu.snt.socrates.ide"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ide/2.16.0.v20181203-0514/org.eclipse.xtext.ide-2.16.0.v20181203-0514.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.xbase.ide/2.16.0.v20181203-0528/org.eclipse.xtext.xbase.ide-2.16.0.v20181203-0528.jar"/>
-  <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/lu/snt/socrates/lu.snt.socrates.ui/1.0.0-SNAPSHOT/lu.snt.socrates.ui-1.0.0-SNAPSHOT.jar"/>
+  <classpathentry kind="src" path="/lu.snt.socrates.ui"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui/2.16.0.v20181203-1056/org.eclipse.xtext.ui-2.16.0.v20181203-1056.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.shared/2.16.0.v20181203-1056/org.eclipse.xtext.ui.shared-2.16.0.v20181203-1056.jar"/>
   <classpathentry kind="lib" path="/Users/claudio.menghi/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.codetemplates.ui/2.16.0.v20181203-1056/org.eclipse.xtext.ui.codetemplates.ui-2.16.0.v20181203-1056.jar"/>

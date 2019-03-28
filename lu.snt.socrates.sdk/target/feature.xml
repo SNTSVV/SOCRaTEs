@@ -2,7 +2,7 @@
 <feature
     id="lu.snt.socrates.sdk"
     label="Socrates SDK Feature "
-    version="1.0.0.201903060631">
+    version="1.0.0.201903281601">
     
     <requires>
         <import feature="org.eclipse.xtext.runtime" version="2.8.0" match="greaterOrEqual"/>
@@ -12,21 +12,21 @@
     id="lu.snt.socrates"
     download-size="427"
     install-size="1145"
-    version="1.0.0.201903060631"
+    version="1.0.0.201903281601"
     unpack="false"/>
     
     <plugin
     id="lu.snt.socrates.ide"
-    download-size="107"
-    install-size="469"
-    version="1.0.0.201903060631"
+    download-size="112"
+    install-size="475"
+    version="1.0.0.201903281601"
     unpack="false"/>
     
     <plugin
     id="lu.snt.socrates.ui"
-    download-size="21"
-    install-size="60"
-    version="1.0.0.201903060631"
+    download-size="32"
+    install-size="71"
+    version="1.0.0.201903281601"
     unpack="false"/>
     
 </feature>

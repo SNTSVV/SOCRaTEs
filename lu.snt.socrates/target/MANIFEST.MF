@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: lu.snt.socrates
 Bundle-Vendor: SnT
-Bundle-Version: 1.0.0.201903060634
+Bundle-Version: 1.0.0.201903281601
 Bundle-SymbolicName: lu.snt.socrates; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.xbase,org.eclipse.eq
