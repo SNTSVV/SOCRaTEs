@@ -7,14 +7,14 @@
 </p>
 
 
-- Section Overview provides an overview on SOCRaTEs.
+- Section [Overview](#overview) provides an overview on SOCRaTEs.
 
--   Section Installation and Project Creation describes how to install
+-   Section [Installation and Project Creation](#installation-and-project-creation) describes how to install
     SOCRaTEs and how to create your first SOCRaTEs project.
 
--   Section Using SOCRaTEs describes how to use SOCRaTEs.
+-   Section [Using SOCRaTEs](#using-socrates) describes how to use SOCRaTEs.
 
--   Finally Section Tutorial provides a tutorial that describes how to
+-   Finally Section [Tutorial](#tutorial) provides a tutorial that describes how to
     use SOCRaTEs on a set of simple examples.
 
 Overview
@@ -66,6 +66,17 @@ The following software must be installed on your laptop to run Socrates
 -   Java 1.8 or superior
 
 -   Matlab/Simulink
+
+Exporting Socrates
+------------------
+
+Socrates can be exported from source code as a single jar file.
+Using the exported jar file, users have an alternative to run
+requirement translation in pure Command-Line style.
+
+The detailed instructions are introduced in [SOCRaTEs-CLI.md](SOCRaTEs-CLI.md).
+
+The following sections are the instructions for socrates usage in Eclipse.
 
 Installing Socrates
 -------------------
