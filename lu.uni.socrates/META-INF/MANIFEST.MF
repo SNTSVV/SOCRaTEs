@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: lu.uni.socrates
+Bundle-ManifestVersion: 2
+Bundle-Name: lu.uni.socrates
+Bundle-Vendor: SnT - University of Luxembourg
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: lu.uni.socrates; singleton:=true
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/rfol-0.0.1-SNAPSHOT.jar
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.eclipse.xtend.lib;bundle-version="2.14.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: lu.uni.socrates.impl,
+ lu.uni.socrates.util,
+ lu.uni.socrates,
+ lu.uni,
+ lu.uni.scoping,
+ lu.uni.validation,
+ lu.uni.generator,
+ lu.uni.serializer,
+ lu.uni.services,
+ lu.uni.parser.antlr,
+ lu.uni.parser.antlr.internal
+Import-Package: org.apache.log4j

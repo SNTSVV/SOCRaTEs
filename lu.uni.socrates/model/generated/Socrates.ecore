@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="socrates" nsURI="http://www.uni.lu/socrates" nsPrefix="socrates">
+  <eClassifiers xsi:type="ecore:EClass" name="Socrates">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oracles" upperBound="-1"
+        eType="#//Oracle" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Oracle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reqname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signdef" eType="#//Signalsdefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constantDefinitions" eType="#//ConstantsDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" eType="#//Requirement"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Requirement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formula" eType="#//formula"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Signalsdefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signals" upperBound="-1"
+        eType="#//SignalID" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstantsDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constants" upperBound="-1"
+        eType="#//ConstantDefinition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstantDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constantid" eType="#//ConstantId"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignalID">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstantId">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tvariable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="negationformula">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="negationchild" eType="#//formula"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="forAllformula">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bound" eType="#//boundterm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forallchild" eType="#//formula"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="existsformula">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bound" eType="#//boundterm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="existschild" eType="#//formula"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="formula">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="formulab">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//formulabprime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="formulabprime">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t2" eType="#//term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//formulabprime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="term">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//atom" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//termprime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="termprime">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f1" eType="#//termprime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expb" eType="#//expressionb"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="expressionb">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="term" eType="#//expressionterm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expprime" eType="#//expressionprime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="expressionprime">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t2" eType="#//expressionterm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//expressionprime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="expressionterm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="term" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expprime" eType="#//expressiontermprime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="expressiontermprime">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t2" eType="#//expressionterm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//expressiontermprime"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionAtom">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Basicexpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="basicformulae">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="boundterm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//Tvariable"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="l" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftbound" eType="#//timedterm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightbound" eType="#//timedterm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="r" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="timedterm">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inf" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//value"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="atom">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//formula" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s1" eType="#//expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s2" eType="#//expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="value">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//ConstantId"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="float" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Signal">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signalid" eType="#//SignalID"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timdedterm" eType="#//timedterm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indx1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indx2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsEXP">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp1" eType="#//expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Normexp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp1" eType="#//expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sin">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp1" eType="#//expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cos">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp1" eType="#//expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sqrt">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp1" eType="#//expression"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

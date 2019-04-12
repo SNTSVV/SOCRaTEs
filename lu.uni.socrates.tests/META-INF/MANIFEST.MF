@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: lu.uni.socrates.tests
+Bundle-ManifestVersion: 2
+Bundle-Name: lu.uni.socrates.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: lu.uni.socrates.tests; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: lu.uni.socrates,
+ org.junit.jupiter.api;bundle-version="[5.0.0,6.0.0)",
+ org.eclipse.xtext.testing,
+ org.eclipse.xtext.xbase.testing,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: lu.uni.tests;x-internal=true
