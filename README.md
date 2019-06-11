@@ -6,6 +6,8 @@
 <img src="Manual/Socrates.png" alt="drawing" width="200"/>
 </p>
 
+- Section [Publications](#publications) provides an overview of the publications that describe the theoretical foundations of this work.
+
 
 - Section [Overview](#overview) provides an overview on SOCRaTEs.
 
@@ -16,6 +18,14 @@
 
 -   Finally Section [Tutorial](#tutorial) provides a tutorial that describes how to
     use SOCRaTEs on a set of simple examples.
+
+Publications
+========
+- Generating Automated and Online Test Oracles for Simulink Models with Continuous and Uncertain Behaviors<br/>
+<i>Menghi Claudio, Nejati Shiva,  Khouloud Gaaloul,  Lionel Briand<br/>
+Joint Meeting on Foundations of Software Engineering, ESEC/FSE'19 <br/>
+(ACM SIGSOFT Distinguished Paper Award)
+</i>
 
 Overview
 ========
