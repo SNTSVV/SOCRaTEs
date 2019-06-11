@@ -1,3 +1,7 @@
+/*******************************************************************************
+ * Copyright Menghi Claudio, University of Luxembourg, 2018-2019, 
+ * claudio.menghi@uni.lu
+ ******************************************************************************/
 grammar lu.uni.Socrates with org.eclipse.xtext.common.Terminals
 
 generate socrates "http://www.uni.lu/socrates"

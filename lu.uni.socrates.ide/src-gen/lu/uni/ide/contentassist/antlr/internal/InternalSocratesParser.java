@@ -1,3 +1,6 @@
+/*******************************************************************************
+ * Copyright Menghi Claudio, University of Luxembourg, 2018-2019, claudio.menghi@uni.lu
+ ******************************************************************************/
 package lu.uni.ide.contentassist.antlr.internal;
 
 import java.io.InputStream;
