@@ -271,3 +271,15 @@ for this simulation is: -0.3333. Note that the result is negative, and
 the simulation stops as soon as the upper-bound of the interval
 constrained by the exist operator is reached. The property is indeed not
 satisfied.
+
+Developers corner
+========
+Instruction to install SOCRaTEs
+-   Install eclipse (https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers)
+-   Install the Xtext (https://www.eclipse.org/Xtext/) and Xtend (https://www.eclipse.org/xtend/download.html) eclipse plugins
+-   Install Maven
+-   git clone https://github.com/SNTSVV/SOCRaTEs.git
+-   File > Import > Existing Maven Projects > Select the folder where the sources have been downloaded
+-   Right click on the project lu.uni.socrates > Properties > Java Build Path > And make sure that the rfol library is in your build path. I had also made it available at (https://github.com/claudiomenghi/RFOL/releases/tag/0.0.1-SNAPSHOT)
+-   Right click on the project lu.uni.socrates > Run as > Eclipse Application > Launch Runtime Eclipse > If error exists click to proceed
+-   Now you can follow the standard User Guide.
