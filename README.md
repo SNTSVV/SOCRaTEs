@@ -26,6 +26,11 @@ Publications
 Joint Meeting on Foundations of Software Engineering, ESEC/FSE'19 <br/>
 (ACM SIGSOFT Distinguished Paper Award)
 </i>
+- <a href="https://github.com/SNTSVV/SOCRaTEs/raw/master/AdditionalMaterial/FSEAppendix.pdf">Online Appendix: Generating Automated and Online Test Oracles for Simulink Models with Continuous and Uncertain Behaviors</a><br/>
+<i>Menghi Claudio, Nejati Shiva,  Khouloud Gaaloul,  Lionel Briand<br/>
+
+
+</i>
 
 Overview
 ========
