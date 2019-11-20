@@ -3,6 +3,14 @@
  */
 package lu.uni.scoping
 
+import org.eclipse.emf.ecore.EReference
+import lu.uni.socrates.Tvariable
+import org.eclipse.xtext.scoping.Scopes
+import java.util.ArrayList
+import lu.uni.socrates.Oracle
+import org.eclipse.emf.ecore.EObject
+import lu.uni.socrates.ForAllformula
+import lu.uni.socrates.Existsformula
 
 /**
  * This class contains custom scoping description.
@@ -11,5 +19,7 @@ package lu.uni.scoping
  * on how and when to use it.
  */
 class SocratesScopeProvider extends AbstractSocratesScopeProvider {
+
+	
 
 }

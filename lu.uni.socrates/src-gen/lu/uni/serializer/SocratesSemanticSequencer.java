@@ -12,7 +12,9 @@ import lu.uni.socrates.ConstantDefinition;
 import lu.uni.socrates.ConstantId;
 import lu.uni.socrates.ConstantsDefinition;
 import lu.uni.socrates.Cos;
+import lu.uni.socrates.Existsformula;
 import lu.uni.socrates.ExpressionAtom;
+import lu.uni.socrates.ForAllformula;
 import lu.uni.socrates.Normexp;
 import lu.uni.socrates.Oracle;
 import lu.uni.socrates.Requirement;
@@ -27,13 +29,11 @@ import lu.uni.socrates.Tvariable;
 import lu.uni.socrates.atom;
 import lu.uni.socrates.basicformulae;
 import lu.uni.socrates.boundterm;
-import lu.uni.socrates.existsformula;
 import lu.uni.socrates.expression;
 import lu.uni.socrates.expressionb;
 import lu.uni.socrates.expressionprime;
 import lu.uni.socrates.expressionterm;
 import lu.uni.socrates.expressiontermprime;
-import lu.uni.socrates.forAllformula;
 import lu.uni.socrates.formula;
 import lu.uni.socrates.formulab;
 import lu.uni.socrates.formulabprime;
@@ -84,8 +84,14 @@ public class SocratesSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case SocratesPackage.COS:
 				sequence_Cos(context, (Cos) semanticObject); 
 				return; 
+			case SocratesPackage.EXISTSFORMULA:
+				sequence_Existsformula(context, (Existsformula) semanticObject); 
+				return; 
 			case SocratesPackage.EXPRESSION_ATOM:
 				sequence_ExpressionAtom(context, (ExpressionAtom) semanticObject); 
+				return; 
+			case SocratesPackage.FOR_ALLFORMULA:
+				sequence_ForAllformula(context, (ForAllformula) semanticObject); 
 				return; 
 			case SocratesPackage.NORMEXP:
 				sequence_Normexp(context, (Normexp) semanticObject); 
@@ -126,9 +132,6 @@ public class SocratesSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case SocratesPackage.BOUNDTERM:
 				sequence_boundterm(context, (boundterm) semanticObject); 
 				return; 
-			case SocratesPackage.EXISTSFORMULA:
-				sequence_existsformula(context, (existsformula) semanticObject); 
-				return; 
 			case SocratesPackage.EXPRESSION:
 				sequence_expression(context, (expression) semanticObject); 
 				return; 
@@ -143,9 +146,6 @@ public class SocratesSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case SocratesPackage.EXPRESSIONTERMPRIME:
 				sequence_expressiontermprime(context, (expressiontermprime) semanticObject); 
-				return; 
-			case SocratesPackage.FOR_ALLFORMULA:
-				sequence_forAllformula(context, (forAllformula) semanticObject); 
 				return; 
 			case SocratesPackage.FORMULA:
 				sequence_formula(context, (formula) semanticObject); 
@@ -284,6 +284,27 @@ public class SocratesSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
+	 *     Existsformula returns Existsformula
+	 *
+	 * Constraint:
+	 *     (bound=boundterm existschild=formula)
+	 */
+	protected void sequence_Existsformula(ISerializationContext context, Existsformula semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SocratesPackage.Literals.EXISTSFORMULA__BOUND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SocratesPackage.Literals.EXISTSFORMULA__BOUND));
+			if (transientValues.isValueTransient(semanticObject, SocratesPackage.Literals.EXISTSFORMULA__EXISTSCHILD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SocratesPackage.Literals.EXISTSFORMULA__EXISTSCHILD));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExistsformulaAccess().getBoundBoundtermParserRuleCall_1_0(), semanticObject.getBound());
+		feeder.accept(grammarAccess.getExistsformulaAccess().getExistschildFormulaParserRuleCall_4_0(), semanticObject.getExistschild());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     ExpressionAtom returns ExpressionAtom
 	 *
 	 * Constraint:
@@ -291,6 +312,27 @@ public class SocratesSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_ExpressionAtom(ISerializationContext context, ExpressionAtom semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ForAllformula returns ForAllformula
+	 *
+	 * Constraint:
+	 *     (bound=boundterm forallchild=formula)
+	 */
+	protected void sequence_ForAllformula(ISerializationContext context, ForAllformula semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SocratesPackage.Literals.FOR_ALLFORMULA__BOUND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SocratesPackage.Literals.FOR_ALLFORMULA__BOUND));
+			if (transientValues.isValueTransient(semanticObject, SocratesPackage.Literals.FOR_ALLFORMULA__FORALLCHILD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SocratesPackage.Literals.FOR_ALLFORMULA__FORALLCHILD));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getForAllformulaAccess().getBoundBoundtermParserRuleCall_1_0(), semanticObject.getBound());
+		feeder.accept(grammarAccess.getForAllformulaAccess().getForallchildFormulaParserRuleCall_4_0(), semanticObject.getForallchild());
+		feeder.finish();
 	}
 	
 	
@@ -478,7 +520,7 @@ public class SocratesSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     basicformulae returns basicformulae
 	 *
 	 * Constraint:
-	 *     (f=negationformula | f=forAllformula | f=existsformula)
+	 *     (f=negationformula | f=ForAllformula | f=Existsformula)
 	 */
 	protected void sequence_basicformulae(ISerializationContext context, basicformulae semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -494,27 +536,6 @@ public class SocratesSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_boundterm(ISerializationContext context, boundterm semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     existsformula returns existsformula
-	 *
-	 * Constraint:
-	 *     (bound=boundterm existschild=formula)
-	 */
-	protected void sequence_existsformula(ISerializationContext context, existsformula semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SocratesPackage.Literals.EXISTSFORMULA__BOUND) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SocratesPackage.Literals.EXISTSFORMULA__BOUND));
-			if (transientValues.isValueTransient(semanticObject, SocratesPackage.Literals.EXISTSFORMULA__EXISTSCHILD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SocratesPackage.Literals.EXISTSFORMULA__EXISTSCHILD));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getExistsformulaAccess().getBoundBoundtermParserRuleCall_1_0(), semanticObject.getBound());
-		feeder.accept(grammarAccess.getExistsformulaAccess().getExistschildFormulaParserRuleCall_4_0(), semanticObject.getExistschild());
-		feeder.finish();
 	}
 	
 	
@@ -581,27 +602,6 @@ public class SocratesSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_expressiontermprime(ISerializationContext context, expressiontermprime semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     forAllformula returns forAllformula
-	 *
-	 * Constraint:
-	 *     (bound=boundterm forallchild=formula)
-	 */
-	protected void sequence_forAllformula(ISerializationContext context, forAllformula semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SocratesPackage.Literals.FOR_ALLFORMULA__BOUND) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SocratesPackage.Literals.FOR_ALLFORMULA__BOUND));
-			if (transientValues.isValueTransient(semanticObject, SocratesPackage.Literals.FOR_ALLFORMULA__FORALLCHILD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SocratesPackage.Literals.FOR_ALLFORMULA__FORALLCHILD));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getForAllformulaAccess().getBoundBoundtermParserRuleCall_1_0(), semanticObject.getBound());
-		feeder.accept(grammarAccess.getForAllformulaAccess().getForallchildFormulaParserRuleCall_4_0(), semanticObject.getForallchild());
-		feeder.finish();
 	}
 	
 	

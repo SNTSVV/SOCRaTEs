@@ -3,9 +3,9 @@
  */
 package lu.uni.socrates.impl;
 
+import lu.uni.socrates.Existsformula;
 import lu.uni.socrates.SocratesPackage;
 import lu.uni.socrates.boundterm;
-import lu.uni.socrates.existsformula;
 import lu.uni.socrates.formula;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -19,19 +19,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>existsformula</b></em>'.
+ * An implementation of the model object '<em><b>Existsformula</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link lu.uni.socrates.impl.existsformulaImpl#getBound <em>Bound</em>}</li>
- *   <li>{@link lu.uni.socrates.impl.existsformulaImpl#getExistschild <em>Existschild</em>}</li>
+ *   <li>{@link lu.uni.socrates.impl.ExistsformulaImpl#getBound <em>Bound</em>}</li>
+ *   <li>{@link lu.uni.socrates.impl.ExistsformulaImpl#getExistschild <em>Existschild</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class existsformulaImpl extends MinimalEObjectImpl.Container implements existsformula
+public class ExistsformulaImpl extends MinimalEObjectImpl.Container implements Existsformula
 {
   /**
    * The cached value of the '{@link #getBound() <em>Bound</em>}' containment reference.
@@ -58,7 +58,7 @@ public class existsformulaImpl extends MinimalEObjectImpl.Container implements e
    * <!-- end-user-doc -->
    * @generated
    */
-  protected existsformulaImpl()
+  protected ExistsformulaImpl()
   {
     super();
   }
@@ -268,4 +268,4 @@ public class existsformulaImpl extends MinimalEObjectImpl.Container implements e
     return super.eIsSet(featureID);
   }
 
-} //existsformulaImpl
+} //ExistsformulaImpl

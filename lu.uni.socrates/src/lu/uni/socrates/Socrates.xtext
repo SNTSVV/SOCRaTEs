@@ -46,6 +46,15 @@ SignalID:
 ConstantId:
 	name=ID;
 
+
+ForAllformula:
+	FORALL  bound=boundterm COLON  LPAREN forallchild=formula RPAREN ;
+
+
+Existsformula:
+	 EXISTS  bound=boundterm COLON LPAREN existschild=formula RPAREN;
+
+
 Tvariable:
 	name=ID;
 
@@ -54,12 +63,6 @@ negationformula:
 	 NOT negationchild=formula;
 
 
-forAllformula:
-	FORALL  bound=boundterm COLON  LPAREN forallchild=formula RPAREN ;
-
-
-existsformula:
-	 EXISTS  bound=boundterm COLON LPAREN existschild=formula RPAREN;
 
 
 
@@ -104,8 +107,8 @@ exp=Sqrt
 
 basicformulae: 
 	f=negationformula  
-	| f=forAllformula 
-	| f=existsformula 
+	| f=ForAllformula 
+	| f=Existsformula 
 ;
 
 
@@ -184,6 +187,7 @@ PATH: (('../')* | './') ( ID '/')*;
 number:
 	INT | DIGIT;
 
+@Override
 terminal WS:
 	' ' | '\t' | '\r' | '\n';
 
@@ -268,6 +272,7 @@ SIGN:
 OP:
 	'+' | '-' | '*' | '/';
 
+@Override
 terminal ML_COMMENT:
 	'/*'->'*/';
 

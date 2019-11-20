@@ -336,6 +336,80 @@ public interface SocratesPackage extends EPackage
   int CONSTANT_ID_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link lu.uni.socrates.impl.ForAllformulaImpl <em>For Allformula</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see lu.uni.socrates.impl.ForAllformulaImpl
+   * @see lu.uni.socrates.impl.SocratesPackageImpl#getForAllformula()
+   * @generated
+   */
+  int FOR_ALLFORMULA = 8;
+
+  /**
+   * The feature id for the '<em><b>Bound</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR_ALLFORMULA__BOUND = 0;
+
+  /**
+   * The feature id for the '<em><b>Forallchild</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR_ALLFORMULA__FORALLCHILD = 1;
+
+  /**
+   * The number of structural features of the '<em>For Allformula</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR_ALLFORMULA_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link lu.uni.socrates.impl.ExistsformulaImpl <em>Existsformula</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see lu.uni.socrates.impl.ExistsformulaImpl
+   * @see lu.uni.socrates.impl.SocratesPackageImpl#getExistsformula()
+   * @generated
+   */
+  int EXISTSFORMULA = 9;
+
+  /**
+   * The feature id for the '<em><b>Bound</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTSFORMULA__BOUND = 0;
+
+  /**
+   * The feature id for the '<em><b>Existschild</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTSFORMULA__EXISTSCHILD = 1;
+
+  /**
+   * The number of structural features of the '<em>Existsformula</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTSFORMULA_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link lu.uni.socrates.impl.TvariableImpl <em>Tvariable</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -343,7 +417,7 @@ public interface SocratesPackage extends EPackage
    * @see lu.uni.socrates.impl.SocratesPackageImpl#getTvariable()
    * @generated
    */
-  int TVARIABLE = 8;
+  int TVARIABLE = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -371,7 +445,7 @@ public interface SocratesPackage extends EPackage
    * @see lu.uni.socrates.impl.SocratesPackageImpl#getnegationformula()
    * @generated
    */
-  int NEGATIONFORMULA = 9;
+  int NEGATIONFORMULA = 11;
 
   /**
    * The feature id for the '<em><b>Negationchild</b></em>' containment reference.
@@ -390,80 +464,6 @@ public interface SocratesPackage extends EPackage
    * @ordered
    */
   int NEGATIONFORMULA_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link lu.uni.socrates.impl.forAllformulaImpl <em>for Allformula</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see lu.uni.socrates.impl.forAllformulaImpl
-   * @see lu.uni.socrates.impl.SocratesPackageImpl#getforAllformula()
-   * @generated
-   */
-  int FOR_ALLFORMULA = 10;
-
-  /**
-   * The feature id for the '<em><b>Bound</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FOR_ALLFORMULA__BOUND = 0;
-
-  /**
-   * The feature id for the '<em><b>Forallchild</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FOR_ALLFORMULA__FORALLCHILD = 1;
-
-  /**
-   * The number of structural features of the '<em>for Allformula</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FOR_ALLFORMULA_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link lu.uni.socrates.impl.existsformulaImpl <em>existsformula</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see lu.uni.socrates.impl.existsformulaImpl
-   * @see lu.uni.socrates.impl.SocratesPackageImpl#getexistsformula()
-   * @generated
-   */
-  int EXISTSFORMULA = 11;
-
-  /**
-   * The feature id for the '<em><b>Bound</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXISTSFORMULA__BOUND = 0;
-
-  /**
-   * The feature id for the '<em><b>Existschild</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXISTSFORMULA__EXISTSCHILD = 1;
-
-  /**
-   * The number of structural features of the '<em>existsformula</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXISTSFORMULA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link lu.uni.socrates.impl.formulaImpl <em>formula</em>}' class.
@@ -1615,6 +1615,70 @@ public interface SocratesPackage extends EPackage
   EAttribute getConstantId_Name();
 
   /**
+   * Returns the meta object for class '{@link lu.uni.socrates.ForAllformula <em>For Allformula</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>For Allformula</em>'.
+   * @see lu.uni.socrates.ForAllformula
+   * @generated
+   */
+  EClass getForAllformula();
+
+  /**
+   * Returns the meta object for the containment reference '{@link lu.uni.socrates.ForAllformula#getBound <em>Bound</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bound</em>'.
+   * @see lu.uni.socrates.ForAllformula#getBound()
+   * @see #getForAllformula()
+   * @generated
+   */
+  EReference getForAllformula_Bound();
+
+  /**
+   * Returns the meta object for the containment reference '{@link lu.uni.socrates.ForAllformula#getForallchild <em>Forallchild</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Forallchild</em>'.
+   * @see lu.uni.socrates.ForAllformula#getForallchild()
+   * @see #getForAllformula()
+   * @generated
+   */
+  EReference getForAllformula_Forallchild();
+
+  /**
+   * Returns the meta object for class '{@link lu.uni.socrates.Existsformula <em>Existsformula</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Existsformula</em>'.
+   * @see lu.uni.socrates.Existsformula
+   * @generated
+   */
+  EClass getExistsformula();
+
+  /**
+   * Returns the meta object for the containment reference '{@link lu.uni.socrates.Existsformula#getBound <em>Bound</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bound</em>'.
+   * @see lu.uni.socrates.Existsformula#getBound()
+   * @see #getExistsformula()
+   * @generated
+   */
+  EReference getExistsformula_Bound();
+
+  /**
+   * Returns the meta object for the containment reference '{@link lu.uni.socrates.Existsformula#getExistschild <em>Existschild</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Existschild</em>'.
+   * @see lu.uni.socrates.Existsformula#getExistschild()
+   * @see #getExistsformula()
+   * @generated
+   */
+  EReference getExistsformula_Existschild();
+
+  /**
    * Returns the meta object for class '{@link lu.uni.socrates.Tvariable <em>Tvariable</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1655,70 +1719,6 @@ public interface SocratesPackage extends EPackage
    * @generated
    */
   EReference getnegationformula_Negationchild();
-
-  /**
-   * Returns the meta object for class '{@link lu.uni.socrates.forAllformula <em>for Allformula</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>for Allformula</em>'.
-   * @see lu.uni.socrates.forAllformula
-   * @generated
-   */
-  EClass getforAllformula();
-
-  /**
-   * Returns the meta object for the containment reference '{@link lu.uni.socrates.forAllformula#getBound <em>Bound</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bound</em>'.
-   * @see lu.uni.socrates.forAllformula#getBound()
-   * @see #getforAllformula()
-   * @generated
-   */
-  EReference getforAllformula_Bound();
-
-  /**
-   * Returns the meta object for the containment reference '{@link lu.uni.socrates.forAllformula#getForallchild <em>Forallchild</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Forallchild</em>'.
-   * @see lu.uni.socrates.forAllformula#getForallchild()
-   * @see #getforAllformula()
-   * @generated
-   */
-  EReference getforAllformula_Forallchild();
-
-  /**
-   * Returns the meta object for class '{@link lu.uni.socrates.existsformula <em>existsformula</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>existsformula</em>'.
-   * @see lu.uni.socrates.existsformula
-   * @generated
-   */
-  EClass getexistsformula();
-
-  /**
-   * Returns the meta object for the containment reference '{@link lu.uni.socrates.existsformula#getBound <em>Bound</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bound</em>'.
-   * @see lu.uni.socrates.existsformula#getBound()
-   * @see #getexistsformula()
-   * @generated
-   */
-  EReference getexistsformula_Bound();
-
-  /**
-   * Returns the meta object for the containment reference '{@link lu.uni.socrates.existsformula#getExistschild <em>Existschild</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Existschild</em>'.
-   * @see lu.uni.socrates.existsformula#getExistschild()
-   * @see #getexistsformula()
-   * @generated
-   */
-  EReference getexistsformula_Existschild();
 
   /**
    * Returns the meta object for class '{@link lu.uni.socrates.formula <em>formula</em>}'.
@@ -2749,6 +2749,58 @@ public interface SocratesPackage extends EPackage
     EAttribute CONSTANT_ID__NAME = eINSTANCE.getConstantId_Name();
 
     /**
+     * The meta object literal for the '{@link lu.uni.socrates.impl.ForAllformulaImpl <em>For Allformula</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see lu.uni.socrates.impl.ForAllformulaImpl
+     * @see lu.uni.socrates.impl.SocratesPackageImpl#getForAllformula()
+     * @generated
+     */
+    EClass FOR_ALLFORMULA = eINSTANCE.getForAllformula();
+
+    /**
+     * The meta object literal for the '<em><b>Bound</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FOR_ALLFORMULA__BOUND = eINSTANCE.getForAllformula_Bound();
+
+    /**
+     * The meta object literal for the '<em><b>Forallchild</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FOR_ALLFORMULA__FORALLCHILD = eINSTANCE.getForAllformula_Forallchild();
+
+    /**
+     * The meta object literal for the '{@link lu.uni.socrates.impl.ExistsformulaImpl <em>Existsformula</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see lu.uni.socrates.impl.ExistsformulaImpl
+     * @see lu.uni.socrates.impl.SocratesPackageImpl#getExistsformula()
+     * @generated
+     */
+    EClass EXISTSFORMULA = eINSTANCE.getExistsformula();
+
+    /**
+     * The meta object literal for the '<em><b>Bound</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXISTSFORMULA__BOUND = eINSTANCE.getExistsformula_Bound();
+
+    /**
+     * The meta object literal for the '<em><b>Existschild</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXISTSFORMULA__EXISTSCHILD = eINSTANCE.getExistsformula_Existschild();
+
+    /**
      * The meta object literal for the '{@link lu.uni.socrates.impl.TvariableImpl <em>Tvariable</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2783,58 +2835,6 @@ public interface SocratesPackage extends EPackage
      * @generated
      */
     EReference NEGATIONFORMULA__NEGATIONCHILD = eINSTANCE.getnegationformula_Negationchild();
-
-    /**
-     * The meta object literal for the '{@link lu.uni.socrates.impl.forAllformulaImpl <em>for Allformula</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see lu.uni.socrates.impl.forAllformulaImpl
-     * @see lu.uni.socrates.impl.SocratesPackageImpl#getforAllformula()
-     * @generated
-     */
-    EClass FOR_ALLFORMULA = eINSTANCE.getforAllformula();
-
-    /**
-     * The meta object literal for the '<em><b>Bound</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FOR_ALLFORMULA__BOUND = eINSTANCE.getforAllformula_Bound();
-
-    /**
-     * The meta object literal for the '<em><b>Forallchild</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FOR_ALLFORMULA__FORALLCHILD = eINSTANCE.getforAllformula_Forallchild();
-
-    /**
-     * The meta object literal for the '{@link lu.uni.socrates.impl.existsformulaImpl <em>existsformula</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see lu.uni.socrates.impl.existsformulaImpl
-     * @see lu.uni.socrates.impl.SocratesPackageImpl#getexistsformula()
-     * @generated
-     */
-    EClass EXISTSFORMULA = eINSTANCE.getexistsformula();
-
-    /**
-     * The meta object literal for the '<em><b>Bound</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXISTSFORMULA__BOUND = eINSTANCE.getexistsformula_Bound();
-
-    /**
-     * The meta object literal for the '<em><b>Existschild</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXISTSFORMULA__EXISTSCHILD = eINSTANCE.getexistsformula_Existschild();
 
     /**
      * The meta object literal for the '{@link lu.uni.socrates.impl.formulaImpl <em>formula</em>}' class.

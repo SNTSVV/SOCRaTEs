@@ -275,6 +275,56 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleForAllformula
+entryRuleForAllformula
+:
+{ before(grammarAccess.getForAllformulaRule()); }
+	 ruleForAllformula
+{ after(grammarAccess.getForAllformulaRule()); } 
+	 EOF 
+;
+
+// Rule ForAllformula
+ruleForAllformula 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getForAllformulaAccess().getGroup()); }
+		(rule__ForAllformula__Group__0)
+		{ after(grammarAccess.getForAllformulaAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+// Entry rule entryRuleExistsformula
+entryRuleExistsformula
+:
+{ before(grammarAccess.getExistsformulaRule()); }
+	 ruleExistsformula
+{ after(grammarAccess.getExistsformulaRule()); } 
+	 EOF 
+;
+
+// Rule Existsformula
+ruleExistsformula 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getExistsformulaAccess().getGroup()); }
+		(rule__Existsformula__Group__0)
+		{ after(grammarAccess.getExistsformulaAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleTvariable
 entryRuleTvariable
 :
@@ -319,56 +369,6 @@ rulenegationformula
 		{ before(grammarAccess.getNegationformulaAccess().getGroup()); }
 		(rule__Negationformula__Group__0)
 		{ after(grammarAccess.getNegationformulaAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Entry rule entryRuleforAllformula
-entryRuleforAllformula
-:
-{ before(grammarAccess.getForAllformulaRule()); }
-	 ruleforAllformula
-{ after(grammarAccess.getForAllformulaRule()); } 
-	 EOF 
-;
-
-// Rule forAllformula
-ruleforAllformula 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getForAllformulaAccess().getGroup()); }
-		(rule__ForAllformula__Group__0)
-		{ after(grammarAccess.getForAllformulaAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Entry rule entryRuleexistsformula
-entryRuleexistsformula
-:
-{ before(grammarAccess.getExistsformulaRule()); }
-	 ruleexistsformula
-{ after(grammarAccess.getExistsformulaRule()); } 
-	 EOF 
-;
-
-// Rule existsformula
-ruleexistsformula 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getExistsformulaAccess().getGroup()); }
-		(rule__Existsformula__Group__0)
-		{ after(grammarAccess.getExistsformulaAccess().getGroup()); }
 	)
 ;
 finally {
@@ -3348,60 +3348,6 @@ finally {
 }
 
 
-rule__Negationformula__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Negationformula__Group__0__Impl
-	rule__Negationformula__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Negationformula__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0()); }
-	ruleNOT
-	{ after(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Negationformula__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Negationformula__Group__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Negationformula__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1()); }
-	(rule__Negationformula__NegationchildAssignment_1)
-	{ after(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 rule__ForAllformula__Group__0
 	@init {
 		int stackSize = keepStackSize();
@@ -3719,6 +3665,60 @@ rule__Existsformula__Group__5__Impl
 	{ before(grammarAccess.getExistsformulaAccess().getRPARENParserRuleCall_5()); }
 	ruleRPAREN
 	{ after(grammarAccess.getExistsformulaAccess().getRPARENParserRuleCall_5()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Negationformula__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Negationformula__Group__0__Impl
+	rule__Negationformula__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Negationformula__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0()); }
+	ruleNOT
+	{ after(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Negationformula__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Negationformula__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Negationformula__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1()); }
+	(rule__Negationformula__NegationchildAssignment_1)
+	{ after(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1()); }
 )
 ;
 finally {
@@ -6666,36 +6666,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Tvariable__NameAssignment
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0()); }
-		RULE_ID
-		{ after(grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Negationformula__NegationchildAssignment_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0()); }
-		ruleformula
-		{ after(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__ForAllformula__BoundAssignment_1
 	@init {
 		int stackSize = keepStackSize();
@@ -6750,6 +6720,36 @@ rule__Existsformula__ExistschildAssignment_4
 		{ before(grammarAccess.getExistsformulaAccess().getExistschildFormulaParserRuleCall_4_0()); }
 		ruleformula
 		{ after(grammarAccess.getExistsformulaAccess().getExistschildFormulaParserRuleCall_4_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Tvariable__NameAssignment
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0()); }
+		RULE_ID
+		{ after(grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Negationformula__NegationchildAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0()); }
+		ruleformula
+		{ after(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -7322,7 +7322,7 @@ rule__Basicformulae__FAssignment_1
 :
 	(
 		{ before(grammarAccess.getBasicformulaeAccess().getFForAllformulaParserRuleCall_1_0()); }
-		ruleforAllformula
+		ruleForAllformula
 		{ after(grammarAccess.getBasicformulaeAccess().getFForAllformulaParserRuleCall_1_0()); }
 	)
 ;
@@ -7337,7 +7337,7 @@ rule__Basicformulae__FAssignment_2
 :
 	(
 		{ before(grammarAccess.getBasicformulaeAccess().getFExistsformulaParserRuleCall_2_0()); }
-		ruleexistsformula
+		ruleExistsformula
 		{ after(grammarAccess.getBasicformulaeAccess().getFExistsformulaParserRuleCall_2_0()); }
 	)
 ;

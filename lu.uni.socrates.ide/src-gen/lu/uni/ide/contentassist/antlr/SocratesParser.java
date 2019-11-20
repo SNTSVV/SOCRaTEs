@@ -65,9 +65,9 @@ public class SocratesParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConstantsDefinitionAccess().getGroup(), "rule__ConstantsDefinition__Group__0");
 			builder.put(grammarAccess.getConstantsDefinitionAccess().getGroup_2(), "rule__ConstantsDefinition__Group_2__0");
 			builder.put(grammarAccess.getConstantDefinitionAccess().getGroup(), "rule__ConstantDefinition__Group__0");
-			builder.put(grammarAccess.getNegationformulaAccess().getGroup(), "rule__Negationformula__Group__0");
 			builder.put(grammarAccess.getForAllformulaAccess().getGroup(), "rule__ForAllformula__Group__0");
 			builder.put(grammarAccess.getExistsformulaAccess().getGroup(), "rule__Existsformula__Group__0");
+			builder.put(grammarAccess.getNegationformulaAccess().getGroup(), "rule__Negationformula__Group__0");
 			builder.put(grammarAccess.getFormulabAccess().getGroup(), "rule__Formulab__Group__0");
 			builder.put(grammarAccess.getFormulabprimeAccess().getGroup(), "rule__Formulabprime__Group__0");
 			builder.put(grammarAccess.getTermAccess().getGroup(), "rule__Term__Group__0");
@@ -113,12 +113,12 @@ public class SocratesParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConstantDefinitionAccess().getValueAssignment_3(), "rule__ConstantDefinition__ValueAssignment_3");
 			builder.put(grammarAccess.getSignalIDAccess().getNameAssignment(), "rule__SignalID__NameAssignment");
 			builder.put(grammarAccess.getConstantIdAccess().getNameAssignment(), "rule__ConstantId__NameAssignment");
-			builder.put(grammarAccess.getTvariableAccess().getNameAssignment(), "rule__Tvariable__NameAssignment");
-			builder.put(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1(), "rule__Negationformula__NegationchildAssignment_1");
 			builder.put(grammarAccess.getForAllformulaAccess().getBoundAssignment_1(), "rule__ForAllformula__BoundAssignment_1");
 			builder.put(grammarAccess.getForAllformulaAccess().getForallchildAssignment_4(), "rule__ForAllformula__ForallchildAssignment_4");
 			builder.put(grammarAccess.getExistsformulaAccess().getBoundAssignment_1(), "rule__Existsformula__BoundAssignment_1");
 			builder.put(grammarAccess.getExistsformulaAccess().getExistschildAssignment_4(), "rule__Existsformula__ExistschildAssignment_4");
+			builder.put(grammarAccess.getTvariableAccess().getNameAssignment(), "rule__Tvariable__NameAssignment");
+			builder.put(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1(), "rule__Negationformula__NegationchildAssignment_1");
 			builder.put(grammarAccess.getFormulaAccess().getFAssignment_0(), "rule__Formula__FAssignment_0");
 			builder.put(grammarAccess.getFormulaAccess().getFAssignment_1(), "rule__Formula__FAssignment_1");
 			builder.put(grammarAccess.getFormulabAccess().getAAssignment_0(), "rule__Formulab__AAssignment_0");

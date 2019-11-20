@@ -366,6 +366,92 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
 	}
+	public class ForAllformulaElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "lu.uni.Socrates.ForAllformula");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cFORALLParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cBoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cBoundBoundtermParserRuleCall_1_0 = (RuleCall)cBoundAssignment_1.eContents().get(0);
+		private final RuleCall cCOLONParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final RuleCall cLPARENParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Assignment cForallchildAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cForallchildFormulaParserRuleCall_4_0 = (RuleCall)cForallchildAssignment_4.eContents().get(0);
+		private final RuleCall cRPARENParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		
+		//ForAllformula:
+		//	FORALL bound=boundterm COLON LPAREN forallchild=formula RPAREN;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//FORALL bound=boundterm COLON LPAREN forallchild=formula RPAREN
+		public Group getGroup() { return cGroup; }
+		
+		//FORALL
+		public RuleCall getFORALLParserRuleCall_0() { return cFORALLParserRuleCall_0; }
+		
+		//bound=boundterm
+		public Assignment getBoundAssignment_1() { return cBoundAssignment_1; }
+		
+		//boundterm
+		public RuleCall getBoundBoundtermParserRuleCall_1_0() { return cBoundBoundtermParserRuleCall_1_0; }
+		
+		//COLON
+		public RuleCall getCOLONParserRuleCall_2() { return cCOLONParserRuleCall_2; }
+		
+		//LPAREN
+		public RuleCall getLPARENParserRuleCall_3() { return cLPARENParserRuleCall_3; }
+		
+		//forallchild=formula
+		public Assignment getForallchildAssignment_4() { return cForallchildAssignment_4; }
+		
+		//formula
+		public RuleCall getForallchildFormulaParserRuleCall_4_0() { return cForallchildFormulaParserRuleCall_4_0; }
+		
+		//RPAREN
+		public RuleCall getRPARENParserRuleCall_5() { return cRPARENParserRuleCall_5; }
+	}
+	public class ExistsformulaElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "lu.uni.Socrates.Existsformula");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cEXISTSParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cBoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cBoundBoundtermParserRuleCall_1_0 = (RuleCall)cBoundAssignment_1.eContents().get(0);
+		private final RuleCall cCOLONParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final RuleCall cLPARENParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Assignment cExistschildAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cExistschildFormulaParserRuleCall_4_0 = (RuleCall)cExistschildAssignment_4.eContents().get(0);
+		private final RuleCall cRPARENParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		
+		//Existsformula:
+		//	EXISTS bound=boundterm COLON LPAREN existschild=formula RPAREN;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//EXISTS bound=boundterm COLON LPAREN existschild=formula RPAREN
+		public Group getGroup() { return cGroup; }
+		
+		//EXISTS
+		public RuleCall getEXISTSParserRuleCall_0() { return cEXISTSParserRuleCall_0; }
+		
+		//bound=boundterm
+		public Assignment getBoundAssignment_1() { return cBoundAssignment_1; }
+		
+		//boundterm
+		public RuleCall getBoundBoundtermParserRuleCall_1_0() { return cBoundBoundtermParserRuleCall_1_0; }
+		
+		//COLON
+		public RuleCall getCOLONParserRuleCall_2() { return cCOLONParserRuleCall_2; }
+		
+		//LPAREN
+		public RuleCall getLPARENParserRuleCall_3() { return cLPARENParserRuleCall_3; }
+		
+		//existschild=formula
+		public Assignment getExistschildAssignment_4() { return cExistschildAssignment_4; }
+		
+		//formula
+		public RuleCall getExistschildFormulaParserRuleCall_4_0() { return cExistschildFormulaParserRuleCall_4_0; }
+		
+		//RPAREN
+		public RuleCall getRPARENParserRuleCall_5() { return cRPARENParserRuleCall_5; }
+	}
 	public class TvariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "lu.uni.Socrates.Tvariable");
 		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
@@ -403,92 +489,6 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//formula
 		public RuleCall getNegationchildFormulaParserRuleCall_1_0() { return cNegationchildFormulaParserRuleCall_1_0; }
-	}
-	public class ForAllformulaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "lu.uni.Socrates.forAllformula");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cFORALLParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Assignment cBoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cBoundBoundtermParserRuleCall_1_0 = (RuleCall)cBoundAssignment_1.eContents().get(0);
-		private final RuleCall cCOLONParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final RuleCall cLPARENParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Assignment cForallchildAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cForallchildFormulaParserRuleCall_4_0 = (RuleCall)cForallchildAssignment_4.eContents().get(0);
-		private final RuleCall cRPARENParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		
-		//forAllformula:
-		//	FORALL bound=boundterm COLON LPAREN forallchild=formula RPAREN;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//FORALL bound=boundterm COLON LPAREN forallchild=formula RPAREN
-		public Group getGroup() { return cGroup; }
-		
-		//FORALL
-		public RuleCall getFORALLParserRuleCall_0() { return cFORALLParserRuleCall_0; }
-		
-		//bound=boundterm
-		public Assignment getBoundAssignment_1() { return cBoundAssignment_1; }
-		
-		//boundterm
-		public RuleCall getBoundBoundtermParserRuleCall_1_0() { return cBoundBoundtermParserRuleCall_1_0; }
-		
-		//COLON
-		public RuleCall getCOLONParserRuleCall_2() { return cCOLONParserRuleCall_2; }
-		
-		//LPAREN
-		public RuleCall getLPARENParserRuleCall_3() { return cLPARENParserRuleCall_3; }
-		
-		//forallchild=formula
-		public Assignment getForallchildAssignment_4() { return cForallchildAssignment_4; }
-		
-		//formula
-		public RuleCall getForallchildFormulaParserRuleCall_4_0() { return cForallchildFormulaParserRuleCall_4_0; }
-		
-		//RPAREN
-		public RuleCall getRPARENParserRuleCall_5() { return cRPARENParserRuleCall_5; }
-	}
-	public class ExistsformulaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "lu.uni.Socrates.existsformula");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cEXISTSParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Assignment cBoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cBoundBoundtermParserRuleCall_1_0 = (RuleCall)cBoundAssignment_1.eContents().get(0);
-		private final RuleCall cCOLONParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final RuleCall cLPARENParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Assignment cExistschildAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cExistschildFormulaParserRuleCall_4_0 = (RuleCall)cExistschildAssignment_4.eContents().get(0);
-		private final RuleCall cRPARENParserRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		
-		//existsformula:
-		//	EXISTS bound=boundterm COLON LPAREN existschild=formula RPAREN;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//EXISTS bound=boundterm COLON LPAREN existschild=formula RPAREN
-		public Group getGroup() { return cGroup; }
-		
-		//EXISTS
-		public RuleCall getEXISTSParserRuleCall_0() { return cEXISTSParserRuleCall_0; }
-		
-		//bound=boundterm
-		public Assignment getBoundAssignment_1() { return cBoundAssignment_1; }
-		
-		//boundterm
-		public RuleCall getBoundBoundtermParserRuleCall_1_0() { return cBoundBoundtermParserRuleCall_1_0; }
-		
-		//COLON
-		public RuleCall getCOLONParserRuleCall_2() { return cCOLONParserRuleCall_2; }
-		
-		//LPAREN
-		public RuleCall getLPARENParserRuleCall_3() { return cLPARENParserRuleCall_3; }
-		
-		//existschild=formula
-		public Assignment getExistschildAssignment_4() { return cExistschildAssignment_4; }
-		
-		//formula
-		public RuleCall getExistschildFormulaParserRuleCall_4_0() { return cExistschildFormulaParserRuleCall_4_0; }
-		
-		//RPAREN
-		public RuleCall getRPARENParserRuleCall_5() { return cRPARENParserRuleCall_5; }
 	}
 	public class FormulaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "lu.uni.Socrates.formula");
@@ -999,11 +999,11 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//basicformulae:
 		//	f=negationformula
-		//	| f=forAllformula
-		//	| f=existsformula;
+		//	| f=ForAllformula
+		//	| f=Existsformula;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//f=negationformula | f=forAllformula | f=existsformula
+		//f=negationformula | f=ForAllformula | f=Existsformula
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//f=negationformula
@@ -1012,16 +1012,16 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 		//negationformula
 		public RuleCall getFNegationformulaParserRuleCall_0_0() { return cFNegationformulaParserRuleCall_0_0; }
 		
-		//f=forAllformula
+		//f=ForAllformula
 		public Assignment getFAssignment_1() { return cFAssignment_1; }
 		
-		//forAllformula
+		//ForAllformula
 		public RuleCall getFForAllformulaParserRuleCall_1_0() { return cFForAllformulaParserRuleCall_1_0; }
 		
-		//f=existsformula
+		//f=Existsformula
 		public Assignment getFAssignment_2() { return cFAssignment_2; }
 		
-		//existsformula
+		//Existsformula
 		public RuleCall getFExistsformulaParserRuleCall_2_0() { return cFExistsformulaParserRuleCall_2_0; }
 	}
 	public class BoundtermElements extends AbstractParserRuleElementFinder {
@@ -2094,10 +2094,10 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 	private final ConstantDefinitionElements pConstantDefinition;
 	private final SignalIDElements pSignalID;
 	private final ConstantIdElements pConstantId;
-	private final TvariableElements pTvariable;
-	private final NegationformulaElements pNegationformula;
 	private final ForAllformulaElements pForAllformula;
 	private final ExistsformulaElements pExistsformula;
+	private final TvariableElements pTvariable;
+	private final NegationformulaElements pNegationformula;
 	private final FormulaElements pFormula;
 	private final FormulabElements pFormulab;
 	private final FormulabprimeElements pFormulabprime;
@@ -2175,10 +2175,10 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pConstantDefinition = new ConstantDefinitionElements();
 		this.pSignalID = new SignalIDElements();
 		this.pConstantId = new ConstantIdElements();
-		this.pTvariable = new TvariableElements();
-		this.pNegationformula = new NegationformulaElements();
 		this.pForAllformula = new ForAllformulaElements();
 		this.pExistsformula = new ExistsformulaElements();
+		this.pTvariable = new TvariableElements();
+		this.pNegationformula = new NegationformulaElements();
 		this.pFormula = new FormulaElements();
 		this.pFormulab = new FormulabElements();
 		this.pFormulabprime = new FormulabprimeElements();
@@ -2368,6 +2368,26 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 		return getConstantIdAccess().getRule();
 	}
 	
+	//ForAllformula:
+	//	FORALL bound=boundterm COLON LPAREN forallchild=formula RPAREN;
+	public ForAllformulaElements getForAllformulaAccess() {
+		return pForAllformula;
+	}
+	
+	public ParserRule getForAllformulaRule() {
+		return getForAllformulaAccess().getRule();
+	}
+	
+	//Existsformula:
+	//	EXISTS bound=boundterm COLON LPAREN existschild=formula RPAREN;
+	public ExistsformulaElements getExistsformulaAccess() {
+		return pExistsformula;
+	}
+	
+	public ParserRule getExistsformulaRule() {
+		return getExistsformulaAccess().getRule();
+	}
+	
 	//Tvariable:
 	//	name=ID;
 	public TvariableElements getTvariableAccess() {
@@ -2386,26 +2406,6 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getNegationformulaRule() {
 		return getNegationformulaAccess().getRule();
-	}
-	
-	//forAllformula:
-	//	FORALL bound=boundterm COLON LPAREN forallchild=formula RPAREN;
-	public ForAllformulaElements getForAllformulaAccess() {
-		return pForAllformula;
-	}
-	
-	public ParserRule getForAllformulaRule() {
-		return getForAllformulaAccess().getRule();
-	}
-	
-	//existsformula:
-	//	EXISTS bound=boundterm COLON LPAREN existschild=formula RPAREN;
-	public ExistsformulaElements getExistsformulaAccess() {
-		return pExistsformula;
-	}
-	
-	public ParserRule getExistsformulaRule() {
-		return getExistsformulaAccess().getRule();
 	}
 	
 	//formula:
@@ -2530,8 +2530,8 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//basicformulae:
 	//	f=negationformula
-	//	| f=forAllformula
-	//	| f=existsformula;
+	//	| f=ForAllformula
+	//	| f=Existsformula;
 	public BasicformulaeElements getBasicformulaeAccess() {
 		return pBasicformulae;
 	}
@@ -2689,6 +2689,7 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 		return getNumberAccess().getRule();
 	}
 	
+	//@Override
 	//terminal WS:
 	//	' ' | '\t' | '\r' | '\n';
 	public TerminalRule getWSRule() {
@@ -2965,6 +2966,7 @@ public class SocratesGrammarAccess extends AbstractGrammarElementFinder {
 		return getOPAccess().getRule();
 	}
 	
+	//@Override
 	//terminal ML_COMMENT:
 	//	'/*'->'*/';
 	public TerminalRule getML_COMMENTRule() {

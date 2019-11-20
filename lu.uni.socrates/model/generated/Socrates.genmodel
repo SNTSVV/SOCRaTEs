@@ -36,19 +36,19 @@
     <genClasses ecoreClass="Socrates.ecore#//ConstantId">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Socrates.ecore#//ConstantId/name"/>
     </genClasses>
+    <genClasses ecoreClass="Socrates.ecore#//ForAllformula">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//ForAllformula/bound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//ForAllformula/forallchild"/>
+    </genClasses>
+    <genClasses ecoreClass="Socrates.ecore#//Existsformula">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//Existsformula/bound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//Existsformula/existschild"/>
+    </genClasses>
     <genClasses ecoreClass="Socrates.ecore#//Tvariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Socrates.ecore#//Tvariable/name"/>
     </genClasses>
     <genClasses ecoreClass="Socrates.ecore#//negationformula">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//negationformula/negationchild"/>
-    </genClasses>
-    <genClasses ecoreClass="Socrates.ecore#//forAllformula">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//forAllformula/bound"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//forAllformula/forallchild"/>
-    </genClasses>
-    <genClasses ecoreClass="Socrates.ecore#//existsformula">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//existsformula/bound"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//existsformula/existschild"/>
     </genClasses>
     <genClasses ecoreClass="Socrates.ecore#//formula">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Socrates.ecore#//formula/f"/>

@@ -7,22 +7,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>for Allformula</b></em>'.
+ * A representation of the model object '<em><b>For Allformula</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link lu.uni.socrates.forAllformula#getBound <em>Bound</em>}</li>
- *   <li>{@link lu.uni.socrates.forAllformula#getForallchild <em>Forallchild</em>}</li>
+ *   <li>{@link lu.uni.socrates.ForAllformula#getBound <em>Bound</em>}</li>
+ *   <li>{@link lu.uni.socrates.ForAllformula#getForallchild <em>Forallchild</em>}</li>
  * </ul>
  *
- * @see lu.uni.socrates.SocratesPackage#getforAllformula()
+ * @see lu.uni.socrates.SocratesPackage#getForAllformula()
  * @model
  * @generated
  */
-public interface forAllformula extends EObject
+public interface ForAllformula extends EObject
 {
   /**
    * Returns the value of the '<em><b>Bound</b></em>' containment reference.
@@ -34,14 +34,14 @@ public interface forAllformula extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Bound</em>' containment reference.
    * @see #setBound(boundterm)
-   * @see lu.uni.socrates.SocratesPackage#getforAllformula_Bound()
+   * @see lu.uni.socrates.SocratesPackage#getForAllformula_Bound()
    * @model containment="true"
    * @generated
    */
   boundterm getBound();
 
   /**
-   * Sets the value of the '{@link lu.uni.socrates.forAllformula#getBound <em>Bound</em>}' containment reference.
+   * Sets the value of the '{@link lu.uni.socrates.ForAllformula#getBound <em>Bound</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Bound</em>' containment reference.
@@ -60,14 +60,14 @@ public interface forAllformula extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Forallchild</em>' containment reference.
    * @see #setForallchild(formula)
-   * @see lu.uni.socrates.SocratesPackage#getforAllformula_Forallchild()
+   * @see lu.uni.socrates.SocratesPackage#getForAllformula_Forallchild()
    * @model containment="true"
    * @generated
    */
   formula getForallchild();
 
   /**
-   * Sets the value of the '{@link lu.uni.socrates.forAllformula#getForallchild <em>Forallchild</em>}' containment reference.
+   * Sets the value of the '{@link lu.uni.socrates.ForAllformula#getForallchild <em>Forallchild</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Forallchild</em>' containment reference.
@@ -76,4 +76,4 @@ public interface forAllformula extends EObject
    */
   void setForallchild(formula value);
 
-} // forAllformula
+} // ForAllformula

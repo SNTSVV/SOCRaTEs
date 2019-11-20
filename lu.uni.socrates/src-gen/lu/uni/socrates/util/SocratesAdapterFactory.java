@@ -116,6 +116,16 @@ public class SocratesAdapterFactory extends AdapterFactoryImpl
         return createConstantIdAdapter();
       }
       @Override
+      public Adapter caseForAllformula(ForAllformula object)
+      {
+        return createForAllformulaAdapter();
+      }
+      @Override
+      public Adapter caseExistsformula(Existsformula object)
+      {
+        return createExistsformulaAdapter();
+      }
+      @Override
       public Adapter caseTvariable(Tvariable object)
       {
         return createTvariableAdapter();
@@ -124,16 +134,6 @@ public class SocratesAdapterFactory extends AdapterFactoryImpl
       public Adapter casenegationformula(negationformula object)
       {
         return createnegationformulaAdapter();
-      }
-      @Override
-      public Adapter caseforAllformula(forAllformula object)
-      {
-        return createforAllformulaAdapter();
-      }
-      @Override
-      public Adapter caseexistsformula(existsformula object)
-      {
-        return createexistsformulaAdapter();
       }
       @Override
       public Adapter caseformula(formula object)
@@ -393,6 +393,36 @@ public class SocratesAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link lu.uni.socrates.ForAllformula <em>For Allformula</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see lu.uni.socrates.ForAllformula
+   * @generated
+   */
+  public Adapter createForAllformulaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link lu.uni.socrates.Existsformula <em>Existsformula</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see lu.uni.socrates.Existsformula
+   * @generated
+   */
+  public Adapter createExistsformulaAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link lu.uni.socrates.Tvariable <em>Tvariable</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -418,36 +448,6 @@ public class SocratesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createnegationformulaAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link lu.uni.socrates.forAllformula <em>for Allformula</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see lu.uni.socrates.forAllformula
-   * @generated
-   */
-  public Adapter createforAllformulaAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link lu.uni.socrates.existsformula <em>existsformula</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see lu.uni.socrates.existsformula
-   * @generated
-   */
-  public Adapter createexistsformulaAdapter()
   {
     return null;
   }

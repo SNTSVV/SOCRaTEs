@@ -9,7 +9,9 @@ import lu.uni.socrates.ConstantDefinition;
 import lu.uni.socrates.ConstantId;
 import lu.uni.socrates.ConstantsDefinition;
 import lu.uni.socrates.Cos;
+import lu.uni.socrates.Existsformula;
 import lu.uni.socrates.ExpressionAtom;
+import lu.uni.socrates.ForAllformula;
 import lu.uni.socrates.Normexp;
 import lu.uni.socrates.Oracle;
 import lu.uni.socrates.Requirement;
@@ -25,13 +27,11 @@ import lu.uni.socrates.Tvariable;
 import lu.uni.socrates.atom;
 import lu.uni.socrates.basicformulae;
 import lu.uni.socrates.boundterm;
-import lu.uni.socrates.existsformula;
 import lu.uni.socrates.expression;
 import lu.uni.socrates.expressionb;
 import lu.uni.socrates.expressionprime;
 import lu.uni.socrates.expressionterm;
 import lu.uni.socrates.expressiontermprime;
-import lu.uni.socrates.forAllformula;
 import lu.uni.socrates.formula;
 import lu.uni.socrates.formulab;
 import lu.uni.socrates.formulabprime;
@@ -117,20 +117,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass tvariableEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass negationformulaEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass forAllformulaEClass = null;
 
   /**
@@ -139,6 +125,20 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * @generated
    */
   private EClass existsformulaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tvariableEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass negationformulaEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -612,6 +612,72 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
    * @generated
    */
   @Override
+  public EClass getForAllformula()
+  {
+    return forAllformulaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getForAllformula_Bound()
+  {
+    return (EReference)forAllformulaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getForAllformula_Forallchild()
+  {
+    return (EReference)forAllformulaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getExistsformula()
+  {
+    return existsformulaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getExistsformula_Bound()
+  {
+    return (EReference)existsformulaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getExistsformula_Existschild()
+  {
+    return (EReference)existsformulaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getTvariable()
   {
     return tvariableEClass;
@@ -648,72 +714,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
   public EReference getnegationformula_Negationchild()
   {
     return (EReference)negationformulaEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getforAllformula()
-  {
-    return forAllformulaEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getforAllformula_Bound()
-  {
-    return (EReference)forAllformulaEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getforAllformula_Forallchild()
-  {
-    return (EReference)forAllformulaEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getexistsformula()
-  {
-    return existsformulaEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getexistsformula_Bound()
-  {
-    return (EReference)existsformulaEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getexistsformula_Existschild()
-  {
-    return (EReference)existsformulaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1613,12 +1613,6 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
     constantIdEClass = createEClass(CONSTANT_ID);
     createEAttribute(constantIdEClass, CONSTANT_ID__NAME);
 
-    tvariableEClass = createEClass(TVARIABLE);
-    createEAttribute(tvariableEClass, TVARIABLE__NAME);
-
-    negationformulaEClass = createEClass(NEGATIONFORMULA);
-    createEReference(negationformulaEClass, NEGATIONFORMULA__NEGATIONCHILD);
-
     forAllformulaEClass = createEClass(FOR_ALLFORMULA);
     createEReference(forAllformulaEClass, FOR_ALLFORMULA__BOUND);
     createEReference(forAllformulaEClass, FOR_ALLFORMULA__FORALLCHILD);
@@ -1626,6 +1620,12 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
     existsformulaEClass = createEClass(EXISTSFORMULA);
     createEReference(existsformulaEClass, EXISTSFORMULA__BOUND);
     createEReference(existsformulaEClass, EXISTSFORMULA__EXISTSCHILD);
+
+    tvariableEClass = createEClass(TVARIABLE);
+    createEAttribute(tvariableEClass, TVARIABLE__NAME);
+
+    negationformulaEClass = createEClass(NEGATIONFORMULA);
+    createEReference(negationformulaEClass, NEGATIONFORMULA__NEGATIONCHILD);
 
     formulaEClass = createEClass(FORMULA);
     createEReference(formulaEClass, FORMULA__F);
@@ -1788,19 +1788,19 @@ public class SocratesPackageImpl extends EPackageImpl implements SocratesPackage
     initEClass(constantIdEClass, ConstantId.class, "ConstantId", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getConstantId_Name(), ecorePackage.getEString(), "name", null, 0, 1, ConstantId.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(forAllformulaEClass, ForAllformula.class, "ForAllformula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getForAllformula_Bound(), this.getboundterm(), null, "bound", null, 0, 1, ForAllformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getForAllformula_Forallchild(), this.getformula(), null, "forallchild", null, 0, 1, ForAllformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(existsformulaEClass, Existsformula.class, "Existsformula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getExistsformula_Bound(), this.getboundterm(), null, "bound", null, 0, 1, Existsformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExistsformula_Existschild(), this.getformula(), null, "existschild", null, 0, 1, Existsformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(tvariableEClass, Tvariable.class, "Tvariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTvariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tvariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(negationformulaEClass, negationformula.class, "negationformula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getnegationformula_Negationchild(), this.getformula(), null, "negationchild", null, 0, 1, negationformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(forAllformulaEClass, forAllformula.class, "forAllformula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getforAllformula_Bound(), this.getboundterm(), null, "bound", null, 0, 1, forAllformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getforAllformula_Forallchild(), this.getformula(), null, "forallchild", null, 0, 1, forAllformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(existsformulaEClass, existsformula.class, "existsformula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getexistsformula_Bound(), this.getboundterm(), null, "bound", null, 0, 1, existsformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getexistsformula_Existschild(), this.getformula(), null, "existschild", null, 0, 1, existsformula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(formulaEClass, formula.class, "formula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getformula_F(), ecorePackage.getEObject(), null, "f", null, 0, 1, formula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

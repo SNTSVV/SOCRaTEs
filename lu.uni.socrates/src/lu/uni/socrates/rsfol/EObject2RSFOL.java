@@ -73,11 +73,11 @@ public class EObject2RSFOL {
 
 	public RSFOLFormula eObject2RSFOL(lu.uni.socrates.basicformulae e) {
 
-		if (e.getF() instanceof lu.uni.socrates.forAllformula) {
-			return eObject2RSFOL((lu.uni.socrates.forAllformula) e.getF());
+		if (e.getF() instanceof lu.uni.socrates.ForAllformula) {
+			return eObject2RSFOL((lu.uni.socrates.ForAllformula) e.getF());
 		}
-		if (e.getF() instanceof lu.uni.socrates.existsformula) {
-			return eObject2RSFOL((lu.uni.socrates.existsformula) e.getF());
+		if (e.getF() instanceof lu.uni.socrates.Existsformula) {
+			return eObject2RSFOL((lu.uni.socrates.Existsformula) e.getF());
 		}
 		if (e.getF() instanceof lu.uni.socrates.negationformula) {
 			return eObject2RSFOL((lu.uni.socrates.negationformula) e.getF());
@@ -171,11 +171,11 @@ public class EObject2RSFOL {
 		throw new InternalError("No valid alternative for the subformula " + e.getF().getClass());
 	}
 
-	public RSFOLFormula eObject2RSFOL(lu.uni.socrates.forAllformula e) {
+	public RSFOLFormula eObject2RSFOL(lu.uni.socrates.ForAllformula e) {
 		return new ForallFormula(eObject2RSFOL(e.getBound()), eObject2RSFOL(e.getForallchild()));
 	}
 
-	public RSFOLFormula eObject2RSFOL(lu.uni.socrates.existsformula e) {
+	public RSFOLFormula eObject2RSFOL(lu.uni.socrates.Existsformula e) {
 		return new ExistsFormula(eObject2RSFOL(e.getBound()), eObject2RSFOL(e.getExistschild()));
 	}
 

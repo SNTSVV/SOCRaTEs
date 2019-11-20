@@ -96,6 +96,24 @@ public interface SocratesFactory extends EFactory
   ConstantId createConstantId();
 
   /**
+   * Returns a new object of class '<em>For Allformula</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>For Allformula</em>'.
+   * @generated
+   */
+  ForAllformula createForAllformula();
+
+  /**
+   * Returns a new object of class '<em>Existsformula</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Existsformula</em>'.
+   * @generated
+   */
+  Existsformula createExistsformula();
+
+  /**
    * Returns a new object of class '<em>Tvariable</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -112,24 +130,6 @@ public interface SocratesFactory extends EFactory
    * @generated
    */
   negationformula createnegationformula();
-
-  /**
-   * Returns a new object of class '<em>for Allformula</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>for Allformula</em>'.
-   * @generated
-   */
-  forAllformula createforAllformula();
-
-  /**
-   * Returns a new object of class '<em>existsformula</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>existsformula</em>'.
-   * @generated
-   */
-  existsformula createexistsformula();
 
   /**
    * Returns a new object of class '<em>formula</em>'.

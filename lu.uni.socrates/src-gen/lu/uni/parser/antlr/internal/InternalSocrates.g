@@ -673,98 +673,15 @@ ruleConstantId returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleTvariable
-entryRuleTvariable returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getTvariableRule()); }
-	iv_ruleTvariable=ruleTvariable
-	{ $current=$iv_ruleTvariable.current; }
-	EOF;
-
-// Rule Tvariable
-ruleTvariable returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			lv_name_0_0=RULE_ID
-			{
-				newLeafNode(lv_name_0_0, grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0());
-			}
-			{
-				if ($current==null) {
-					$current = createModelElement(grammarAccess.getTvariableRule());
-				}
-				setWithLastConsumed(
-					$current,
-					"name",
-					lv_name_0_0,
-					"org.eclipse.xtext.common.Terminals.ID");
-			}
-		)
-	)
-;
-
-// Entry rule entryRulenegationformula
-entryRulenegationformula returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getNegationformulaRule()); }
-	iv_rulenegationformula=rulenegationformula
-	{ $current=$iv_rulenegationformula.current; }
-	EOF;
-
-// Rule negationformula
-rulenegationformula returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		{
-			/* */
-		}
-		{
-			newCompositeNode(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0());
-		}
-		ruleNOT
-		{
-			afterParserOrEnumRuleCall();
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0());
-				}
-				lv_negationchild_1_0=ruleformula
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getNegationformulaRule());
-					}
-					set(
-						$current,
-						"negationchild",
-						lv_negationchild_1_0,
-						"lu.uni.Socrates.formula");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRuleforAllformula
-entryRuleforAllformula returns [EObject current=null]:
+// Entry rule entryRuleForAllformula
+entryRuleForAllformula returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getForAllformulaRule()); }
-	iv_ruleforAllformula=ruleforAllformula
-	{ $current=$iv_ruleforAllformula.current; }
+	iv_ruleForAllformula=ruleForAllformula
+	{ $current=$iv_ruleForAllformula.current; }
 	EOF;
 
-// Rule forAllformula
-ruleforAllformula returns [EObject current=null]
+// Rule ForAllformula
+ruleForAllformula returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -853,15 +770,15 @@ ruleforAllformula returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleexistsformula
-entryRuleexistsformula returns [EObject current=null]:
+// Entry rule entryRuleExistsformula
+entryRuleExistsformula returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getExistsformulaRule()); }
-	iv_ruleexistsformula=ruleexistsformula
-	{ $current=$iv_ruleexistsformula.current; }
+	iv_ruleExistsformula=ruleExistsformula
+	{ $current=$iv_ruleExistsformula.current; }
 	EOF;
 
-// Rule existsformula
-ruleexistsformula returns [EObject current=null]
+// Rule Existsformula
+ruleExistsformula returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -947,6 +864,89 @@ ruleexistsformula returns [EObject current=null]
 		{
 			afterParserOrEnumRuleCall();
 		}
+	)
+;
+
+// Entry rule entryRuleTvariable
+entryRuleTvariable returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTvariableRule()); }
+	iv_ruleTvariable=ruleTvariable
+	{ $current=$iv_ruleTvariable.current; }
+	EOF;
+
+// Rule Tvariable
+ruleTvariable returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_name_0_0=RULE_ID
+			{
+				newLeafNode(lv_name_0_0, grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getTvariableRule());
+				}
+				setWithLastConsumed(
+					$current,
+					"name",
+					lv_name_0_0,
+					"org.eclipse.xtext.common.Terminals.ID");
+			}
+		)
+	)
+;
+
+// Entry rule entryRulenegationformula
+entryRulenegationformula returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getNegationformulaRule()); }
+	iv_rulenegationformula=rulenegationformula
+	{ $current=$iv_rulenegationformula.current; }
+	EOF;
+
+// Rule negationformula
+rulenegationformula returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0());
+		}
+		ruleNOT
+		{
+			afterParserOrEnumRuleCall();
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0());
+				}
+				lv_negationchild_1_0=ruleformula
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getNegationformulaRule());
+					}
+					set(
+						$current,
+						"negationchild",
+						lv_negationchild_1_0,
+						"lu.uni.Socrates.formula");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
@@ -2029,7 +2029,7 @@ rulebasicformulae returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getBasicformulaeAccess().getFForAllformulaParserRuleCall_1_0());
 				}
-				lv_f_1_0=ruleforAllformula
+				lv_f_1_0=ruleForAllformula
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getBasicformulaeRule());
@@ -2038,7 +2038,7 @@ rulebasicformulae returns [EObject current=null]
 						$current,
 						"f",
 						lv_f_1_0,
-						"lu.uni.Socrates.forAllformula");
+						"lu.uni.Socrates.ForAllformula");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2049,7 +2049,7 @@ rulebasicformulae returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getBasicformulaeAccess().getFExistsformulaParserRuleCall_2_0());
 				}
-				lv_f_2_0=ruleexistsformula
+				lv_f_2_0=ruleExistsformula
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getBasicformulaeRule());
@@ -2058,7 +2058,7 @@ rulebasicformulae returns [EObject current=null]
 						$current,
 						"f",
 						lv_f_2_0,
-						"lu.uni.Socrates.existsformula");
+						"lu.uni.Socrates.Existsformula");
 					afterParserOrEnumRuleCall();
 				}
 			)

@@ -129,6 +129,20 @@ public class SocratesSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SocratesPackage.FOR_ALLFORMULA:
+      {
+        ForAllformula forAllformula = (ForAllformula)theEObject;
+        T result = caseForAllformula(forAllformula);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SocratesPackage.EXISTSFORMULA:
+      {
+        Existsformula existsformula = (Existsformula)theEObject;
+        T result = caseExistsformula(existsformula);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SocratesPackage.TVARIABLE:
       {
         Tvariable tvariable = (Tvariable)theEObject;
@@ -140,20 +154,6 @@ public class SocratesSwitch<T> extends Switch<T>
       {
         negationformula negationformula = (negationformula)theEObject;
         T result = casenegationformula(negationformula);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SocratesPackage.FOR_ALLFORMULA:
-      {
-        forAllformula forAllformula = (forAllformula)theEObject;
-        T result = caseforAllformula(forAllformula);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case SocratesPackage.EXISTSFORMULA:
-      {
-        existsformula existsformula = (existsformula)theEObject;
-        T result = caseexistsformula(existsformula);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -451,6 +451,38 @@ public class SocratesSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>For Allformula</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>For Allformula</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseForAllformula(ForAllformula object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Existsformula</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Existsformula</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExistsformula(Existsformula object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Tvariable</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -478,38 +510,6 @@ public class SocratesSwitch<T> extends Switch<T>
    * @generated
    */
   public T casenegationformula(negationformula object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>for Allformula</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>for Allformula</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseforAllformula(forAllformula object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>existsformula</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>existsformula</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseexistsformula(existsformula object)
   {
     return null;
   }

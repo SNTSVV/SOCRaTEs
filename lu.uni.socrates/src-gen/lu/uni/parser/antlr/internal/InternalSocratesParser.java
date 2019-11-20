@@ -1,6 +1,3 @@
-/*******************************************************************************
- * Copyright Menghi Claudio, University of Luxembourg, 2018-2019, claudio.menghi@uni.lu
- ******************************************************************************/
 package lu.uni.parser.antlr.internal;
 
 import org.eclipse.xtext.*;
@@ -1792,270 +1789,28 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleConstantId"
 
 
-    // $ANTLR start "entryRuleTvariable"
-    // InternalSocrates.g:677:1: entryRuleTvariable returns [EObject current=null] : iv_ruleTvariable= ruleTvariable EOF ;
-    public final EObject entryRuleTvariable() throws RecognitionException {
+    // $ANTLR start "entryRuleForAllformula"
+    // InternalSocrates.g:677:1: entryRuleForAllformula returns [EObject current=null] : iv_ruleForAllformula= ruleForAllformula EOF ;
+    public final EObject entryRuleForAllformula() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleTvariable = null;
+        EObject iv_ruleForAllformula = null;
 
 
         try {
-            // InternalSocrates.g:677:50: (iv_ruleTvariable= ruleTvariable EOF )
-            // InternalSocrates.g:678:2: iv_ruleTvariable= ruleTvariable EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getTvariableRule()); 
-            }
-            pushFollow(FOLLOW_1);
-            iv_ruleTvariable=ruleTvariable();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleTvariable; 
-            }
-            match(input,EOF,FOLLOW_2); if (state.failed) return current;
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleTvariable"
-
-
-    // $ANTLR start "ruleTvariable"
-    // InternalSocrates.g:684:1: ruleTvariable returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
-    public final EObject ruleTvariable() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_name_0_0=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalSocrates.g:690:2: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // InternalSocrates.g:691:2: ( (lv_name_0_0= RULE_ID ) )
-            {
-            // InternalSocrates.g:691:2: ( (lv_name_0_0= RULE_ID ) )
-            // InternalSocrates.g:692:3: (lv_name_0_0= RULE_ID )
-            {
-            // InternalSocrates.g:692:3: (lv_name_0_0= RULE_ID )
-            // InternalSocrates.g:693:4: lv_name_0_0= RULE_ID
-            {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              				newLeafNode(lv_name_0_0, grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0());
-              			
-            }
-            if ( state.backtracking==0 ) {
-
-              				if (current==null) {
-              					current = createModelElement(grammarAccess.getTvariableRule());
-              				}
-              				setWithLastConsumed(
-              					current,
-              					"name",
-              					lv_name_0_0,
-              					"org.eclipse.xtext.common.Terminals.ID");
-              			
-            }
-
-            }
-
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleTvariable"
-
-
-    // $ANTLR start "entryRulenegationformula"
-    // InternalSocrates.g:712:1: entryRulenegationformula returns [EObject current=null] : iv_rulenegationformula= rulenegationformula EOF ;
-    public final EObject entryRulenegationformula() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_rulenegationformula = null;
-
-
-        try {
-            // InternalSocrates.g:712:56: (iv_rulenegationformula= rulenegationformula EOF )
-            // InternalSocrates.g:713:2: iv_rulenegationformula= rulenegationformula EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getNegationformulaRule()); 
-            }
-            pushFollow(FOLLOW_1);
-            iv_rulenegationformula=rulenegationformula();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_rulenegationformula; 
-            }
-            match(input,EOF,FOLLOW_2); if (state.failed) return current;
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRulenegationformula"
-
-
-    // $ANTLR start "rulenegationformula"
-    // InternalSocrates.g:719:1: rulenegationformula returns [EObject current=null] : ( ruleNOT ( (lv_negationchild_1_0= ruleformula ) ) ) ;
-    public final EObject rulenegationformula() throws RecognitionException {
-        EObject current = null;
-
-        EObject lv_negationchild_1_0 = null;
-
-
-
-        	enterRule();
-
-        try {
-            // InternalSocrates.g:725:2: ( ( ruleNOT ( (lv_negationchild_1_0= ruleformula ) ) ) )
-            // InternalSocrates.g:726:2: ( ruleNOT ( (lv_negationchild_1_0= ruleformula ) ) )
-            {
-            // InternalSocrates.g:726:2: ( ruleNOT ( (lv_negationchild_1_0= ruleformula ) ) )
-            // InternalSocrates.g:727:3: ruleNOT ( (lv_negationchild_1_0= ruleformula ) )
-            {
-            if ( state.backtracking==0 ) {
-
-              			/* */
-              		
-            }
-            if ( state.backtracking==0 ) {
-
-              			newCompositeNode(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0());
-              		
-            }
-            pushFollow(FOLLOW_14);
-            ruleNOT();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              			afterParserOrEnumRuleCall();
-              		
-            }
-            // InternalSocrates.g:737:3: ( (lv_negationchild_1_0= ruleformula ) )
-            // InternalSocrates.g:738:4: (lv_negationchild_1_0= ruleformula )
-            {
-            // InternalSocrates.g:738:4: (lv_negationchild_1_0= ruleformula )
-            // InternalSocrates.g:739:5: lv_negationchild_1_0= ruleformula
-            {
-            if ( state.backtracking==0 ) {
-
-              					newCompositeNode(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0());
-              				
-            }
-            pushFollow(FOLLOW_2);
-            lv_negationchild_1_0=ruleformula();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getNegationformulaRule());
-              					}
-              					set(
-              						current,
-              						"negationchild",
-              						lv_negationchild_1_0,
-              						"lu.uni.Socrates.formula");
-              					afterParserOrEnumRuleCall();
-              				
-            }
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "rulenegationformula"
-
-
-    // $ANTLR start "entryRuleforAllformula"
-    // InternalSocrates.g:760:1: entryRuleforAllformula returns [EObject current=null] : iv_ruleforAllformula= ruleforAllformula EOF ;
-    public final EObject entryRuleforAllformula() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleforAllformula = null;
-
-
-        try {
-            // InternalSocrates.g:760:54: (iv_ruleforAllformula= ruleforAllformula EOF )
-            // InternalSocrates.g:761:2: iv_ruleforAllformula= ruleforAllformula EOF
+            // InternalSocrates.g:677:54: (iv_ruleForAllformula= ruleForAllformula EOF )
+            // InternalSocrates.g:678:2: iv_ruleForAllformula= ruleForAllformula EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getForAllformulaRule()); 
             }
             pushFollow(FOLLOW_1);
-            iv_ruleforAllformula=ruleforAllformula();
+            iv_ruleForAllformula=ruleForAllformula();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleforAllformula; 
+               current =iv_ruleForAllformula; 
             }
             match(input,EOF,FOLLOW_2); if (state.failed) return current;
 
@@ -2071,12 +1826,12 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleforAllformula"
+    // $ANTLR end "entryRuleForAllformula"
 
 
-    // $ANTLR start "ruleforAllformula"
-    // InternalSocrates.g:767:1: ruleforAllformula returns [EObject current=null] : ( ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN ) ;
-    public final EObject ruleforAllformula() throws RecognitionException {
+    // $ANTLR start "ruleForAllformula"
+    // InternalSocrates.g:684:1: ruleForAllformula returns [EObject current=null] : ( ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN ) ;
+    public final EObject ruleForAllformula() throws RecognitionException {
         EObject current = null;
 
         EObject lv_bound_1_0 = null;
@@ -2088,11 +1843,11 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSocrates.g:773:2: ( ( ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN ) )
-            // InternalSocrates.g:774:2: ( ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN )
+            // InternalSocrates.g:690:2: ( ( ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN ) )
+            // InternalSocrates.g:691:2: ( ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN )
             {
-            // InternalSocrates.g:774:2: ( ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN )
-            // InternalSocrates.g:775:3: ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN
+            // InternalSocrates.g:691:2: ( ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN )
+            // InternalSocrates.g:692:3: ruleFORALL ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_forallchild_4_0= ruleformula ) ) ruleRPAREN
             {
             if ( state.backtracking==0 ) {
 
@@ -2114,11 +1869,11 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSocrates.g:785:3: ( (lv_bound_1_0= ruleboundterm ) )
-            // InternalSocrates.g:786:4: (lv_bound_1_0= ruleboundterm )
+            // InternalSocrates.g:702:3: ( (lv_bound_1_0= ruleboundterm ) )
+            // InternalSocrates.g:703:4: (lv_bound_1_0= ruleboundterm )
             {
-            // InternalSocrates.g:786:4: (lv_bound_1_0= ruleboundterm )
-            // InternalSocrates.g:787:5: lv_bound_1_0= ruleboundterm
+            // InternalSocrates.g:703:4: (lv_bound_1_0= ruleboundterm )
+            // InternalSocrates.g:704:5: lv_bound_1_0= ruleboundterm
             {
             if ( state.backtracking==0 ) {
 
@@ -2189,11 +1944,11 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSocrates.g:824:3: ( (lv_forallchild_4_0= ruleformula ) )
-            // InternalSocrates.g:825:4: (lv_forallchild_4_0= ruleformula )
+            // InternalSocrates.g:741:3: ( (lv_forallchild_4_0= ruleformula ) )
+            // InternalSocrates.g:742:4: (lv_forallchild_4_0= ruleformula )
             {
-            // InternalSocrates.g:825:4: (lv_forallchild_4_0= ruleformula )
-            // InternalSocrates.g:826:5: lv_forallchild_4_0= ruleformula
+            // InternalSocrates.g:742:4: (lv_forallchild_4_0= ruleformula )
+            // InternalSocrates.g:743:5: lv_forallchild_4_0= ruleformula
             {
             if ( state.backtracking==0 ) {
 
@@ -2265,31 +2020,31 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleforAllformula"
+    // $ANTLR end "ruleForAllformula"
 
 
-    // $ANTLR start "entryRuleexistsformula"
-    // InternalSocrates.g:857:1: entryRuleexistsformula returns [EObject current=null] : iv_ruleexistsformula= ruleexistsformula EOF ;
-    public final EObject entryRuleexistsformula() throws RecognitionException {
+    // $ANTLR start "entryRuleExistsformula"
+    // InternalSocrates.g:774:1: entryRuleExistsformula returns [EObject current=null] : iv_ruleExistsformula= ruleExistsformula EOF ;
+    public final EObject entryRuleExistsformula() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleexistsformula = null;
+        EObject iv_ruleExistsformula = null;
 
 
         try {
-            // InternalSocrates.g:857:54: (iv_ruleexistsformula= ruleexistsformula EOF )
-            // InternalSocrates.g:858:2: iv_ruleexistsformula= ruleexistsformula EOF
+            // InternalSocrates.g:774:54: (iv_ruleExistsformula= ruleExistsformula EOF )
+            // InternalSocrates.g:775:2: iv_ruleExistsformula= ruleExistsformula EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExistsformulaRule()); 
             }
             pushFollow(FOLLOW_1);
-            iv_ruleexistsformula=ruleexistsformula();
+            iv_ruleExistsformula=ruleExistsformula();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleexistsformula; 
+               current =iv_ruleExistsformula; 
             }
             match(input,EOF,FOLLOW_2); if (state.failed) return current;
 
@@ -2305,12 +2060,12 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleexistsformula"
+    // $ANTLR end "entryRuleExistsformula"
 
 
-    // $ANTLR start "ruleexistsformula"
-    // InternalSocrates.g:864:1: ruleexistsformula returns [EObject current=null] : ( ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN ) ;
-    public final EObject ruleexistsformula() throws RecognitionException {
+    // $ANTLR start "ruleExistsformula"
+    // InternalSocrates.g:781:1: ruleExistsformula returns [EObject current=null] : ( ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN ) ;
+    public final EObject ruleExistsformula() throws RecognitionException {
         EObject current = null;
 
         EObject lv_bound_1_0 = null;
@@ -2322,11 +2077,11 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSocrates.g:870:2: ( ( ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN ) )
-            // InternalSocrates.g:871:2: ( ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN )
+            // InternalSocrates.g:787:2: ( ( ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN ) )
+            // InternalSocrates.g:788:2: ( ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN )
             {
-            // InternalSocrates.g:871:2: ( ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN )
-            // InternalSocrates.g:872:3: ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN
+            // InternalSocrates.g:788:2: ( ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN )
+            // InternalSocrates.g:789:3: ruleEXISTS ( (lv_bound_1_0= ruleboundterm ) ) ruleCOLON ruleLPAREN ( (lv_existschild_4_0= ruleformula ) ) ruleRPAREN
             {
             if ( state.backtracking==0 ) {
 
@@ -2348,11 +2103,11 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSocrates.g:882:3: ( (lv_bound_1_0= ruleboundterm ) )
-            // InternalSocrates.g:883:4: (lv_bound_1_0= ruleboundterm )
+            // InternalSocrates.g:799:3: ( (lv_bound_1_0= ruleboundterm ) )
+            // InternalSocrates.g:800:4: (lv_bound_1_0= ruleboundterm )
             {
-            // InternalSocrates.g:883:4: (lv_bound_1_0= ruleboundterm )
-            // InternalSocrates.g:884:5: lv_bound_1_0= ruleboundterm
+            // InternalSocrates.g:800:4: (lv_bound_1_0= ruleboundterm )
+            // InternalSocrates.g:801:5: lv_bound_1_0= ruleboundterm
             {
             if ( state.backtracking==0 ) {
 
@@ -2423,11 +2178,11 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSocrates.g:921:3: ( (lv_existschild_4_0= ruleformula ) )
-            // InternalSocrates.g:922:4: (lv_existschild_4_0= ruleformula )
+            // InternalSocrates.g:838:3: ( (lv_existschild_4_0= ruleformula ) )
+            // InternalSocrates.g:839:4: (lv_existschild_4_0= ruleformula )
             {
-            // InternalSocrates.g:922:4: (lv_existschild_4_0= ruleformula )
-            // InternalSocrates.g:923:5: lv_existschild_4_0= ruleformula
+            // InternalSocrates.g:839:4: (lv_existschild_4_0= ruleformula )
+            // InternalSocrates.g:840:5: lv_existschild_4_0= ruleformula
             {
             if ( state.backtracking==0 ) {
 
@@ -2499,7 +2254,249 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleexistsformula"
+    // $ANTLR end "ruleExistsformula"
+
+
+    // $ANTLR start "entryRuleTvariable"
+    // InternalSocrates.g:871:1: entryRuleTvariable returns [EObject current=null] : iv_ruleTvariable= ruleTvariable EOF ;
+    public final EObject entryRuleTvariable() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleTvariable = null;
+
+
+        try {
+            // InternalSocrates.g:871:50: (iv_ruleTvariable= ruleTvariable EOF )
+            // InternalSocrates.g:872:2: iv_ruleTvariable= ruleTvariable EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getTvariableRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            iv_ruleTvariable=ruleTvariable();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleTvariable; 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleTvariable"
+
+
+    // $ANTLR start "ruleTvariable"
+    // InternalSocrates.g:878:1: ruleTvariable returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    public final EObject ruleTvariable() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalSocrates.g:884:2: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // InternalSocrates.g:885:2: ( (lv_name_0_0= RULE_ID ) )
+            {
+            // InternalSocrates.g:885:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalSocrates.g:886:3: (lv_name_0_0= RULE_ID )
+            {
+            // InternalSocrates.g:886:3: (lv_name_0_0= RULE_ID )
+            // InternalSocrates.g:887:4: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              				newLeafNode(lv_name_0_0, grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0());
+              			
+            }
+            if ( state.backtracking==0 ) {
+
+              				if (current==null) {
+              					current = createModelElement(grammarAccess.getTvariableRule());
+              				}
+              				setWithLastConsumed(
+              					current,
+              					"name",
+              					lv_name_0_0,
+              					"org.eclipse.xtext.common.Terminals.ID");
+              			
+            }
+
+            }
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleTvariable"
+
+
+    // $ANTLR start "entryRulenegationformula"
+    // InternalSocrates.g:906:1: entryRulenegationformula returns [EObject current=null] : iv_rulenegationformula= rulenegationformula EOF ;
+    public final EObject entryRulenegationformula() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_rulenegationformula = null;
+
+
+        try {
+            // InternalSocrates.g:906:56: (iv_rulenegationformula= rulenegationformula EOF )
+            // InternalSocrates.g:907:2: iv_rulenegationformula= rulenegationformula EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getNegationformulaRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            iv_rulenegationformula=rulenegationformula();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_rulenegationformula; 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulenegationformula"
+
+
+    // $ANTLR start "rulenegationformula"
+    // InternalSocrates.g:913:1: rulenegationformula returns [EObject current=null] : ( ruleNOT ( (lv_negationchild_1_0= ruleformula ) ) ) ;
+    public final EObject rulenegationformula() throws RecognitionException {
+        EObject current = null;
+
+        EObject lv_negationchild_1_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalSocrates.g:919:2: ( ( ruleNOT ( (lv_negationchild_1_0= ruleformula ) ) ) )
+            // InternalSocrates.g:920:2: ( ruleNOT ( (lv_negationchild_1_0= ruleformula ) ) )
+            {
+            // InternalSocrates.g:920:2: ( ruleNOT ( (lv_negationchild_1_0= ruleformula ) ) )
+            // InternalSocrates.g:921:3: ruleNOT ( (lv_negationchild_1_0= ruleformula ) )
+            {
+            if ( state.backtracking==0 ) {
+
+              			/* */
+              		
+            }
+            if ( state.backtracking==0 ) {
+
+              			newCompositeNode(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0());
+              		
+            }
+            pushFollow(FOLLOW_14);
+            ruleNOT();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			afterParserOrEnumRuleCall();
+              		
+            }
+            // InternalSocrates.g:931:3: ( (lv_negationchild_1_0= ruleformula ) )
+            // InternalSocrates.g:932:4: (lv_negationchild_1_0= ruleformula )
+            {
+            // InternalSocrates.g:932:4: (lv_negationchild_1_0= ruleformula )
+            // InternalSocrates.g:933:5: lv_negationchild_1_0= ruleformula
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0());
+              				
+            }
+            pushFollow(FOLLOW_2);
+            lv_negationchild_1_0=ruleformula();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getNegationformulaRule());
+              					}
+              					set(
+              						current,
+              						"negationchild",
+              						lv_negationchild_1_0,
+              						"lu.uni.Socrates.formula");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "rulenegationformula"
 
 
     // $ANTLR start "entryRuleformula"
@@ -5425,7 +5422,7 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulebasicformulae"
-    // InternalSocrates.g:1999:1: rulebasicformulae returns [EObject current=null] : ( ( (lv_f_0_0= rulenegationformula ) ) | ( (lv_f_1_0= ruleforAllformula ) ) | ( (lv_f_2_0= ruleexistsformula ) ) ) ;
+    // InternalSocrates.g:1999:1: rulebasicformulae returns [EObject current=null] : ( ( (lv_f_0_0= rulenegationformula ) ) | ( (lv_f_1_0= ruleForAllformula ) ) | ( (lv_f_2_0= ruleExistsformula ) ) ) ;
     public final EObject rulebasicformulae() throws RecognitionException {
         EObject current = null;
 
@@ -5440,10 +5437,10 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSocrates.g:2005:2: ( ( ( (lv_f_0_0= rulenegationformula ) ) | ( (lv_f_1_0= ruleforAllformula ) ) | ( (lv_f_2_0= ruleexistsformula ) ) ) )
-            // InternalSocrates.g:2006:2: ( ( (lv_f_0_0= rulenegationformula ) ) | ( (lv_f_1_0= ruleforAllformula ) ) | ( (lv_f_2_0= ruleexistsformula ) ) )
+            // InternalSocrates.g:2005:2: ( ( ( (lv_f_0_0= rulenegationformula ) ) | ( (lv_f_1_0= ruleForAllformula ) ) | ( (lv_f_2_0= ruleExistsformula ) ) ) )
+            // InternalSocrates.g:2006:2: ( ( (lv_f_0_0= rulenegationformula ) ) | ( (lv_f_1_0= ruleForAllformula ) ) | ( (lv_f_2_0= ruleExistsformula ) ) )
             {
-            // InternalSocrates.g:2006:2: ( ( (lv_f_0_0= rulenegationformula ) ) | ( (lv_f_1_0= ruleforAllformula ) ) | ( (lv_f_2_0= ruleexistsformula ) ) )
+            // InternalSocrates.g:2006:2: ( ( (lv_f_0_0= rulenegationformula ) ) | ( (lv_f_1_0= ruleForAllformula ) ) | ( (lv_f_2_0= ruleExistsformula ) ) )
             int alt21=3;
             switch ( input.LA(1) ) {
             case 52:
@@ -5512,13 +5509,13 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSocrates.g:2027:3: ( (lv_f_1_0= ruleforAllformula ) )
+                    // InternalSocrates.g:2027:3: ( (lv_f_1_0= ruleForAllformula ) )
                     {
-                    // InternalSocrates.g:2027:3: ( (lv_f_1_0= ruleforAllformula ) )
-                    // InternalSocrates.g:2028:4: (lv_f_1_0= ruleforAllformula )
+                    // InternalSocrates.g:2027:3: ( (lv_f_1_0= ruleForAllformula ) )
+                    // InternalSocrates.g:2028:4: (lv_f_1_0= ruleForAllformula )
                     {
-                    // InternalSocrates.g:2028:4: (lv_f_1_0= ruleforAllformula )
-                    // InternalSocrates.g:2029:5: lv_f_1_0= ruleforAllformula
+                    // InternalSocrates.g:2028:4: (lv_f_1_0= ruleForAllformula )
+                    // InternalSocrates.g:2029:5: lv_f_1_0= ruleForAllformula
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5526,7 +5523,7 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
                       				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_f_1_0=ruleforAllformula();
+                    lv_f_1_0=ruleForAllformula();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -5539,7 +5536,7 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
                       						current,
                       						"f",
                       						lv_f_1_0,
-                      						"lu.uni.Socrates.forAllformula");
+                      						"lu.uni.Socrates.ForAllformula");
                       					afterParserOrEnumRuleCall();
                       				
                     }
@@ -5553,13 +5550,13 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSocrates.g:2047:3: ( (lv_f_2_0= ruleexistsformula ) )
+                    // InternalSocrates.g:2047:3: ( (lv_f_2_0= ruleExistsformula ) )
                     {
-                    // InternalSocrates.g:2047:3: ( (lv_f_2_0= ruleexistsformula ) )
-                    // InternalSocrates.g:2048:4: (lv_f_2_0= ruleexistsformula )
+                    // InternalSocrates.g:2047:3: ( (lv_f_2_0= ruleExistsformula ) )
+                    // InternalSocrates.g:2048:4: (lv_f_2_0= ruleExistsformula )
                     {
-                    // InternalSocrates.g:2048:4: (lv_f_2_0= ruleexistsformula )
-                    // InternalSocrates.g:2049:5: lv_f_2_0= ruleexistsformula
+                    // InternalSocrates.g:2048:4: (lv_f_2_0= ruleExistsformula )
+                    // InternalSocrates.g:2049:5: lv_f_2_0= ruleExistsformula
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5567,7 +5564,7 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
                       				
                     }
                     pushFollow(FOLLOW_2);
-                    lv_f_2_0=ruleexistsformula();
+                    lv_f_2_0=ruleExistsformula();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -5580,7 +5577,7 @@ public class InternalSocratesParser extends AbstractInternalAntlrParser {
                       						current,
                       						"f",
                       						lv_f_2_0,
-                      						"lu.uni.Socrates.existsformula");
+                      						"lu.uni.Socrates.Existsformula");
                       					afterParserOrEnumRuleCall();
                       				
                     }

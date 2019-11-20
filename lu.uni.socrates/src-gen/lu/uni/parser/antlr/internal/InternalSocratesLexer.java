@@ -1,6 +1,3 @@
-/*******************************************************************************
- * Copyright Menghi Claudio, University of Luxembourg, 2018-2019, claudio.menghi@uni.lu
- ******************************************************************************/
 package lu.uni.parser.antlr.internal;
 
 // Hack: Use our own Lexer superclass by means of import. 

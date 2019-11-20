@@ -7,22 +7,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>existsformula</b></em>'.
+ * A representation of the model object '<em><b>Existsformula</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link lu.uni.socrates.existsformula#getBound <em>Bound</em>}</li>
- *   <li>{@link lu.uni.socrates.existsformula#getExistschild <em>Existschild</em>}</li>
+ *   <li>{@link lu.uni.socrates.Existsformula#getBound <em>Bound</em>}</li>
+ *   <li>{@link lu.uni.socrates.Existsformula#getExistschild <em>Existschild</em>}</li>
  * </ul>
  *
- * @see lu.uni.socrates.SocratesPackage#getexistsformula()
+ * @see lu.uni.socrates.SocratesPackage#getExistsformula()
  * @model
  * @generated
  */
-public interface existsformula extends EObject
+public interface Existsformula extends EObject
 {
   /**
    * Returns the value of the '<em><b>Bound</b></em>' containment reference.
@@ -34,14 +34,14 @@ public interface existsformula extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Bound</em>' containment reference.
    * @see #setBound(boundterm)
-   * @see lu.uni.socrates.SocratesPackage#getexistsformula_Bound()
+   * @see lu.uni.socrates.SocratesPackage#getExistsformula_Bound()
    * @model containment="true"
    * @generated
    */
   boundterm getBound();
 
   /**
-   * Sets the value of the '{@link lu.uni.socrates.existsformula#getBound <em>Bound</em>}' containment reference.
+   * Sets the value of the '{@link lu.uni.socrates.Existsformula#getBound <em>Bound</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Bound</em>' containment reference.
@@ -60,14 +60,14 @@ public interface existsformula extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Existschild</em>' containment reference.
    * @see #setExistschild(formula)
-   * @see lu.uni.socrates.SocratesPackage#getexistsformula_Existschild()
+   * @see lu.uni.socrates.SocratesPackage#getExistsformula_Existschild()
    * @model containment="true"
    * @generated
    */
   formula getExistschild();
 
   /**
-   * Sets the value of the '{@link lu.uni.socrates.existsformula#getExistschild <em>Existschild</em>}' containment reference.
+   * Sets the value of the '{@link lu.uni.socrates.Existsformula#getExistschild <em>Existschild</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Existschild</em>' containment reference.
@@ -76,4 +76,4 @@ public interface existsformula extends EObject
    */
   void setExistschild(formula value);
 
-} // existsformula
+} // Existsformula

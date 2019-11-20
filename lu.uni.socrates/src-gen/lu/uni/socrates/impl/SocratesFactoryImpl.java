@@ -73,10 +73,10 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
       case SocratesPackage.CONSTANT_DEFINITION: return createConstantDefinition();
       case SocratesPackage.SIGNAL_ID: return createSignalID();
       case SocratesPackage.CONSTANT_ID: return createConstantId();
+      case SocratesPackage.FOR_ALLFORMULA: return createForAllformula();
+      case SocratesPackage.EXISTSFORMULA: return createExistsformula();
       case SocratesPackage.TVARIABLE: return createTvariable();
       case SocratesPackage.NEGATIONFORMULA: return createnegationformula();
-      case SocratesPackage.FOR_ALLFORMULA: return createforAllformula();
-      case SocratesPackage.EXISTSFORMULA: return createexistsformula();
       case SocratesPackage.FORMULA: return createformula();
       case SocratesPackage.FORMULAB: return createformulab();
       case SocratesPackage.FORMULABPRIME: return createformulabprime();
@@ -207,6 +207,30 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
    * @generated
    */
   @Override
+  public ForAllformula createForAllformula()
+  {
+    ForAllformulaImpl forAllformula = new ForAllformulaImpl();
+    return forAllformula;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Existsformula createExistsformula()
+  {
+    ExistsformulaImpl existsformula = new ExistsformulaImpl();
+    return existsformula;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Tvariable createTvariable()
   {
     TvariableImpl tvariable = new TvariableImpl();
@@ -223,30 +247,6 @@ public class SocratesFactoryImpl extends EFactoryImpl implements SocratesFactory
   {
     negationformulaImpl negationformula = new negationformulaImpl();
     return negationformula;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public forAllformula createforAllformula()
-  {
-    forAllformulaImpl forAllformula = new forAllformulaImpl();
-    return forAllformula;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public existsformula createexistsformula()
-  {
-    existsformulaImpl existsformula = new existsformulaImpl();
-    return existsformula;
   }
 
   /**

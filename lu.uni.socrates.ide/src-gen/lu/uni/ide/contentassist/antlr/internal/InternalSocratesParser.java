@@ -1,6 +1,3 @@
-/*******************************************************************************
- * Copyright Menghi Claudio, University of Luxembourg, 2018-2019, claudio.menghi@uni.lu
- ******************************************************************************/
 package lu.uni.ide.contentassist.antlr.internal;
 
 import java.io.InputStream;
@@ -902,12 +899,182 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "ruleConstantId"
 
 
+    // $ANTLR start "entryRuleForAllformula"
+    // InternalSocrates.g:279:1: entryRuleForAllformula : ruleForAllformula EOF ;
+    public final void entryRuleForAllformula() throws RecognitionException {
+        try {
+            // InternalSocrates.g:280:1: ( ruleForAllformula EOF )
+            // InternalSocrates.g:281:1: ruleForAllformula EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getForAllformulaRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            ruleForAllformula();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getForAllformulaRule()); 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleForAllformula"
+
+
+    // $ANTLR start "ruleForAllformula"
+    // InternalSocrates.g:288:1: ruleForAllformula : ( ( rule__ForAllformula__Group__0 ) ) ;
+    public final void ruleForAllformula() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSocrates.g:292:2: ( ( ( rule__ForAllformula__Group__0 ) ) )
+            // InternalSocrates.g:293:2: ( ( rule__ForAllformula__Group__0 ) )
+            {
+            // InternalSocrates.g:293:2: ( ( rule__ForAllformula__Group__0 ) )
+            // InternalSocrates.g:294:3: ( rule__ForAllformula__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getForAllformulaAccess().getGroup()); 
+            }
+            // InternalSocrates.g:295:3: ( rule__ForAllformula__Group__0 )
+            // InternalSocrates.g:295:4: rule__ForAllformula__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__ForAllformula__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getForAllformulaAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleForAllformula"
+
+
+    // $ANTLR start "entryRuleExistsformula"
+    // InternalSocrates.g:304:1: entryRuleExistsformula : ruleExistsformula EOF ;
+    public final void entryRuleExistsformula() throws RecognitionException {
+        try {
+            // InternalSocrates.g:305:1: ( ruleExistsformula EOF )
+            // InternalSocrates.g:306:1: ruleExistsformula EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExistsformulaRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            ruleExistsformula();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExistsformulaRule()); 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleExistsformula"
+
+
+    // $ANTLR start "ruleExistsformula"
+    // InternalSocrates.g:313:1: ruleExistsformula : ( ( rule__Existsformula__Group__0 ) ) ;
+    public final void ruleExistsformula() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSocrates.g:317:2: ( ( ( rule__Existsformula__Group__0 ) ) )
+            // InternalSocrates.g:318:2: ( ( rule__Existsformula__Group__0 ) )
+            {
+            // InternalSocrates.g:318:2: ( ( rule__Existsformula__Group__0 ) )
+            // InternalSocrates.g:319:3: ( rule__Existsformula__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExistsformulaAccess().getGroup()); 
+            }
+            // InternalSocrates.g:320:3: ( rule__Existsformula__Group__0 )
+            // InternalSocrates.g:320:4: rule__Existsformula__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Existsformula__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getExistsformulaAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleExistsformula"
+
+
     // $ANTLR start "entryRuleTvariable"
-    // InternalSocrates.g:279:1: entryRuleTvariable : ruleTvariable EOF ;
+    // InternalSocrates.g:329:1: entryRuleTvariable : ruleTvariable EOF ;
     public final void entryRuleTvariable() throws RecognitionException {
         try {
-            // InternalSocrates.g:280:1: ( ruleTvariable EOF )
-            // InternalSocrates.g:281:1: ruleTvariable EOF
+            // InternalSocrates.g:330:1: ( ruleTvariable EOF )
+            // InternalSocrates.g:331:1: ruleTvariable EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTvariableRule()); 
@@ -937,23 +1104,23 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "ruleTvariable"
-    // InternalSocrates.g:288:1: ruleTvariable : ( ( rule__Tvariable__NameAssignment ) ) ;
+    // InternalSocrates.g:338:1: ruleTvariable : ( ( rule__Tvariable__NameAssignment ) ) ;
     public final void ruleTvariable() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:292:2: ( ( ( rule__Tvariable__NameAssignment ) ) )
-            // InternalSocrates.g:293:2: ( ( rule__Tvariable__NameAssignment ) )
+            // InternalSocrates.g:342:2: ( ( ( rule__Tvariable__NameAssignment ) ) )
+            // InternalSocrates.g:343:2: ( ( rule__Tvariable__NameAssignment ) )
             {
-            // InternalSocrates.g:293:2: ( ( rule__Tvariable__NameAssignment ) )
-            // InternalSocrates.g:294:3: ( rule__Tvariable__NameAssignment )
+            // InternalSocrates.g:343:2: ( ( rule__Tvariable__NameAssignment ) )
+            // InternalSocrates.g:344:3: ( rule__Tvariable__NameAssignment )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTvariableAccess().getNameAssignment()); 
             }
-            // InternalSocrates.g:295:3: ( rule__Tvariable__NameAssignment )
-            // InternalSocrates.g:295:4: rule__Tvariable__NameAssignment
+            // InternalSocrates.g:345:3: ( rule__Tvariable__NameAssignment )
+            // InternalSocrates.g:345:4: rule__Tvariable__NameAssignment
             {
             pushFollow(FOLLOW_2);
             rule__Tvariable__NameAssignment();
@@ -988,11 +1155,11 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "entryRulenegationformula"
-    // InternalSocrates.g:304:1: entryRulenegationformula : rulenegationformula EOF ;
+    // InternalSocrates.g:354:1: entryRulenegationformula : rulenegationformula EOF ;
     public final void entryRulenegationformula() throws RecognitionException {
         try {
-            // InternalSocrates.g:305:1: ( rulenegationformula EOF )
-            // InternalSocrates.g:306:1: rulenegationformula EOF
+            // InternalSocrates.g:355:1: ( rulenegationformula EOF )
+            // InternalSocrates.g:356:1: rulenegationformula EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNegationformulaRule()); 
@@ -1022,23 +1189,23 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rulenegationformula"
-    // InternalSocrates.g:313:1: rulenegationformula : ( ( rule__Negationformula__Group__0 ) ) ;
+    // InternalSocrates.g:363:1: rulenegationformula : ( ( rule__Negationformula__Group__0 ) ) ;
     public final void rulenegationformula() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:317:2: ( ( ( rule__Negationformula__Group__0 ) ) )
-            // InternalSocrates.g:318:2: ( ( rule__Negationformula__Group__0 ) )
+            // InternalSocrates.g:367:2: ( ( ( rule__Negationformula__Group__0 ) ) )
+            // InternalSocrates.g:368:2: ( ( rule__Negationformula__Group__0 ) )
             {
-            // InternalSocrates.g:318:2: ( ( rule__Negationformula__Group__0 ) )
-            // InternalSocrates.g:319:3: ( rule__Negationformula__Group__0 )
+            // InternalSocrates.g:368:2: ( ( rule__Negationformula__Group__0 ) )
+            // InternalSocrates.g:369:3: ( rule__Negationformula__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNegationformulaAccess().getGroup()); 
             }
-            // InternalSocrates.g:320:3: ( rule__Negationformula__Group__0 )
-            // InternalSocrates.g:320:4: rule__Negationformula__Group__0
+            // InternalSocrates.g:370:3: ( rule__Negationformula__Group__0 )
+            // InternalSocrates.g:370:4: rule__Negationformula__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Negationformula__Group__0();
@@ -1070,176 +1237,6 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
         return ;
     }
     // $ANTLR end "rulenegationformula"
-
-
-    // $ANTLR start "entryRuleforAllformula"
-    // InternalSocrates.g:329:1: entryRuleforAllformula : ruleforAllformula EOF ;
-    public final void entryRuleforAllformula() throws RecognitionException {
-        try {
-            // InternalSocrates.g:330:1: ( ruleforAllformula EOF )
-            // InternalSocrates.g:331:1: ruleforAllformula EOF
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getForAllformulaRule()); 
-            }
-            pushFollow(FOLLOW_1);
-            ruleforAllformula();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getForAllformulaRule()); 
-            }
-            match(input,EOF,FOLLOW_2); if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleforAllformula"
-
-
-    // $ANTLR start "ruleforAllformula"
-    // InternalSocrates.g:338:1: ruleforAllformula : ( ( rule__ForAllformula__Group__0 ) ) ;
-    public final void ruleforAllformula() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSocrates.g:342:2: ( ( ( rule__ForAllformula__Group__0 ) ) )
-            // InternalSocrates.g:343:2: ( ( rule__ForAllformula__Group__0 ) )
-            {
-            // InternalSocrates.g:343:2: ( ( rule__ForAllformula__Group__0 ) )
-            // InternalSocrates.g:344:3: ( rule__ForAllformula__Group__0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getForAllformulaAccess().getGroup()); 
-            }
-            // InternalSocrates.g:345:3: ( rule__ForAllformula__Group__0 )
-            // InternalSocrates.g:345:4: rule__ForAllformula__Group__0
-            {
-            pushFollow(FOLLOW_2);
-            rule__ForAllformula__Group__0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getForAllformulaAccess().getGroup()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleforAllformula"
-
-
-    // $ANTLR start "entryRuleexistsformula"
-    // InternalSocrates.g:354:1: entryRuleexistsformula : ruleexistsformula EOF ;
-    public final void entryRuleexistsformula() throws RecognitionException {
-        try {
-            // InternalSocrates.g:355:1: ( ruleexistsformula EOF )
-            // InternalSocrates.g:356:1: ruleexistsformula EOF
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExistsformulaRule()); 
-            }
-            pushFollow(FOLLOW_1);
-            ruleexistsformula();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExistsformulaRule()); 
-            }
-            match(input,EOF,FOLLOW_2); if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleexistsformula"
-
-
-    // $ANTLR start "ruleexistsformula"
-    // InternalSocrates.g:363:1: ruleexistsformula : ( ( rule__Existsformula__Group__0 ) ) ;
-    public final void ruleexistsformula() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSocrates.g:367:2: ( ( ( rule__Existsformula__Group__0 ) ) )
-            // InternalSocrates.g:368:2: ( ( rule__Existsformula__Group__0 ) )
-            {
-            // InternalSocrates.g:368:2: ( ( rule__Existsformula__Group__0 ) )
-            // InternalSocrates.g:369:3: ( rule__Existsformula__Group__0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExistsformulaAccess().getGroup()); 
-            }
-            // InternalSocrates.g:370:3: ( rule__Existsformula__Group__0 )
-            // InternalSocrates.g:370:4: rule__Existsformula__Group__0
-            {
-            pushFollow(FOLLOW_2);
-            rule__Existsformula__Group__0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getExistsformulaAccess().getGroup()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleexistsformula"
 
 
     // $ANTLR start "entryRuleformula"
@@ -11685,182 +11682,15 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__ConstantDefinition__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Negationformula__Group__0"
-    // InternalSocrates.g:3351:1: rule__Negationformula__Group__0 : rule__Negationformula__Group__0__Impl rule__Negationformula__Group__1 ;
-    public final void rule__Negationformula__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSocrates.g:3355:1: ( rule__Negationformula__Group__0__Impl rule__Negationformula__Group__1 )
-            // InternalSocrates.g:3356:2: rule__Negationformula__Group__0__Impl rule__Negationformula__Group__1
-            {
-            pushFollow(FOLLOW_14);
-            rule__Negationformula__Group__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_2);
-            rule__Negationformula__Group__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Negationformula__Group__0"
-
-
-    // $ANTLR start "rule__Negationformula__Group__0__Impl"
-    // InternalSocrates.g:3363:1: rule__Negationformula__Group__0__Impl : ( ruleNOT ) ;
-    public final void rule__Negationformula__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSocrates.g:3367:1: ( ( ruleNOT ) )
-            // InternalSocrates.g:3368:1: ( ruleNOT )
-            {
-            // InternalSocrates.g:3368:1: ( ruleNOT )
-            // InternalSocrates.g:3369:2: ruleNOT
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0()); 
-            }
-            pushFollow(FOLLOW_2);
-            ruleNOT();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Negationformula__Group__0__Impl"
-
-
-    // $ANTLR start "rule__Negationformula__Group__1"
-    // InternalSocrates.g:3378:1: rule__Negationformula__Group__1 : rule__Negationformula__Group__1__Impl ;
-    public final void rule__Negationformula__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSocrates.g:3382:1: ( rule__Negationformula__Group__1__Impl )
-            // InternalSocrates.g:3383:2: rule__Negationformula__Group__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Negationformula__Group__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Negationformula__Group__1"
-
-
-    // $ANTLR start "rule__Negationformula__Group__1__Impl"
-    // InternalSocrates.g:3389:1: rule__Negationformula__Group__1__Impl : ( ( rule__Negationformula__NegationchildAssignment_1 ) ) ;
-    public final void rule__Negationformula__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSocrates.g:3393:1: ( ( ( rule__Negationformula__NegationchildAssignment_1 ) ) )
-            // InternalSocrates.g:3394:1: ( ( rule__Negationformula__NegationchildAssignment_1 ) )
-            {
-            // InternalSocrates.g:3394:1: ( ( rule__Negationformula__NegationchildAssignment_1 ) )
-            // InternalSocrates.g:3395:2: ( rule__Negationformula__NegationchildAssignment_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1()); 
-            }
-            // InternalSocrates.g:3396:2: ( rule__Negationformula__NegationchildAssignment_1 )
-            // InternalSocrates.g:3396:3: rule__Negationformula__NegationchildAssignment_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Negationformula__NegationchildAssignment_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Negationformula__Group__1__Impl"
-
-
     // $ANTLR start "rule__ForAllformula__Group__0"
-    // InternalSocrates.g:3405:1: rule__ForAllformula__Group__0 : rule__ForAllformula__Group__0__Impl rule__ForAllformula__Group__1 ;
+    // InternalSocrates.g:3351:1: rule__ForAllformula__Group__0 : rule__ForAllformula__Group__0__Impl rule__ForAllformula__Group__1 ;
     public final void rule__ForAllformula__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3409:1: ( rule__ForAllformula__Group__0__Impl rule__ForAllformula__Group__1 )
-            // InternalSocrates.g:3410:2: rule__ForAllformula__Group__0__Impl rule__ForAllformula__Group__1
+            // InternalSocrates.g:3355:1: ( rule__ForAllformula__Group__0__Impl rule__ForAllformula__Group__1 )
+            // InternalSocrates.g:3356:2: rule__ForAllformula__Group__0__Impl rule__ForAllformula__Group__1
             {
             pushFollow(FOLLOW_6);
             rule__ForAllformula__Group__0__Impl();
@@ -11891,17 +11721,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__0__Impl"
-    // InternalSocrates.g:3417:1: rule__ForAllformula__Group__0__Impl : ( ruleFORALL ) ;
+    // InternalSocrates.g:3363:1: rule__ForAllformula__Group__0__Impl : ( ruleFORALL ) ;
     public final void rule__ForAllformula__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3421:1: ( ( ruleFORALL ) )
-            // InternalSocrates.g:3422:1: ( ruleFORALL )
+            // InternalSocrates.g:3367:1: ( ( ruleFORALL ) )
+            // InternalSocrates.g:3368:1: ( ruleFORALL )
             {
-            // InternalSocrates.g:3422:1: ( ruleFORALL )
-            // InternalSocrates.g:3423:2: ruleFORALL
+            // InternalSocrates.g:3368:1: ( ruleFORALL )
+            // InternalSocrates.g:3369:2: ruleFORALL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForAllformulaAccess().getFORALLParserRuleCall_0()); 
@@ -11936,14 +11766,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__1"
-    // InternalSocrates.g:3432:1: rule__ForAllformula__Group__1 : rule__ForAllformula__Group__1__Impl rule__ForAllformula__Group__2 ;
+    // InternalSocrates.g:3378:1: rule__ForAllformula__Group__1 : rule__ForAllformula__Group__1__Impl rule__ForAllformula__Group__2 ;
     public final void rule__ForAllformula__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3436:1: ( rule__ForAllformula__Group__1__Impl rule__ForAllformula__Group__2 )
-            // InternalSocrates.g:3437:2: rule__ForAllformula__Group__1__Impl rule__ForAllformula__Group__2
+            // InternalSocrates.g:3382:1: ( rule__ForAllformula__Group__1__Impl rule__ForAllformula__Group__2 )
+            // InternalSocrates.g:3383:2: rule__ForAllformula__Group__1__Impl rule__ForAllformula__Group__2
             {
             pushFollow(FOLLOW_22);
             rule__ForAllformula__Group__1__Impl();
@@ -11974,23 +11804,23 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__1__Impl"
-    // InternalSocrates.g:3444:1: rule__ForAllformula__Group__1__Impl : ( ( rule__ForAllformula__BoundAssignment_1 ) ) ;
+    // InternalSocrates.g:3390:1: rule__ForAllformula__Group__1__Impl : ( ( rule__ForAllformula__BoundAssignment_1 ) ) ;
     public final void rule__ForAllformula__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3448:1: ( ( ( rule__ForAllformula__BoundAssignment_1 ) ) )
-            // InternalSocrates.g:3449:1: ( ( rule__ForAllformula__BoundAssignment_1 ) )
+            // InternalSocrates.g:3394:1: ( ( ( rule__ForAllformula__BoundAssignment_1 ) ) )
+            // InternalSocrates.g:3395:1: ( ( rule__ForAllformula__BoundAssignment_1 ) )
             {
-            // InternalSocrates.g:3449:1: ( ( rule__ForAllformula__BoundAssignment_1 ) )
-            // InternalSocrates.g:3450:2: ( rule__ForAllformula__BoundAssignment_1 )
+            // InternalSocrates.g:3395:1: ( ( rule__ForAllformula__BoundAssignment_1 ) )
+            // InternalSocrates.g:3396:2: ( rule__ForAllformula__BoundAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForAllformulaAccess().getBoundAssignment_1()); 
             }
-            // InternalSocrates.g:3451:2: ( rule__ForAllformula__BoundAssignment_1 )
-            // InternalSocrates.g:3451:3: rule__ForAllformula__BoundAssignment_1
+            // InternalSocrates.g:3397:2: ( rule__ForAllformula__BoundAssignment_1 )
+            // InternalSocrates.g:3397:3: rule__ForAllformula__BoundAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__ForAllformula__BoundAssignment_1();
@@ -12025,14 +11855,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__2"
-    // InternalSocrates.g:3459:1: rule__ForAllformula__Group__2 : rule__ForAllformula__Group__2__Impl rule__ForAllformula__Group__3 ;
+    // InternalSocrates.g:3405:1: rule__ForAllformula__Group__2 : rule__ForAllformula__Group__2__Impl rule__ForAllformula__Group__3 ;
     public final void rule__ForAllformula__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3463:1: ( rule__ForAllformula__Group__2__Impl rule__ForAllformula__Group__3 )
-            // InternalSocrates.g:3464:2: rule__ForAllformula__Group__2__Impl rule__ForAllformula__Group__3
+            // InternalSocrates.g:3409:1: ( rule__ForAllformula__Group__2__Impl rule__ForAllformula__Group__3 )
+            // InternalSocrates.g:3410:2: rule__ForAllformula__Group__2__Impl rule__ForAllformula__Group__3
             {
             pushFollow(FOLLOW_23);
             rule__ForAllformula__Group__2__Impl();
@@ -12063,17 +11893,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__2__Impl"
-    // InternalSocrates.g:3471:1: rule__ForAllformula__Group__2__Impl : ( ruleCOLON ) ;
+    // InternalSocrates.g:3417:1: rule__ForAllformula__Group__2__Impl : ( ruleCOLON ) ;
     public final void rule__ForAllformula__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3475:1: ( ( ruleCOLON ) )
-            // InternalSocrates.g:3476:1: ( ruleCOLON )
+            // InternalSocrates.g:3421:1: ( ( ruleCOLON ) )
+            // InternalSocrates.g:3422:1: ( ruleCOLON )
             {
-            // InternalSocrates.g:3476:1: ( ruleCOLON )
-            // InternalSocrates.g:3477:2: ruleCOLON
+            // InternalSocrates.g:3422:1: ( ruleCOLON )
+            // InternalSocrates.g:3423:2: ruleCOLON
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForAllformulaAccess().getCOLONParserRuleCall_2()); 
@@ -12108,14 +11938,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__3"
-    // InternalSocrates.g:3486:1: rule__ForAllformula__Group__3 : rule__ForAllformula__Group__3__Impl rule__ForAllformula__Group__4 ;
+    // InternalSocrates.g:3432:1: rule__ForAllformula__Group__3 : rule__ForAllformula__Group__3__Impl rule__ForAllformula__Group__4 ;
     public final void rule__ForAllformula__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3490:1: ( rule__ForAllformula__Group__3__Impl rule__ForAllformula__Group__4 )
-            // InternalSocrates.g:3491:2: rule__ForAllformula__Group__3__Impl rule__ForAllformula__Group__4
+            // InternalSocrates.g:3436:1: ( rule__ForAllformula__Group__3__Impl rule__ForAllformula__Group__4 )
+            // InternalSocrates.g:3437:2: rule__ForAllformula__Group__3__Impl rule__ForAllformula__Group__4
             {
             pushFollow(FOLLOW_14);
             rule__ForAllformula__Group__3__Impl();
@@ -12146,17 +11976,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__3__Impl"
-    // InternalSocrates.g:3498:1: rule__ForAllformula__Group__3__Impl : ( ruleLPAREN ) ;
+    // InternalSocrates.g:3444:1: rule__ForAllformula__Group__3__Impl : ( ruleLPAREN ) ;
     public final void rule__ForAllformula__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3502:1: ( ( ruleLPAREN ) )
-            // InternalSocrates.g:3503:1: ( ruleLPAREN )
+            // InternalSocrates.g:3448:1: ( ( ruleLPAREN ) )
+            // InternalSocrates.g:3449:1: ( ruleLPAREN )
             {
-            // InternalSocrates.g:3503:1: ( ruleLPAREN )
-            // InternalSocrates.g:3504:2: ruleLPAREN
+            // InternalSocrates.g:3449:1: ( ruleLPAREN )
+            // InternalSocrates.g:3450:2: ruleLPAREN
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForAllformulaAccess().getLPARENParserRuleCall_3()); 
@@ -12191,14 +12021,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__4"
-    // InternalSocrates.g:3513:1: rule__ForAllformula__Group__4 : rule__ForAllformula__Group__4__Impl rule__ForAllformula__Group__5 ;
+    // InternalSocrates.g:3459:1: rule__ForAllformula__Group__4 : rule__ForAllformula__Group__4__Impl rule__ForAllformula__Group__5 ;
     public final void rule__ForAllformula__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3517:1: ( rule__ForAllformula__Group__4__Impl rule__ForAllformula__Group__5 )
-            // InternalSocrates.g:3518:2: rule__ForAllformula__Group__4__Impl rule__ForAllformula__Group__5
+            // InternalSocrates.g:3463:1: ( rule__ForAllformula__Group__4__Impl rule__ForAllformula__Group__5 )
+            // InternalSocrates.g:3464:2: rule__ForAllformula__Group__4__Impl rule__ForAllformula__Group__5
             {
             pushFollow(FOLLOW_24);
             rule__ForAllformula__Group__4__Impl();
@@ -12229,23 +12059,23 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__4__Impl"
-    // InternalSocrates.g:3525:1: rule__ForAllformula__Group__4__Impl : ( ( rule__ForAllformula__ForallchildAssignment_4 ) ) ;
+    // InternalSocrates.g:3471:1: rule__ForAllformula__Group__4__Impl : ( ( rule__ForAllformula__ForallchildAssignment_4 ) ) ;
     public final void rule__ForAllformula__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3529:1: ( ( ( rule__ForAllformula__ForallchildAssignment_4 ) ) )
-            // InternalSocrates.g:3530:1: ( ( rule__ForAllformula__ForallchildAssignment_4 ) )
+            // InternalSocrates.g:3475:1: ( ( ( rule__ForAllformula__ForallchildAssignment_4 ) ) )
+            // InternalSocrates.g:3476:1: ( ( rule__ForAllformula__ForallchildAssignment_4 ) )
             {
-            // InternalSocrates.g:3530:1: ( ( rule__ForAllformula__ForallchildAssignment_4 ) )
-            // InternalSocrates.g:3531:2: ( rule__ForAllformula__ForallchildAssignment_4 )
+            // InternalSocrates.g:3476:1: ( ( rule__ForAllformula__ForallchildAssignment_4 ) )
+            // InternalSocrates.g:3477:2: ( rule__ForAllformula__ForallchildAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForAllformulaAccess().getForallchildAssignment_4()); 
             }
-            // InternalSocrates.g:3532:2: ( rule__ForAllformula__ForallchildAssignment_4 )
-            // InternalSocrates.g:3532:3: rule__ForAllformula__ForallchildAssignment_4
+            // InternalSocrates.g:3478:2: ( rule__ForAllformula__ForallchildAssignment_4 )
+            // InternalSocrates.g:3478:3: rule__ForAllformula__ForallchildAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__ForAllformula__ForallchildAssignment_4();
@@ -12280,14 +12110,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__5"
-    // InternalSocrates.g:3540:1: rule__ForAllformula__Group__5 : rule__ForAllformula__Group__5__Impl ;
+    // InternalSocrates.g:3486:1: rule__ForAllformula__Group__5 : rule__ForAllformula__Group__5__Impl ;
     public final void rule__ForAllformula__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3544:1: ( rule__ForAllformula__Group__5__Impl )
-            // InternalSocrates.g:3545:2: rule__ForAllformula__Group__5__Impl
+            // InternalSocrates.g:3490:1: ( rule__ForAllformula__Group__5__Impl )
+            // InternalSocrates.g:3491:2: rule__ForAllformula__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ForAllformula__Group__5__Impl();
@@ -12313,17 +12143,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__Group__5__Impl"
-    // InternalSocrates.g:3551:1: rule__ForAllformula__Group__5__Impl : ( ruleRPAREN ) ;
+    // InternalSocrates.g:3497:1: rule__ForAllformula__Group__5__Impl : ( ruleRPAREN ) ;
     public final void rule__ForAllformula__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3555:1: ( ( ruleRPAREN ) )
-            // InternalSocrates.g:3556:1: ( ruleRPAREN )
+            // InternalSocrates.g:3501:1: ( ( ruleRPAREN ) )
+            // InternalSocrates.g:3502:1: ( ruleRPAREN )
             {
-            // InternalSocrates.g:3556:1: ( ruleRPAREN )
-            // InternalSocrates.g:3557:2: ruleRPAREN
+            // InternalSocrates.g:3502:1: ( ruleRPAREN )
+            // InternalSocrates.g:3503:2: ruleRPAREN
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForAllformulaAccess().getRPARENParserRuleCall_5()); 
@@ -12358,14 +12188,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__0"
-    // InternalSocrates.g:3567:1: rule__Existsformula__Group__0 : rule__Existsformula__Group__0__Impl rule__Existsformula__Group__1 ;
+    // InternalSocrates.g:3513:1: rule__Existsformula__Group__0 : rule__Existsformula__Group__0__Impl rule__Existsformula__Group__1 ;
     public final void rule__Existsformula__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3571:1: ( rule__Existsformula__Group__0__Impl rule__Existsformula__Group__1 )
-            // InternalSocrates.g:3572:2: rule__Existsformula__Group__0__Impl rule__Existsformula__Group__1
+            // InternalSocrates.g:3517:1: ( rule__Existsformula__Group__0__Impl rule__Existsformula__Group__1 )
+            // InternalSocrates.g:3518:2: rule__Existsformula__Group__0__Impl rule__Existsformula__Group__1
             {
             pushFollow(FOLLOW_6);
             rule__Existsformula__Group__0__Impl();
@@ -12396,17 +12226,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__0__Impl"
-    // InternalSocrates.g:3579:1: rule__Existsformula__Group__0__Impl : ( ruleEXISTS ) ;
+    // InternalSocrates.g:3525:1: rule__Existsformula__Group__0__Impl : ( ruleEXISTS ) ;
     public final void rule__Existsformula__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3583:1: ( ( ruleEXISTS ) )
-            // InternalSocrates.g:3584:1: ( ruleEXISTS )
+            // InternalSocrates.g:3529:1: ( ( ruleEXISTS ) )
+            // InternalSocrates.g:3530:1: ( ruleEXISTS )
             {
-            // InternalSocrates.g:3584:1: ( ruleEXISTS )
-            // InternalSocrates.g:3585:2: ruleEXISTS
+            // InternalSocrates.g:3530:1: ( ruleEXISTS )
+            // InternalSocrates.g:3531:2: ruleEXISTS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExistsformulaAccess().getEXISTSParserRuleCall_0()); 
@@ -12441,14 +12271,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__1"
-    // InternalSocrates.g:3594:1: rule__Existsformula__Group__1 : rule__Existsformula__Group__1__Impl rule__Existsformula__Group__2 ;
+    // InternalSocrates.g:3540:1: rule__Existsformula__Group__1 : rule__Existsformula__Group__1__Impl rule__Existsformula__Group__2 ;
     public final void rule__Existsformula__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3598:1: ( rule__Existsformula__Group__1__Impl rule__Existsformula__Group__2 )
-            // InternalSocrates.g:3599:2: rule__Existsformula__Group__1__Impl rule__Existsformula__Group__2
+            // InternalSocrates.g:3544:1: ( rule__Existsformula__Group__1__Impl rule__Existsformula__Group__2 )
+            // InternalSocrates.g:3545:2: rule__Existsformula__Group__1__Impl rule__Existsformula__Group__2
             {
             pushFollow(FOLLOW_22);
             rule__Existsformula__Group__1__Impl();
@@ -12479,23 +12309,23 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__1__Impl"
-    // InternalSocrates.g:3606:1: rule__Existsformula__Group__1__Impl : ( ( rule__Existsformula__BoundAssignment_1 ) ) ;
+    // InternalSocrates.g:3552:1: rule__Existsformula__Group__1__Impl : ( ( rule__Existsformula__BoundAssignment_1 ) ) ;
     public final void rule__Existsformula__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3610:1: ( ( ( rule__Existsformula__BoundAssignment_1 ) ) )
-            // InternalSocrates.g:3611:1: ( ( rule__Existsformula__BoundAssignment_1 ) )
+            // InternalSocrates.g:3556:1: ( ( ( rule__Existsformula__BoundAssignment_1 ) ) )
+            // InternalSocrates.g:3557:1: ( ( rule__Existsformula__BoundAssignment_1 ) )
             {
-            // InternalSocrates.g:3611:1: ( ( rule__Existsformula__BoundAssignment_1 ) )
-            // InternalSocrates.g:3612:2: ( rule__Existsformula__BoundAssignment_1 )
+            // InternalSocrates.g:3557:1: ( ( rule__Existsformula__BoundAssignment_1 ) )
+            // InternalSocrates.g:3558:2: ( rule__Existsformula__BoundAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExistsformulaAccess().getBoundAssignment_1()); 
             }
-            // InternalSocrates.g:3613:2: ( rule__Existsformula__BoundAssignment_1 )
-            // InternalSocrates.g:3613:3: rule__Existsformula__BoundAssignment_1
+            // InternalSocrates.g:3559:2: ( rule__Existsformula__BoundAssignment_1 )
+            // InternalSocrates.g:3559:3: rule__Existsformula__BoundAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Existsformula__BoundAssignment_1();
@@ -12530,14 +12360,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__2"
-    // InternalSocrates.g:3621:1: rule__Existsformula__Group__2 : rule__Existsformula__Group__2__Impl rule__Existsformula__Group__3 ;
+    // InternalSocrates.g:3567:1: rule__Existsformula__Group__2 : rule__Existsformula__Group__2__Impl rule__Existsformula__Group__3 ;
     public final void rule__Existsformula__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3625:1: ( rule__Existsformula__Group__2__Impl rule__Existsformula__Group__3 )
-            // InternalSocrates.g:3626:2: rule__Existsformula__Group__2__Impl rule__Existsformula__Group__3
+            // InternalSocrates.g:3571:1: ( rule__Existsformula__Group__2__Impl rule__Existsformula__Group__3 )
+            // InternalSocrates.g:3572:2: rule__Existsformula__Group__2__Impl rule__Existsformula__Group__3
             {
             pushFollow(FOLLOW_23);
             rule__Existsformula__Group__2__Impl();
@@ -12568,17 +12398,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__2__Impl"
-    // InternalSocrates.g:3633:1: rule__Existsformula__Group__2__Impl : ( ruleCOLON ) ;
+    // InternalSocrates.g:3579:1: rule__Existsformula__Group__2__Impl : ( ruleCOLON ) ;
     public final void rule__Existsformula__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3637:1: ( ( ruleCOLON ) )
-            // InternalSocrates.g:3638:1: ( ruleCOLON )
+            // InternalSocrates.g:3583:1: ( ( ruleCOLON ) )
+            // InternalSocrates.g:3584:1: ( ruleCOLON )
             {
-            // InternalSocrates.g:3638:1: ( ruleCOLON )
-            // InternalSocrates.g:3639:2: ruleCOLON
+            // InternalSocrates.g:3584:1: ( ruleCOLON )
+            // InternalSocrates.g:3585:2: ruleCOLON
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExistsformulaAccess().getCOLONParserRuleCall_2()); 
@@ -12613,14 +12443,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__3"
-    // InternalSocrates.g:3648:1: rule__Existsformula__Group__3 : rule__Existsformula__Group__3__Impl rule__Existsformula__Group__4 ;
+    // InternalSocrates.g:3594:1: rule__Existsformula__Group__3 : rule__Existsformula__Group__3__Impl rule__Existsformula__Group__4 ;
     public final void rule__Existsformula__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3652:1: ( rule__Existsformula__Group__3__Impl rule__Existsformula__Group__4 )
-            // InternalSocrates.g:3653:2: rule__Existsformula__Group__3__Impl rule__Existsformula__Group__4
+            // InternalSocrates.g:3598:1: ( rule__Existsformula__Group__3__Impl rule__Existsformula__Group__4 )
+            // InternalSocrates.g:3599:2: rule__Existsformula__Group__3__Impl rule__Existsformula__Group__4
             {
             pushFollow(FOLLOW_14);
             rule__Existsformula__Group__3__Impl();
@@ -12651,17 +12481,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__3__Impl"
-    // InternalSocrates.g:3660:1: rule__Existsformula__Group__3__Impl : ( ruleLPAREN ) ;
+    // InternalSocrates.g:3606:1: rule__Existsformula__Group__3__Impl : ( ruleLPAREN ) ;
     public final void rule__Existsformula__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3664:1: ( ( ruleLPAREN ) )
-            // InternalSocrates.g:3665:1: ( ruleLPAREN )
+            // InternalSocrates.g:3610:1: ( ( ruleLPAREN ) )
+            // InternalSocrates.g:3611:1: ( ruleLPAREN )
             {
-            // InternalSocrates.g:3665:1: ( ruleLPAREN )
-            // InternalSocrates.g:3666:2: ruleLPAREN
+            // InternalSocrates.g:3611:1: ( ruleLPAREN )
+            // InternalSocrates.g:3612:2: ruleLPAREN
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExistsformulaAccess().getLPARENParserRuleCall_3()); 
@@ -12696,14 +12526,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__4"
-    // InternalSocrates.g:3675:1: rule__Existsformula__Group__4 : rule__Existsformula__Group__4__Impl rule__Existsformula__Group__5 ;
+    // InternalSocrates.g:3621:1: rule__Existsformula__Group__4 : rule__Existsformula__Group__4__Impl rule__Existsformula__Group__5 ;
     public final void rule__Existsformula__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3679:1: ( rule__Existsformula__Group__4__Impl rule__Existsformula__Group__5 )
-            // InternalSocrates.g:3680:2: rule__Existsformula__Group__4__Impl rule__Existsformula__Group__5
+            // InternalSocrates.g:3625:1: ( rule__Existsformula__Group__4__Impl rule__Existsformula__Group__5 )
+            // InternalSocrates.g:3626:2: rule__Existsformula__Group__4__Impl rule__Existsformula__Group__5
             {
             pushFollow(FOLLOW_24);
             rule__Existsformula__Group__4__Impl();
@@ -12734,23 +12564,23 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__4__Impl"
-    // InternalSocrates.g:3687:1: rule__Existsformula__Group__4__Impl : ( ( rule__Existsformula__ExistschildAssignment_4 ) ) ;
+    // InternalSocrates.g:3633:1: rule__Existsformula__Group__4__Impl : ( ( rule__Existsformula__ExistschildAssignment_4 ) ) ;
     public final void rule__Existsformula__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3691:1: ( ( ( rule__Existsformula__ExistschildAssignment_4 ) ) )
-            // InternalSocrates.g:3692:1: ( ( rule__Existsformula__ExistschildAssignment_4 ) )
+            // InternalSocrates.g:3637:1: ( ( ( rule__Existsformula__ExistschildAssignment_4 ) ) )
+            // InternalSocrates.g:3638:1: ( ( rule__Existsformula__ExistschildAssignment_4 ) )
             {
-            // InternalSocrates.g:3692:1: ( ( rule__Existsformula__ExistschildAssignment_4 ) )
-            // InternalSocrates.g:3693:2: ( rule__Existsformula__ExistschildAssignment_4 )
+            // InternalSocrates.g:3638:1: ( ( rule__Existsformula__ExistschildAssignment_4 ) )
+            // InternalSocrates.g:3639:2: ( rule__Existsformula__ExistschildAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExistsformulaAccess().getExistschildAssignment_4()); 
             }
-            // InternalSocrates.g:3694:2: ( rule__Existsformula__ExistschildAssignment_4 )
-            // InternalSocrates.g:3694:3: rule__Existsformula__ExistschildAssignment_4
+            // InternalSocrates.g:3640:2: ( rule__Existsformula__ExistschildAssignment_4 )
+            // InternalSocrates.g:3640:3: rule__Existsformula__ExistschildAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Existsformula__ExistschildAssignment_4();
@@ -12785,14 +12615,14 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__5"
-    // InternalSocrates.g:3702:1: rule__Existsformula__Group__5 : rule__Existsformula__Group__5__Impl ;
+    // InternalSocrates.g:3648:1: rule__Existsformula__Group__5 : rule__Existsformula__Group__5__Impl ;
     public final void rule__Existsformula__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3706:1: ( rule__Existsformula__Group__5__Impl )
-            // InternalSocrates.g:3707:2: rule__Existsformula__Group__5__Impl
+            // InternalSocrates.g:3652:1: ( rule__Existsformula__Group__5__Impl )
+            // InternalSocrates.g:3653:2: rule__Existsformula__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Existsformula__Group__5__Impl();
@@ -12818,17 +12648,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__Group__5__Impl"
-    // InternalSocrates.g:3713:1: rule__Existsformula__Group__5__Impl : ( ruleRPAREN ) ;
+    // InternalSocrates.g:3659:1: rule__Existsformula__Group__5__Impl : ( ruleRPAREN ) ;
     public final void rule__Existsformula__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:3717:1: ( ( ruleRPAREN ) )
-            // InternalSocrates.g:3718:1: ( ruleRPAREN )
+            // InternalSocrates.g:3663:1: ( ( ruleRPAREN ) )
+            // InternalSocrates.g:3664:1: ( ruleRPAREN )
             {
-            // InternalSocrates.g:3718:1: ( ruleRPAREN )
-            // InternalSocrates.g:3719:2: ruleRPAREN
+            // InternalSocrates.g:3664:1: ( ruleRPAREN )
+            // InternalSocrates.g:3665:2: ruleRPAREN
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExistsformulaAccess().getRPARENParserRuleCall_5()); 
@@ -12860,6 +12690,173 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
         return ;
     }
     // $ANTLR end "rule__Existsformula__Group__5__Impl"
+
+
+    // $ANTLR start "rule__Negationformula__Group__0"
+    // InternalSocrates.g:3675:1: rule__Negationformula__Group__0 : rule__Negationformula__Group__0__Impl rule__Negationformula__Group__1 ;
+    public final void rule__Negationformula__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSocrates.g:3679:1: ( rule__Negationformula__Group__0__Impl rule__Negationformula__Group__1 )
+            // InternalSocrates.g:3680:2: rule__Negationformula__Group__0__Impl rule__Negationformula__Group__1
+            {
+            pushFollow(FOLLOW_14);
+            rule__Negationformula__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_2);
+            rule__Negationformula__Group__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Negationformula__Group__0"
+
+
+    // $ANTLR start "rule__Negationformula__Group__0__Impl"
+    // InternalSocrates.g:3687:1: rule__Negationformula__Group__0__Impl : ( ruleNOT ) ;
+    public final void rule__Negationformula__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSocrates.g:3691:1: ( ( ruleNOT ) )
+            // InternalSocrates.g:3692:1: ( ruleNOT )
+            {
+            // InternalSocrates.g:3692:1: ( ruleNOT )
+            // InternalSocrates.g:3693:2: ruleNOT
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0()); 
+            }
+            pushFollow(FOLLOW_2);
+            ruleNOT();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNegationformulaAccess().getNOTParserRuleCall_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Negationformula__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Negationformula__Group__1"
+    // InternalSocrates.g:3702:1: rule__Negationformula__Group__1 : rule__Negationformula__Group__1__Impl ;
+    public final void rule__Negationformula__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSocrates.g:3706:1: ( rule__Negationformula__Group__1__Impl )
+            // InternalSocrates.g:3707:2: rule__Negationformula__Group__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Negationformula__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Negationformula__Group__1"
+
+
+    // $ANTLR start "rule__Negationformula__Group__1__Impl"
+    // InternalSocrates.g:3713:1: rule__Negationformula__Group__1__Impl : ( ( rule__Negationformula__NegationchildAssignment_1 ) ) ;
+    public final void rule__Negationformula__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSocrates.g:3717:1: ( ( ( rule__Negationformula__NegationchildAssignment_1 ) ) )
+            // InternalSocrates.g:3718:1: ( ( rule__Negationformula__NegationchildAssignment_1 ) )
+            {
+            // InternalSocrates.g:3718:1: ( ( rule__Negationformula__NegationchildAssignment_1 ) )
+            // InternalSocrates.g:3719:2: ( rule__Negationformula__NegationchildAssignment_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1()); 
+            }
+            // InternalSocrates.g:3720:2: ( rule__Negationformula__NegationchildAssignment_1 )
+            // InternalSocrates.g:3720:3: rule__Negationformula__NegationchildAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Negationformula__NegationchildAssignment_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNegationformulaAccess().getNegationchildAssignment_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Negationformula__Group__1__Impl"
 
 
     // $ANTLR start "rule__Formulab__Group__0"
@@ -22042,104 +22039,18 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__ConstantId__NameAssignment"
 
 
-    // $ANTLR start "rule__Tvariable__NameAssignment"
-    // InternalSocrates.g:6669:1: rule__Tvariable__NameAssignment : ( RULE_ID ) ;
-    public final void rule__Tvariable__NameAssignment() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSocrates.g:6673:1: ( ( RULE_ID ) )
-            // InternalSocrates.g:6674:2: ( RULE_ID )
-            {
-            // InternalSocrates.g:6674:2: ( RULE_ID )
-            // InternalSocrates.g:6675:3: RULE_ID
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0()); 
-            }
-            match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Tvariable__NameAssignment"
-
-
-    // $ANTLR start "rule__Negationformula__NegationchildAssignment_1"
-    // InternalSocrates.g:6684:1: rule__Negationformula__NegationchildAssignment_1 : ( ruleformula ) ;
-    public final void rule__Negationformula__NegationchildAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSocrates.g:6688:1: ( ( ruleformula ) )
-            // InternalSocrates.g:6689:2: ( ruleformula )
-            {
-            // InternalSocrates.g:6689:2: ( ruleformula )
-            // InternalSocrates.g:6690:3: ruleformula
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0()); 
-            }
-            pushFollow(FOLLOW_2);
-            ruleformula();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Negationformula__NegationchildAssignment_1"
-
-
     // $ANTLR start "rule__ForAllformula__BoundAssignment_1"
-    // InternalSocrates.g:6699:1: rule__ForAllformula__BoundAssignment_1 : ( ruleboundterm ) ;
+    // InternalSocrates.g:6669:1: rule__ForAllformula__BoundAssignment_1 : ( ruleboundterm ) ;
     public final void rule__ForAllformula__BoundAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:6703:1: ( ( ruleboundterm ) )
-            // InternalSocrates.g:6704:2: ( ruleboundterm )
+            // InternalSocrates.g:6673:1: ( ( ruleboundterm ) )
+            // InternalSocrates.g:6674:2: ( ruleboundterm )
             {
-            // InternalSocrates.g:6704:2: ( ruleboundterm )
-            // InternalSocrates.g:6705:3: ruleboundterm
+            // InternalSocrates.g:6674:2: ( ruleboundterm )
+            // InternalSocrates.g:6675:3: ruleboundterm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForAllformulaAccess().getBoundBoundtermParserRuleCall_1_0()); 
@@ -22174,17 +22085,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForAllformula__ForallchildAssignment_4"
-    // InternalSocrates.g:6714:1: rule__ForAllformula__ForallchildAssignment_4 : ( ruleformula ) ;
+    // InternalSocrates.g:6684:1: rule__ForAllformula__ForallchildAssignment_4 : ( ruleformula ) ;
     public final void rule__ForAllformula__ForallchildAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:6718:1: ( ( ruleformula ) )
-            // InternalSocrates.g:6719:2: ( ruleformula )
+            // InternalSocrates.g:6688:1: ( ( ruleformula ) )
+            // InternalSocrates.g:6689:2: ( ruleformula )
             {
-            // InternalSocrates.g:6719:2: ( ruleformula )
-            // InternalSocrates.g:6720:3: ruleformula
+            // InternalSocrates.g:6689:2: ( ruleformula )
+            // InternalSocrates.g:6690:3: ruleformula
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getForAllformulaAccess().getForallchildFormulaParserRuleCall_4_0()); 
@@ -22219,17 +22130,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__BoundAssignment_1"
-    // InternalSocrates.g:6729:1: rule__Existsformula__BoundAssignment_1 : ( ruleboundterm ) ;
+    // InternalSocrates.g:6699:1: rule__Existsformula__BoundAssignment_1 : ( ruleboundterm ) ;
     public final void rule__Existsformula__BoundAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:6733:1: ( ( ruleboundterm ) )
-            // InternalSocrates.g:6734:2: ( ruleboundterm )
+            // InternalSocrates.g:6703:1: ( ( ruleboundterm ) )
+            // InternalSocrates.g:6704:2: ( ruleboundterm )
             {
-            // InternalSocrates.g:6734:2: ( ruleboundterm )
-            // InternalSocrates.g:6735:3: ruleboundterm
+            // InternalSocrates.g:6704:2: ( ruleboundterm )
+            // InternalSocrates.g:6705:3: ruleboundterm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExistsformulaAccess().getBoundBoundtermParserRuleCall_1_0()); 
@@ -22264,17 +22175,17 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Existsformula__ExistschildAssignment_4"
-    // InternalSocrates.g:6744:1: rule__Existsformula__ExistschildAssignment_4 : ( ruleformula ) ;
+    // InternalSocrates.g:6714:1: rule__Existsformula__ExistschildAssignment_4 : ( ruleformula ) ;
     public final void rule__Existsformula__ExistschildAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:6748:1: ( ( ruleformula ) )
-            // InternalSocrates.g:6749:2: ( ruleformula )
+            // InternalSocrates.g:6718:1: ( ( ruleformula ) )
+            // InternalSocrates.g:6719:2: ( ruleformula )
             {
-            // InternalSocrates.g:6749:2: ( ruleformula )
-            // InternalSocrates.g:6750:3: ruleformula
+            // InternalSocrates.g:6719:2: ( ruleformula )
+            // InternalSocrates.g:6720:3: ruleformula
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExistsformulaAccess().getExistschildFormulaParserRuleCall_4_0()); 
@@ -22306,6 +22217,92 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
         return ;
     }
     // $ANTLR end "rule__Existsformula__ExistschildAssignment_4"
+
+
+    // $ANTLR start "rule__Tvariable__NameAssignment"
+    // InternalSocrates.g:6729:1: rule__Tvariable__NameAssignment : ( RULE_ID ) ;
+    public final void rule__Tvariable__NameAssignment() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSocrates.g:6733:1: ( ( RULE_ID ) )
+            // InternalSocrates.g:6734:2: ( RULE_ID )
+            {
+            // InternalSocrates.g:6734:2: ( RULE_ID )
+            // InternalSocrates.g:6735:3: RULE_ID
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0()); 
+            }
+            match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTvariableAccess().getNameIDTerminalRuleCall_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Tvariable__NameAssignment"
+
+
+    // $ANTLR start "rule__Negationformula__NegationchildAssignment_1"
+    // InternalSocrates.g:6744:1: rule__Negationformula__NegationchildAssignment_1 : ( ruleformula ) ;
+    public final void rule__Negationformula__NegationchildAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSocrates.g:6748:1: ( ( ruleformula ) )
+            // InternalSocrates.g:6749:2: ( ruleformula )
+            {
+            // InternalSocrates.g:6749:2: ( ruleformula )
+            // InternalSocrates.g:6750:3: ruleformula
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0()); 
+            }
+            pushFollow(FOLLOW_2);
+            ruleformula();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getNegationformulaAccess().getNegationchildFormulaParserRuleCall_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Negationformula__NegationchildAssignment_1"
 
 
     // $ANTLR start "rule__Formula__FAssignment_0"
@@ -24006,23 +24003,23 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Basicformulae__FAssignment_1"
-    // InternalSocrates.g:7318:1: rule__Basicformulae__FAssignment_1 : ( ruleforAllformula ) ;
+    // InternalSocrates.g:7318:1: rule__Basicformulae__FAssignment_1 : ( ruleForAllformula ) ;
     public final void rule__Basicformulae__FAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:7322:1: ( ( ruleforAllformula ) )
-            // InternalSocrates.g:7323:2: ( ruleforAllformula )
+            // InternalSocrates.g:7322:1: ( ( ruleForAllformula ) )
+            // InternalSocrates.g:7323:2: ( ruleForAllformula )
             {
-            // InternalSocrates.g:7323:2: ( ruleforAllformula )
-            // InternalSocrates.g:7324:3: ruleforAllformula
+            // InternalSocrates.g:7323:2: ( ruleForAllformula )
+            // InternalSocrates.g:7324:3: ruleForAllformula
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicformulaeAccess().getFForAllformulaParserRuleCall_1_0()); 
             }
             pushFollow(FOLLOW_2);
-            ruleforAllformula();
+            ruleForAllformula();
 
             state._fsp--;
             if (state.failed) return ;
@@ -24051,23 +24048,23 @@ public class InternalSocratesParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Basicformulae__FAssignment_2"
-    // InternalSocrates.g:7333:1: rule__Basicformulae__FAssignment_2 : ( ruleexistsformula ) ;
+    // InternalSocrates.g:7333:1: rule__Basicformulae__FAssignment_2 : ( ruleExistsformula ) ;
     public final void rule__Basicformulae__FAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSocrates.g:7337:1: ( ( ruleexistsformula ) )
-            // InternalSocrates.g:7338:2: ( ruleexistsformula )
+            // InternalSocrates.g:7337:1: ( ( ruleExistsformula ) )
+            // InternalSocrates.g:7338:2: ( ruleExistsformula )
             {
-            // InternalSocrates.g:7338:2: ( ruleexistsformula )
-            // InternalSocrates.g:7339:3: ruleexistsformula
+            // InternalSocrates.g:7338:2: ( ruleExistsformula )
+            // InternalSocrates.g:7339:3: ruleExistsformula
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicformulaeAccess().getFExistsformulaParserRuleCall_2_0()); 
             }
             pushFollow(FOLLOW_2);
-            ruleexistsformula();
+            ruleExistsformula();
 
             state._fsp--;
             if (state.failed) return ;

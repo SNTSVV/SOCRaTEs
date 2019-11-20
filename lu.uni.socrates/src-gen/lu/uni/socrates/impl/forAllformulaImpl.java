@@ -3,9 +3,9 @@
  */
 package lu.uni.socrates.impl;
 
+import lu.uni.socrates.ForAllformula;
 import lu.uni.socrates.SocratesPackage;
 import lu.uni.socrates.boundterm;
-import lu.uni.socrates.forAllformula;
 import lu.uni.socrates.formula;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -19,19 +19,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>for Allformula</b></em>'.
+ * An implementation of the model object '<em><b>For Allformula</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link lu.uni.socrates.impl.forAllformulaImpl#getBound <em>Bound</em>}</li>
- *   <li>{@link lu.uni.socrates.impl.forAllformulaImpl#getForallchild <em>Forallchild</em>}</li>
+ *   <li>{@link lu.uni.socrates.impl.ForAllformulaImpl#getBound <em>Bound</em>}</li>
+ *   <li>{@link lu.uni.socrates.impl.ForAllformulaImpl#getForallchild <em>Forallchild</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class forAllformulaImpl extends MinimalEObjectImpl.Container implements forAllformula
+public class ForAllformulaImpl extends MinimalEObjectImpl.Container implements ForAllformula
 {
   /**
    * The cached value of the '{@link #getBound() <em>Bound</em>}' containment reference.
@@ -58,7 +58,7 @@ public class forAllformulaImpl extends MinimalEObjectImpl.Container implements f
    * <!-- end-user-doc -->
    * @generated
    */
-  protected forAllformulaImpl()
+  protected ForAllformulaImpl()
   {
     super();
   }
@@ -268,4 +268,4 @@ public class forAllformulaImpl extends MinimalEObjectImpl.Container implements f
     return super.eIsSet(featureID);
   }
 
-} //forAllformulaImpl
+} //ForAllformulaImpl
