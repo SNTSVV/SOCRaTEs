@@ -220,7 +220,10 @@ public class EObject2RSFOL {
 			return new InfiniteTerm();
 		}
 		if (e.getNumber() != null) {
+
+			System.out.println("Ci passo");
 			return new TimedTermNumber(Integer.parseInt(e.getNumber()));
+			
 		}
 		/*
 		 * if (e.getRef2() != null) { return new

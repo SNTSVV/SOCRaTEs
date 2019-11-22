@@ -24,6 +24,8 @@ import org.eclipse.xtext.generator.IGeneratorContext
 import lu.uni.rfol.visitors.RSFOL2MaximumExistBound
 import lu.uni.rfol.preprocessing.Preprocess
 import lu.uni.rfol.shifting.intervalshif.IntevalShiftingVisitor
+import lu.uni.rfol.shifting.intervalshif.IntervalShifting
+import lu.uni.rfol.shifting.timeshifting.TimeShifting
 
 /**
  * Generates code from your model files on save.
@@ -91,41 +93,26 @@ class SocratesGenerator extends AbstractGenerator {
 		if (!voriginal.accept(new TimedVariableUsedOnceCheck())) {
 			throw new IllegalArgumentException("Each timed variable should be used once in the formula");
 		}
+		println(voriginal);
 		val vpushed = voriginal.accept(new RSFOLPushNegations(false));
 
-		val fafterpushing = vpushed.accept(new Preprocess());
+		//val fafterpushing = vpushed.accept(new Preprocess());
 
-		val v1 = fafterpushing.accept(new TimeShiftVisitor(fafterpushing));
+		val v1 = new TimeShifting().perform(vpushed);
+		
 
 		println("Time shifted requirement:")
 		System.out.println(v1);
 
-		val visitor = new IntevalShiftingVisitor(v1)
-		val v2 = v1.accept(visitor);
+
+		val v2 =  new IntervalShifting().perform(v1);
 		println("Interval shifted requirement:")
 		System.out.println(v2);
 
-		System.out.println(
-			"By running the simulator up to t_fin you compute the results up to t_fin-" +
-				visitor.getSimulationShifting + " due to the shifting procedure\n");
-		System.out.println("You have to run the simulator at least for " + visitor.getMaximumLowerBound);
-
-		if (visitor.getMaximumUpperBound == -1) {
-			System.out.println(
-				"You have to run the simulator up t_fin for completing the evaluation of the formula "
-			);
-		} else {
-			System.out.println(
-				"You have to run the simulator at up to t_fin=" + visitor.getMaximumUpperBound +
-					" for completing the evaluation of the formula "
-			);
-		}
+		
 
 		w.write("% shifted requirement\n");
 		w.write("% " + v2 + "\n");
-		w.write(
-			"% By running the simulator up to t_fin you compute the results up to t_fin-" +
-				visitor.getSimulationShifting + " due to the shifting procedure\n");
 
 //		w.write("delete '" + m.name + ".slx'\n")
 //		w.write("open_system(new_system('" + m.name + "'))\n");
