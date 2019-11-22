@@ -221,7 +221,6 @@ public class EObject2RSFOL {
 		}
 		if (e.getNumber() != null) {
 
-			System.out.println("Ci passo");
 			return new TimedTermNumber(Integer.parseInt(e.getNumber()));
 			
 		}
